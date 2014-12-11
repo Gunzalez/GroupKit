@@ -16,3 +16,4 @@
 _assets/*
 .idea/*
 scss/.sass-cache/*
+.sass-cache/*
