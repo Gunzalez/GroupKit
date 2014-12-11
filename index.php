@@ -11,11 +11,11 @@
     <link rel="stylesheet" type="text/css" href="css/groupkit.css">
 </head>
 <body>
-<div class="page">
+    <div class="page">
 
 
-</div>
 
+    </div>
     <script src="js/vendors/jquery-1.9.1.min.js"></script>
     <script src="js/groupkit.js"></script>
 </body>
