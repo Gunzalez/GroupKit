@@ -22,21 +22,46 @@
             </div>
             <p class="introduction">Ringleader choose your garment above</p>
 
+            <ul class="entry-points">
+                <li class="first-li">
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-fw"></i></span>
+                        <span class="title">Team Members</span>
+                        <span class="intro">Click icon above to complete an order that was arranged for you by your Ringleader.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-fw"></i></span>
+                        <span class="title">Ringleaders</span>
+                        <span class="intro">Click icon above to login to your account to create and amend your orders.</span>
+                    </a>
+                </li>
+                <li class="last-li">
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-fw"></i></span>
+                        <span class="title">Everybody</span>
+                        <span class="intro">Click icon above for help, contact details or our FAQ section.</span>
+                    </a>
+                </li>
+                <div class="cleft"></div>
+            </ul>
+
         </div>
     </div>
     <div class="footer">
         <div class="content">
-            <p class="copy">At GroupKit we want to do a good job with an easy to use service which makes you happy.  Ordering personalised garments is often too complicated, so if you're looking for a much easier way to get group teamwear that's individually personalised to each team member with a straightforward ordering process and a quick and simple payment system then look on further.</p>
+            <p class="copy">At GroupKit we want to do a good job with an easy to use service which makes you happy. Ordering personalised garments is often too complicated, so if you're looking for a much easier way to get group teamwear that's individually personalised to each team member with a straightforward ordering process and a quick and simple payment system then look on further.</p>
+            <ul class="auxiliary-navigation">
+                <li class="first-li"><a href="#"><i class="fa fa-fw"></i>FAQ &amp; HELP</a></li>
+                <li><a href="#"><i class="fa fa-fw"></i>Ts &amp; Cs</a></li>
+                <li><a href="#"><i class="fa fa-fw"></i>PRIVACY</a></li>
+                <li class="last-li"><a href="#"><i class="fa fa-fw"></i>SITEMAP</a></li>
+            </ul>
             <ul class="company-details">
                 <li class="first-li">&copy; 2014 GroupKit</li>
                 <li>Enquiries: <a href="tel:+03333403474" class="telephone"><span>03333</span>&nbsp;<span>403</span>&nbsp;<span>474</span></a></li>
                 <li class="last-li"><a href="mailto:info@groupkit.co.uk">info@groupkit.co.uk</a></li>
-            </ul>
-            <ul class="auxiliary-navigation">
-                <li class="first-li"><a href="#">FAQ &amp; HELP</a></li>
-                <li><a href="#">Ts &amp; Cs</a></li>
-                <li><a href="#">PRIVACY</a></li>
-                <li class="last-li"><a href="#">SITEMAP</a></li>
             </ul>
             <div class="cboth"></div>
         </div>

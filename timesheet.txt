@@ -1,7 +1,8 @@
 Detailed Timesheet breakdown (Estimation: 30 to 40 hours)
 ================================
 
-Sets up project and starts on homepage                                  3.0 hrs   - Saturday 14th December
+Sets up project and starts on homepage                                  3.0 hrs   - Saturday 13th December
+Completes homepage, not responsive though                               1.0 hr    - Sunday 14th December
 
 
 
