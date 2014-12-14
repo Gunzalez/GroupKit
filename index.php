@@ -10,11 +10,36 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/groupkit.css">
 </head>
-<body>
-    <div class="page">
+<body class="home">
+    <div class="header">
+        <h1><a href="index.php">Group Kit</a></h1>
+    </div>
+    <div class="main">
+        <div class="content">
 
+            <div class="carousel" style="width: 760px; margin: 0 auto;">
+                <img src="images/holder-carousel.jpg" />
+            </div>
+            <p class="introduction">Ringleader choose your garment above</p>
 
-
+        </div>
+    </div>
+    <div class="footer">
+        <div class="content">
+            <p class="copy">At GroupKit we want to do a good job with an easy to use service which makes you happy.  Ordering personalised garments is often too complicated, so if you're looking for a much easier way to get group teamwear that's individually personalised to each team member with a straightforward ordering process and a quick and simple payment system then look on further.</p>
+            <ul class="company-details">
+                <li class="first-li">&copy; 2014 GroupKit</li>
+                <li>Enquiries: <a href="tel:+03333403474" class="telephone"><span>03333</span>&nbsp;<span>403</span>&nbsp;<span>474</span></a></li>
+                <li class="last-li"><a href="mailto:info@groupkit.co.uk">info@groupkit.co.uk</a></li>
+            </ul>
+            <ul class="auxiliary-navigation">
+                <li class="first-li"><a href="#">FAQ &amp; HELP</a></li>
+                <li><a href="#">Ts &amp; Cs</a></li>
+                <li><a href="#">PRIVACY</a></li>
+                <li class="last-li"><a href="#">SITEMAP</a></li>
+            </ul>
+            <div class="cboth"></div>
+        </div>
     </div>
     <script src="js/vendors/jquery-1.9.1.min.js"></script>
     <script src="js/groupkit.js"></script>

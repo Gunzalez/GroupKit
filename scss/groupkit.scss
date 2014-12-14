@@ -1,9 +1,170 @@
+// brand colours
+$blue:              #2AA9E0;
+$lime:              #D9E024;
+$pink:              #ED1F7A;
+$green:             #76A741;
+$black:             #231F20;
+$grey:              #666666;
+
 body {
     margin: 0;
     padding: 0;
-    background: #9babaf;
-    color: #444444;
-    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial;
+    background: #fafafa;
+    color: $grey;
+    font-family: 'signikaregular';
     font-size: small;
     -webkit-text-size-adjust: none;
+    position: relative;
+}
+
+@import "mixins";
+@import "fonts";
+
+/* resets */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0 0 12px 0;
+    line-height: 130%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cboth { clear: both; }
+.cleft { clear: left; }
+img { border: none; }
+* { outline: none; }
+
+.desktop {
+    .telephone {
+        cursor: text !important;
+
+        &:hover {
+            text-decoration: none !important;
+            color: $grey !important;
+        }
+    }
+}
+
+.header {
+    width: 100%;
+    padding-top: 30px;
+    background-color: #ffffff;
+
+    h1 {
+        margin: 0 auto;
+        padding: 0;
+        width: 220px;
+        height: 137px;
+
+        a {
+            text-indent: -9000px;
+            background: url("../images/logo.jpg") 0 0 no-repeat;
+            width: 220px;
+            height: 137px;
+            display: block;
+
+            /*CSS for serving the retina image to devices with a high "device-pixel-ratio":*/
+            @media only screen and (-moz-min-device-pixel-ratio: 1.5),
+            only screen and (-o-min-device-pixel-ratio: 3/2),
+            only screen and (-webkit-min-device-pixel-ratio: 1.5),
+            only screen and (min-devicepixel-ratio: 1.5),
+            only screen and (min-resolution: 1.5dppx) {
+                a {
+                    background-image: url("../images/logo@2x.jpg");
+                    width: 220px;
+                    height: 137px;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+.content {
+     width: 882px;
+     margin: 0 auto;
+}
+
+.main {
+    background-color: #ffffff;
+
+    .content {
+        .introduction {
+            text-align: center;
+            font-size: 1.7em;
+            padding-bottom: 35px;
+        }
+    }
+}
+
+.content {
+    width: 882px;
+    margin: 0 auto;
+
+    .introduction {
+        text-align: center;
+        font-size: 1.7em;
+        padding-bottom: 35px;
+    }
+}
+
+.footer {
+    width: 100%;
+    padding: 30px 0;
+    border-top: 1px solid $lime;
+    -webkit-box-shadow: inset 0px 24px 30px -4px rgba(50, 50, 50, 0.05);
+    -moz-box-shadow:    inset 0px 24px 30px -4px rgba(50, 50, 50, 0.05);
+    box-shadow:         inset 0px 24px 30px -4px rgba(50, 50, 50, 0.05);
+
+    .content {
+        p {
+            padding-bottom: 35px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            float: left;
+
+            li {
+                float: left;
+                padding: 0 8px;
+                border-right: 1px solid $grey;
+
+                &.first-li {
+                    padding-left: 0;
+                }
+
+                &.last-li {
+                    padding-right: 0;
+                    border-right: none;
+                }
+
+                a {
+                    color: $grey;
+                    text-decoration: none;
+                    white-space: nowrap;
+
+                    &:hover {
+                        color: $black;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            
+            &.auxiliary-navigation {
+                float: right;
+
+                li {
+                    padding-left: 12px;
+                    padding-right: 0;
+                    border: none;
+
+                    a {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
 }
