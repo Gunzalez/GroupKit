@@ -34,10 +34,10 @@
     <div class="main">
         <div class="content">
 
-            <div class="carousel" style="width: 760px; margin: 0 auto;">
+            <div class="carousel">
                 <img src="images/holder-carousel.jpg" />
             </div>
-            <p class="introduction">Ringleader choose your garment above</p>
+            <p class="introduction">Ringleaders choose your garment above</p>
 
             <ul class="entry-points">
                 <li class="first-li">
