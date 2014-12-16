@@ -78,26 +78,37 @@ img { border: none; }
   .main .content .entry-points li.last-li, .main .content .entry-points li.first-li { width: 239px; }
   .content { width: 724px; margin: 0 auto; }
   .footer .content ul.company-details li { font-size: 0.9em; } }
-@media only screen and (max-width: 800px) { .status-bar .order .percentage { width: 100px; margin: 0 5px; }
-  .status-bar .auxiliary-navigation li { padding-left: 6px; }
-  .status-bar .auxiliary-navigation li a span { display: none; }
+@media only screen and (max-width: 800px) { .main .carousel { width: 100%; }
+  .main .content .entry-points { width: 100%; padding: 0 20px; box-sizing: border-box; }
+  .main .content .entry-points li { width: 34%; box-sizing: border-box; }
+  .main .content .entry-points li.last-li, .main .content .entry-points li.first-li { width: 32%; }
+  .content { width: 100%; margin: 0 auto; padding: 0 20px; box-sizing: border-box; } }
+@media only screen and (max-width: 768px) { .status-bar .auxiliary-navigation li { padding-left: 6px; }
   .status-bar .auxiliary-navigation li.first-li { padding-left: 0; }
   .header { padding-top: 50px; }
   .header h1 { text-align: center; height: auto; }
   .header h1 a { width: 120px; height: 75px; background-size: cover; display: inline-block; }
   .main .carousel { width: 100%; }
   .main .content { padding-bottom: 15px; }
-  .main .content .introduction { font-size: 1.2em; padding-bottom: 10px; }
-  .main .content .entry-points { margin: 0 auto; width: 100%; }
+  .main .content .entry-points { margin: 0 auto; width: 100%; padding: 0; }
   .main .content .entry-points li { width: 100% !important; float: none; border: none; border-bottom: 1px solid #76a741 !important; padding-bottom: inherit; margin-bottom: inherit; }
   .main .content .entry-points li.last-li { border-bottom: none !important; }
-  .content { width: 320px; padding: 0 20px; box-sizing: border-box; }
-  .footer { padding: 15px 0; }
-  .footer .content { padding: 0 10px; }
+  .main .content .entry-points li a span.intro { font-size: 1.1em; }
+  .footer { padding: 15px 0 20px 0; }
+  .footer .content .copy { padding-bottom: 25px; }
+  .footer .content ul.auxiliary-navigation { float: none; text-align: center; padding-bottom: 15px; }
+  .footer .content ul.auxiliary-navigation li { padding: 0 5px !important; float: none; display: inline; }
+  .footer .content ul.auxiliary-navigation li a { font-size: 1.0em; display: inline; }
+  .footer .content .company-details { text-align: center; float: none; }
+  .footer .content .company-details li { padding: 0 5px; font-size: 1.1em !important; float: none; display: inline; } }
+@media only screen and (max-width: 600px) { .status-bar .order .percentage { width: 100px; margin: 0 5px; }
+  .status-bar .auxiliary-navigation li { padding-left: 8px; }
+  .status-bar .auxiliary-navigation li a { font-size: 1.0em; }
+  .status-bar .auxiliary-navigation li a span { display: none; }
+  .main .content .introduction { font-size: 1.2em; padding-bottom: 10px; }
   .footer .content .copy { display: none; }
-  .footer .content ul.auxiliary-navigation { float: left; padding-bottom: 15px; }
-  .footer .content ul.auxiliary-navigation li { padding: 0 5px !important; }
-  .footer .content ul.auxiliary-navigation li a { font-size: 0.9em; }
   .footer .content .company-details { text-align: center; }
-  .footer .content .company-details li { box-sizing: border-box; text-align: center; padding: 0 5px; font-size: 1.1em !important; }
-  .footer .content .company-details li.first-li { width: 100%; border: none; text-align: center; padding-bottom: 5px; } }
+  .footer .content .company-details li { width: 100%; box-sizing: border-box; text-align: center; padding-bottom: 5px; font-size: 1.1em !important; float: left; border: none; } }
+@media only screen and (max-width: 400px) { .footer .content ul.auxiliary-navigation { float: none; text-align: center; padding-bottom: 15px; }
+  .footer .content ul.auxiliary-navigation li { padding: 0 5px !important; float: none; display: inline; }
+  .footer .content ul.auxiliary-navigation li a { font-size: 0.8em; display: inline; } }
