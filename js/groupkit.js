@@ -30,7 +30,14 @@
                 self.environment.isDesktop = true;
                 $('html').addClass('desktop');
             }
+
+
+            $('.back-button').on('click', function(evt) {
+                evt.preventDefault();
+                history.back(1);
+            })
         }
+
     };
 
 	hattyblue.init = function(){

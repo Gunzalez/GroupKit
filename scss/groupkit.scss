@@ -6,6 +6,8 @@ $green:             #76A741;
 $black:             #231F20;
 $grey:              #666666;
 
+$borderColour:      #cccccc;
+
 body {
     margin: 0;
     padding: 0;
@@ -102,7 +104,7 @@ img { border: none; }
 
 .header {
     width: 100%;
-    padding-top: 60px;
+    padding: 60px 0 15px 0;
     background-color: #ffffff;
 
     h1 {
@@ -133,11 +135,6 @@ img { border: none; }
             }
         }
     }
-}
-
-.content {
-     width: 882px;
-     margin: 0 auto;
 }
 
 .main {
@@ -229,6 +226,99 @@ img { border: none; }
         padding-bottom: 35px;
     }
 }
+
+label {
+    font-size: 1.1em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+input {
+    border: 1px solid $borderColour;
+    @include border-radius(4px);
+    padding: 6px 8px;
+    font-size: 1.0em;
+    font-family: tahoma, trebuchet;
+
+    &.input {
+        width: 180px;
+    }
+}
+
+.button {
+    @include border-radius(4px);
+    padding: 6px 8px;
+    font-size: 1.0em;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: $green;
+    @include transitions();
+    border: none;
+
+    &:hover {
+        background-color: $lime;
+        color: $black;
+        @include transitions();
+    }
+}
+
+.members-sign-in {
+    .main {
+        .content {
+            padding-top: 20px;
+            width: 360px;
+        }
+    }
+
+    .title {
+        border-bottom: 1px solid $borderColour;
+        margin-bottom: 15px;
+
+        .button {
+            float: right;
+        }
+
+        h2 {
+            float: left;
+        }
+    }
+
+    .form {
+        width: 100%;
+
+        .row {
+            float: left;
+            clear: left;
+            padding-bottom: 10px;
+            width: 100%;
+
+            label {
+                float: left;
+                padding-top: 5px;
+            }
+
+            .input {
+                float: right;
+            }
+
+            &.button-row {
+                text-align: right;
+            }
+        }
+
+        &#member-sign-in-form {
+            border-bottom:  1px solid $lime;
+            padding-bottom: 40px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+
+
+
 
 .footer {
     width: 100%;
@@ -548,6 +638,47 @@ img { border: none; }
 }
 
 @media only screen and (max-width: 400px) {
+
+    .members-sign-in {
+        .main {
+            .content {
+                width: 100%;
+            }
+        }
+
+        .form {
+            width: 100%;
+
+            .row {
+                float: left;
+                clear: left;
+                padding-bottom: 10px;
+                width: 100%;
+
+                label {
+                    float: none;
+                    padding-top: 0;
+                    padding-bottom: 5px;
+                }
+
+                .input {
+                    float: none;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                &.button-row {
+                    text-align: right;
+                }
+            }
+
+            &#member-sign-in-form {
+                border-bottom:  1px solid $lime;
+                padding-bottom: 40px;
+                margin-bottom: 20px;
+            }
+        }
+    }
 
     .footer {
         .content {
