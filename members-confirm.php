@@ -49,12 +49,12 @@
             </div>
 
             <form class="form" id="choose-garment-form" action="#" method="post" name="choose-garment-form" novalidate="novalidate">
-                <div style="height: 180px">
+                <div style="min-height: 180px">
                     <p>There are no PSDs or wire-frames for the page</p>
                 </div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="#" class="button white-button">Help with this page</a><br />
+                    <a href="members-help.php?topic=Confirm%20and%20Pay" class="button white-button">Help with this page</a><br />
                     <a href="members-start-over.php" class="button white-button">Start over</a>
                 </div>
             </form>

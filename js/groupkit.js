@@ -34,7 +34,11 @@
 
             //$('.back-button').on('click', function(evt) {
             //    evt.preventDefault();
-            //    history.back(1);
+            //    if($(this).attr('href') == '#'){
+            //        history.back(1);
+            //    } else {
+            //        location.assign($(this).attr('href'));
+            //    }
             //})
         }
 

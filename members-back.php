@@ -99,7 +99,7 @@
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="#" class="button white-button">Help with this page</a><br />
+                    <a href="members-help.php?topic=Personalise%20The%20Back" class="button white-button">Help with this page</a><br />
                     <a href="members-start-over.php" class="button white-button">Start over</a>
                 </div>
             </form>
