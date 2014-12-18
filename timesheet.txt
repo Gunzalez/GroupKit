@@ -5,7 +5,8 @@ Sets up project and starts on homepage, planning                        3.0 hrs 
 Completes homepage, (not responsive though and no carousel)             1.0 hr    - Sunday 14th December
 Responsive homepage, site elements and footer                           2.0 hrs   - Monday 15th December
 Rejigged the responsive aspect, as PSDs did not make sense              1.5 hrs   - Tuesday (2.20am)
-Members sign in page                                                    1.5hrs    - Tuesday (Mid night)
+Members sign in page                                                    1.5 hrs   - Tuesday (Mid night)
+Choose Garment, responsive                                              3.0 hrs   - Wednesday night, 2am
 
 
 

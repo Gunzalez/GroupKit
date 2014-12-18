@@ -233,21 +233,36 @@ label {
     vertical-align: middle;
 }
 
-input {
+.input {
     border: 1px solid $borderColour;
     @include border-radius(4px);
     padding: 6px 8px;
     font-size: 1.0em;
-    font-family: tahoma, trebuchet;
+    font-family: 'signikalight';
+    -webkit-appearance: none;
+    width: 200px;
+    box-sizing: border-box;
+}
 
-    &.input {
-        width: 180px;
+select {
+    border: 1px solid $borderColour;
+    @include border-radius(2px);
+    padding: 6px 8px;
+    font-size: 1.0em;
+    font-family: 'signikalight';
+    -webkit-appearance: none;
+    background: url("../images/bg-select.jpg") right 5px no-repeat #ffffff;
+
+    &.select {
+        width: 200px;
+        box-sizing: border-box;
     }
 }
 
+
 .button {
-    @include border-radius(4px);
-    padding: 6px 8px;
+    @include border-radius(2px);
+    padding: 6px 10px;
     font-size: 1.0em;
     cursor: pointer;
     text-decoration: none;
@@ -255,19 +270,47 @@ input {
     background-color: $green;
     @include transitions();
     border: none;
+    font-family: 'signikaregular';
+    text-transform: uppercase;
+    border: 1px solid $green;
 
     &:hover {
         background-color: $lime;
         color: $black;
         @include transitions();
     }
+
+    &.white-button {
+        background-color: #ffffff;
+        border: 1px solid $green;
+        color: $black;
+
+        &:hover {
+            color: #cccccc;
+        }
+    }
 }
 
-.members-sign-in {
+.last-element {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+.helpers {
+    padding-top: 30px;
+    padding-left: 140px;
+
+    a {
+        display: block;
+    }
+}
+
+.page {
+
     .main {
         .content {
             padding-top: 20px;
-            width: 360px;
         }
     }
 
@@ -284,37 +327,165 @@ input {
         }
     }
 
+    .form-heading {
+        width: 340px;
+        margin: 0 auto 10px auto;
+    }
+
+    .form-subheading {
+        width: 340px;
+        margin: 0 auto;
+    }
+
     .form {
-        width: 100%;
+        width: 340px;
+        padding-bottom: 10px;
+        margin: 0 auto 20px auto;
+
+        .divider {
+            border-bottom:  1px solid #e8e8e8;
+            height: 2px;
+            width: 100%;
+        }
 
         .row {
             float: left;
             clear: left;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
             width: 100%;
 
+            .like-label,
             label {
                 float: left;
                 padding-top: 5px;
+                width: 140px;
             }
 
+            .select,
             .input {
-                float: right;
+                float: left;
+            }
+
+            .like-input {
+                float: left;
+                width: 200px;
+
+                label {
+                    padding: 0;
+                    width: auto;
+                }
+
+                input {
+                    float: left;
+                    margin: 5px 16px 0 5px;
+                }
+            }
+
+            .info {
+                width: 200px;
+                margin-left: 140px;
+                float: left;
+                text-align: left;
+                padding-top: 4px;
+                padding-bottom: 0;
             }
 
             &.button-row {
-                text-align: right;
+                .button {
+                    margin-left: 140px;
+                }
             }
-        }
-
-        &#member-sign-in-form {
-            border-bottom:  1px solid $lime;
-            padding-bottom: 40px;
-            margin-bottom: 20px;
         }
     }
 }
 
+.choose-garment {
+
+    .main {
+        .content {
+            width: 670px;
+        }
+    }
+
+    .showcase {
+        float: left;
+        width: 268px;
+
+        .figure {
+            display: block;
+            text-align: center;
+            padding-top: 120px;
+            font-size: 6.0em;
+            font-weight: bold;
+            font-family: 'signikabold';
+        }
+    }
+
+    .form {
+        float: right;
+    }
+
+    span {
+        &.colour {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            @include border-radius(3px);
+            cursor: pointer;
+            border: 1px solid $lime;
+
+            &.blue {
+                background: $blue;
+            }
+            &.black {
+                background: $black;
+            }
+            &.red {
+                background: #ED1F7A;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+#garment-display {
+    width: 268px;
+    height: 307px;
+    border-bottom: 1px solid $green;
+    margin-bottom: 15px;
+
+    &.womens {
+        background: url("../images/garment-womens.jpg") 0 0 no-repeat;
+    }
+
+    &.mens {
+        background: url("../images/garment-mens.jpg") 0 0 no-repeat;
+    }
+}
+
+.gender-switch {
+    padding-bottom: 15px;
+    text-align: center;
+
+    a {
+        display: inline-block;
+
+        color: #cccccc !important;
+        border-color: #cccccc !important;
+        width: 60px;
+        text-align: center;
+
+        &.selected {
+            color: $green !important;
+            border-color: $green !important;
+        }
+    }
+}
 
 
 
@@ -385,6 +556,21 @@ input {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* styles for responsive */
 @media only screen and (max-width: 942px) {
@@ -491,6 +677,30 @@ input {
                 background-size: cover;
                 display: inline-block;
             }
+        }
+    }
+
+    .choose-garment {
+
+        .main {
+            .content {
+                width: 380px;
+            }
+        }
+
+        .showcase {
+            float: none;
+            width: 100%;
+            padding-bottom: 20px;
+            margin: 0 auto;
+
+            .display {
+                margin: 0 auto;
+            }
+        }
+
+        .form {
+            float: none;
         }
     }
 
@@ -609,9 +819,6 @@ input {
     }
 
     .footer {
-    }
-
-    .footer {
         .content {
 
             .copy {
@@ -639,45 +846,72 @@ input {
 
 @media only screen and (max-width: 400px) {
 
-    .members-sign-in {
-        .main {
-            .content {
-                width: 100%;
-            }
+    .page {
+        .form-heading,
+        .form-subheading {
+            width: 100%;
         }
 
         .form {
             width: 100%;
 
             .row {
-                float: left;
-                clear: left;
-                padding-bottom: 10px;
-                width: 100%;
-
+                .like-label,
                 label {
                     float: none;
                     padding-top: 0;
                     padding-bottom: 5px;
+                    width: 100%;
                 }
 
+                .select,
                 .input {
                     float: none;
                     width: 100%;
-                    box-sizing: border-box;
                 }
 
                 &.button-row {
-                    text-align: right;
+                    .button {
+                        margin: 0;
+                        width: 100%;
+                    }
+                }
+
+                .info {
+                    width: 100%;
+                    margin: 0;
+                }
+
+                .like-input{
+                    width: 100%;
+
+                    label {
+                        float: left;
+                    }
                 }
             }
 
-            &#member-sign-in-form {
-                border-bottom:  1px solid $lime;
-                padding-bottom: 40px;
-                margin-bottom: 20px;
+            .helpers {
+                padding-top: 15px;
+                padding-left: 0;
+
             }
         }
+
+
+        &.choose-garment {
+
+            .main {
+                .content {
+                    width: 100%;
+                }
+            }
+
+            .showcase {
+                padding-bottom: 10px;
+            }
+        }
+
     }
 
     .footer {
