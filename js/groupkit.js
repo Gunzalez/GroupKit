@@ -43,29 +43,63 @@
     groupkit.chooseGarment = {
         $html: $('.choose-garment'),
         $garmentDisplay: $('#garment-display', this.$html),
+        $form: $('.form', this.$html),
 
 
         init: function(){
             var self = this,
-                $switcher = $('.gender-switch', self.$html),
-                $switches = $('a', $switcher);
+                $genderSwitcher = $('.gender-switch', self.$html),
+                $genderSwitches = $('a', $genderSwitcher),
+                $colourSwitcher = $('.colour-switch', self.$html),
+                $colourSwitches = $('input', $colourSwitcher),
+                $positionSwitcher = $('.position-switch', self.$html),
+                $positionSwitches = $('input', $positionSwitcher),
+                $styleSwitcher = $('.style-switch', self.$html),
+                $styleSwitches = $('input', $styleSwitcher);
 
-            $switches.on('click', function(evt){
+            $genderSwitches.on('click', function(evt){
                 evt.preventDefault();
                 if(!$(this).hasClass('selected')){
-                    $switches.removeClass('selected');
+                    $genderSwitches.removeClass('selected');
                     $(this).addClass('selected');
 
                     var gender = $(this).data('gender');
-                    self.switchGender(gender);
-                }
-            })
-        },
+                    self.$garmentDisplay.removeClass('womens')
+                        .removeClass('mens')
+                        .addClass(gender);
 
-        switchGender: function(gender){
-            var self = this;
-            self.$garmentDisplay.removeClass('womens').removeClass('mens').addClass(gender);
+                    // update value in form
+                    $('#gender', self.$form).val(gender);
+                }
+            });
+
+            $colourSwitches.on('change', function(){
+                var $figure = $('.figure', self.$garmentDisplay),
+                    newColour = $(this).val();
+
+                $figure.css('color',newColour);
+            });
+
+            $positionSwitches.on('change', function(){
+                var $figure = $('.figure', self.$garmentDisplay),
+                    newPosition = $(this).val();
+
+                $figure.removeClass('left').removeClass('right').addClass(newPosition);
+            });
+
+            $styleSwitches.on('change', function(){
+                var $figure = $('.figure', self.$garmentDisplay),
+                    newStyle = $(this).val();
+
+                $figure.css('font-family', newStyle);
+            });
         }
+
+
+
+
+
+
 
 
 

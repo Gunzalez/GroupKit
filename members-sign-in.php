@@ -17,17 +17,17 @@
                 <div class="cboth"></div>
             </div>
 
-            <form class="form" id="member-sign-in-form" action="members-choose-garment.php" method="post" name="members-sign-in-form" novalidate="novalidate">
+            <form class="form" id="member-sign-in-form" action="members-start-over.php" method="post" name="members-sign-in-form" novalidate="novalidate">
                 <div class="row">
                     <label for="email">Email address</label>
-                    <input type="email" name="email" id="email" value="" class="input" />
+                    <input type="email" name="email" id="email" value="" class="input" tabindex="1" />
                 </div>
                 <div class="row">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" value="" class="input" />
+                    <input type="password" name="password" id="password" value="" class="input" tabindex="2" />
                 </div>
                 <div class="row button-row">
-                    <input type="submit" value="Sign in" class="button" />
+                    <input type="submit" value="Sign in" class="button" tabindex="3" />
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>
@@ -37,10 +37,10 @@
             <form class="form last-element" id="forgot-password" action="" method="post" name="forgot-password" novalidate="novalidate">
                 <div class="row">
                     <label for="email">Email address</label>
-                    <input type="email" name="email" id="email" value="" class="input" />
+                    <input type="email" name="email" id="email" value="" class="input" tabindex="4" />
                 </div>
                 <div class="row button-row">
-                    <input type="submit" value="Submit" class="button" />
+                    <input type="submit" value="Submit" class="button" tabindex="5" />
                 </div>
                 <div class="cleft"></div>
             </form>
