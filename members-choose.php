@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit- Members sign in</title>
+    <title>Group Kit - Members choose garment</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
-<body class="choose-garment page">
+<body class="page inner garment-selection">
 
     <?php include_once('includes/header.php'); ?>
 
@@ -13,7 +13,7 @@
 
             <div class="title">
                 <h2>Choose your garment</h2>
-                <a href="#" class="button back-button white-button">Back</a>
+                <a href="members-sign-in.php" class="button back-button white-button">Back</a>
                 <div class="cboth"></div>
             </div>
 
@@ -23,6 +23,8 @@
                     echo $str;
                 }
             }
+
+
 
             session_start();
             if(!isset($_SESSION["gender"])){
@@ -37,8 +39,11 @@
             if(!isset($_SESSION["position"])){
                 $_SESSION["position"] = 'left';
             }
-            if(!isset($_SESSION["style"])){
-                $_SESSION["style"] = 'signikabold';
+            if(!isset($_SESSION["nameStyle"])){
+                $_SESSION["nameStyle"] = 'signikabold';
+            }
+            if(!isset($_SESSION["numberStyle"])){
+                $_SESSION["numberStyle"] = 'signikabold';
             }
 
 
@@ -46,9 +51,7 @@
             $gender = $_SESSION["gender"];
             $colour = $_SESSION["colour"];
             $size = $_SESSION["size"];
-
             ?>
-
 
             <div class="showcase">
                 <div id="garment-display" class="display <?php echo $gender; ?>">

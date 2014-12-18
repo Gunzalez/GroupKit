@@ -32,16 +32,16 @@
             }
 
 
-            $('.back-button').on('click', function(evt) {
-                evt.preventDefault();
-                history.back(1);
-            })
+            //$('.back-button').on('click', function(evt) {
+            //    evt.preventDefault();
+            //    history.back(1);
+            //})
         }
 
     };
 
-    groupkit.chooseGarment = {
-        $html: $('.choose-garment'),
+    groupkit.garmentSelection = {
+        $html: $('.garment-selection'),
         $garmentDisplay: $('#garment-display', this.$html),
         $form: $('.form', this.$html),
 
@@ -88,7 +88,8 @@
             });
 
             $styleSwitches.on('change', function(){
-                var $figure = $('.figure', self.$garmentDisplay),
+                var figureAttr = $(this).attr('name').replace('Style',''),
+                    $figure = $('[data-figure="'+figureAttr+'"]', self.$garmentDisplay),
                     newStyle = $(this).val();
 
                 $figure.css('font-family', newStyle);
@@ -109,7 +110,7 @@
 
         // Other init
         groupkit.environment.init();
-        groupkit.chooseGarment.init();
+        groupkit.garmentSelection.init();
         //
         //
         //

@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit- Members sign in</title>
+    <title>Group Kit - Members sign in</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
-<body class="members-sign-in page">
+<body class="page">
 
     <?php include_once('includes/header.php'); ?>
 
@@ -13,7 +13,7 @@
 
             <div class="title form-heading">
                 <h2>Members sign in</h2>
-                <a href="#" class="button back-button white-button">Back</a>
+                <a href="index.php" class="button back-button white-button">Back</a>
                 <div class="cboth"></div>
             </div>
 

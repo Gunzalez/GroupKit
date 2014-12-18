@@ -93,19 +93,22 @@ select.select { width: 200px; box-sizing: border-box; }
 .page .form .row .info { width: 200px; margin-left: 140px; float: left; text-align: left; padding-top: 4px; padding-bottom: 0; }
 .page .form .row.button-row .button { margin-left: 140px; }
 
-.choose-garment .main .content { width: 670px; }
-.choose-garment .showcase { float: left; width: 268px; }
-.choose-garment .showcase .figure { display: block; font-weight: bold; font-family: 'signikabold'; text-align: center; }
-.choose-garment .showcase .figure.big { padding-top: 140px; font-size: 5.0em; padding-left: 10px; }
-.choose-garment .showcase .figure.small { padding-top: 90px; font-size: 2.0em; padding-left: 10px; }
-.choose-garment .showcase .figure.small.left { padding-right: 40px; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
-.choose-garment .showcase .figure.small.right { padding-left: 40px; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
-.choose-garment .form { float: right; }
-.choose-garment .form .chosen-name { font-size: 1.6em; line-height: 130%; }
-.choose-garment span.colour { display: inline-block; width: 20px; height: 20px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; cursor: pointer; border: 1px solid #d9e024; }
-.choose-garment span.colour.colour2 { background: #2AA9E0; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
-.choose-garment span.colour.colour1 { background: #000000; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
-.choose-garment span.colour.colour3 { background: #ED1F7A; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
+.inner .main .content { width: 670px; }
+.inner .showcase { float: left; width: 268px; }
+.inner .showcase .figure { display: block; font-weight: bold; font-family: 'signikabold'; text-align: center; }
+.inner .showcase .figure.big { padding-top: 140px; font-size: 4.6em; padding-left: 10px; }
+.inner .showcase .figure.small { padding-top: 90px; font-size: 2.0em; padding-left: 10px; }
+.inner .showcase .figure.small.left { padding-right: 40px; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
+.inner .showcase .figure.small.right { padding-left: 40px; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
+.inner .showcase .display.back .small { padding-top: 140px; }
+.inner .showcase .display.back .big { margin-top: -12px; padding-top: 0; }
+.inner .form { float: right; }
+.inner .form .chosen-name { font-size: 1.3em; line-height: 130%; display: block; padding-top: 5px; padding-bottom: 5px; }
+.inner .form .chosen-name.big { font-size: 2.5em; line-height: 100%; }
+.inner span.colour { display: inline-block; width: 20px; height: 20px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; cursor: pointer; border: 1px solid #d9e024; }
+.inner span.colour.colour2 { background: #2AA9E0; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
+.inner span.colour.colour1 { background: #000000; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
+.inner span.colour.colour3 { background: #ED1F7A; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
 
 #garment-display { width: 268px; height: 307px; border-bottom: 1px solid #76a741; margin-bottom: 15px; }
 #garment-display.womens { background: url("../images/garment-womens.jpg") 0 0 no-repeat; }
@@ -147,10 +150,10 @@ select.select { width: 200px; box-sizing: border-box; }
   .header { padding-top: 50px; }
   .header h1 { text-align: center; height: auto; }
   .header h1 a { width: 120px; height: 75px; background-size: cover; display: inline-block; }
-  .choose-garment .main .content { width: 380px; }
-  .choose-garment .showcase { float: none; width: 100%; padding-bottom: 20px; margin: 0 auto; }
-  .choose-garment .showcase .display { margin: 0 auto; }
-  .choose-garment .form { float: none; }
+  .inner .main .content { width: 380px; }
+  .inner .showcase { float: none; width: 100%; padding-bottom: 20px; margin: 0 auto; }
+  .inner .showcase .display { margin: 0 auto; }
+  .inner .form { float: none; }
   .main .carousel { width: 100%; }
   .main .content { padding-bottom: 15px; }
   .main .content .entry-points { margin: 0 auto; width: 100%; padding: 0; }
@@ -181,8 +184,8 @@ select.select { width: 200px; box-sizing: border-box; }
   .page .form .row .like-input { width: 100%; }
   .page .form .row .like-input label { float: left; }
   .page .form .helpers { padding-top: 15px; padding-left: 0; }
-  .page.choose-garment .main .content { width: 100%; }
-  .page.choose-garment .showcase { padding-bottom: 10px; }
+  .page.inner .main .content { width: 100%; }
+  .page.inner .showcase { padding-bottom: 10px; }
   .footer .content ul.auxiliary-navigation { float: none; text-align: center; padding-bottom: 15px; }
   .footer .content ul.auxiliary-navigation li { padding: 0 5px !important; float: none; display: inline; }
   .footer .content ul.auxiliary-navigation li a { font-size: 0.8em; display: inline; } }
