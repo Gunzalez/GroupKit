@@ -179,7 +179,7 @@ select.select { width: 200px; box-sizing: border-box; }
   .page .form { width: 100%; }
   .page .form .row .like-label, .page .form .row label { float: none; padding-top: 0; padding-bottom: 5px; width: 100%; }
   .page .form .row .select, .page .form .row .input { float: none; width: 100%; }
-  .page .form .row.button-row .button { margin: 0; width: 100%; }
+  .page .form .row.button-row .button { margin: 0; width: 100%; text-align: left; }
   .page .form .row .info { width: 100%; margin: 0; }
   .page .form .row .like-input { width: 100%; }
   .page .form .row .like-input label { float: left; }

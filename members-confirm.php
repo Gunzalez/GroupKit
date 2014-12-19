@@ -1,3 +1,22 @@
+<?php
+session_start();
+if(isset($_POST['numberStyle'])){
+    $_SESSION["numberStyle"] = $_POST['numberStyle'];
+}
+
+
+$gender = $_SESSION['gender'];
+$colour = $_SESSION['colour'];
+$nameStyle = $_SESSION["nameStyle"];
+$numberStyle = $_SESSION["numberStyle"];
+
+function echoIfEqual($val1, $val2, $str){
+    if($val1 == $val2){
+        echo $str;
+    }
+}
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -17,26 +36,6 @@
                 <div class="cboth"></div>
             </div>
 
-            <?php
-            function echoIfEqual($val1, $val2, $str){
-                if($val1 == $val2){
-                    echo $str;
-                }
-            }
-
-
-            session_start();
-            if(isset($_POST['numberStyle'])){
-                $_SESSION["numberStyle"] = $_POST['numberStyle'];
-            }
-
-
-            $gender = $_SESSION['gender'];
-            $colour = $_SESSION['colour'];
-            $nameStyle = $_SESSION["nameStyle"];
-            $numberStyle = $_SESSION["numberStyle"];
-            ?>
-
             <div class="showcase">
                 <div id="garment-display" class="display back <?php echo $gender; ?>">
                     <span class="figure small" data-figure="name" style="color: <?php echo $colour; ?>; font-family: '<?php echo $nameStyle; ?>';">
@@ -46,12 +45,21 @@
                         10
                     </span>
                 </div>
+                <div class="gender-switch">
+                    <a href="#" class="button white-button selected" data-gender="back">Back</a>
+                    <a href="#" class="button white-button" data-gender="front">Front</a>
+                </div>
             </div>
 
             <form class="form" id="choose-garment-form" action="#" method="post" name="choose-garment-form" novalidate="novalidate">
                 <div style="min-height: 180px">
-                    <p>There are no PSDs or wire-frames for the page</p>
+                    <p>There are no PSDs or wire-frames for the page, I presume it will contain a summary of their selection. Please supply, or Rob can build it.</p>
+                    <p>See those buttons below the display there, lets user see front and back of their selection before payment, I did good, yes?</p>
                 </div>
+                <div class="row button-row">
+                    <input type="submit" value="Make payment" class="button" />
+                </div>
+                <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
                     <a href="members-help.php?topic=Confirm%20and%20Pay" class="button white-button">Help with this page</a><br />

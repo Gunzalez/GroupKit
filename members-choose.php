@@ -1,3 +1,36 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["gender"])){
+    $_SESSION["gender"] = 'womens';
+}
+if(!isset($_SESSION["colour"])){
+    $_SESSION["colour"] = '#000000';
+}
+if(!isset($_SESSION["size"])){
+    $_SESSION["size"] = 'nil';
+}
+if(!isset($_SESSION["position"])){
+    $_SESSION["position"] = 'left';
+}
+if(!isset($_SESSION["nameStyle"])){
+    $_SESSION["nameStyle"] = 'signikabold';
+}
+if(!isset($_SESSION["numberStyle"])){
+    $_SESSION["numberStyle"] = 'signikabold';
+}
+
+$gender = $_SESSION["gender"];
+$colour = $_SESSION["colour"];
+$size = $_SESSION["size"];
+
+function echoIfEqual($val1, $val2, $str){
+    if($val1 == $val2){
+        echo $str;
+    }
+}
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -16,42 +49,6 @@
                 <a href="members-sign-in.php" class="button back-button white-button">Back</a>
                 <div class="cboth"></div>
             </div>
-
-            <?php
-            function echoIfEqual($val1, $val2, $str){
-                if($val1 == $val2){
-                    echo $str;
-                }
-            }
-
-
-
-            session_start();
-            if(!isset($_SESSION["gender"])){
-                $_SESSION["gender"] = 'womens';
-            }
-            if(!isset($_SESSION["colour"])){
-                $_SESSION["colour"] = '#000000';
-            }
-            if(!isset($_SESSION["size"])){
-                $_SESSION["size"] = 'nil';
-            }
-            if(!isset($_SESSION["position"])){
-                $_SESSION["position"] = 'left';
-            }
-            if(!isset($_SESSION["nameStyle"])){
-                $_SESSION["nameStyle"] = 'signikabold';
-            }
-            if(!isset($_SESSION["numberStyle"])){
-                $_SESSION["numberStyle"] = 'signikabold';
-            }
-
-
-
-            $gender = $_SESSION["gender"];
-            $colour = $_SESSION["colour"];
-            $size = $_SESSION["size"];
-            ?>
 
             <div class="showcase">
                 <div id="garment-display" class="display <?php echo $gender; ?>">

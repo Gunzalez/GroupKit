@@ -1,3 +1,16 @@
+<?php
+session_start();
+$gender = 'womens';
+if(isset($_SESSION['gender'])){
+    $gender = $_SESSION['gender'];
+}
+
+$view = 'back';
+if(isset($_GET['view'])){
+    $view  = $_GET['view'];
+}
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -18,18 +31,6 @@
                 <div class="cboth"></div>
             </div>
 
-            <?php
-            session_start();
-            $gender = 'womens';
-            if(isset($_SESSION['gender'])){
-                $gender = $_SESSION['gender'];
-            }
-
-            $view = 'back';
-            if(isset($_GET['view'])){
-                $view  = $_GET['view'];
-            }
-            ?>
 
             <div class="showcase">
                 <div id="garment-display" class="display <?php echo $view; ?> <?php echo $gender; ?>">

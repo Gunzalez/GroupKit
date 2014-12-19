@@ -23,6 +23,8 @@ Members personalise front, responsive                                   3.0 hrs 
 
 TODO
 ================================
+Fix IE radio buttons in IE, e.g 'Position' field
+Front/Back views for Confirm and Pay, finish it
 
 
 

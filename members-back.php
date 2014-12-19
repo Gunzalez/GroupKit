@@ -1,3 +1,27 @@
+<?php
+session_start();
+if(isset($_POST['style'])){
+    $_SESSION["style"] = $_POST['style'];
+}
+if(isset($_POST['position'])){
+    $_SESSION["position"] = $_POST['position'];
+}
+if(isset($_POST['nameStyle'])){
+    $_SESSION["nameStyle"] = $_POST['nameStyle'];
+}
+
+$gender = $_SESSION['gender'];
+$colour = $_SESSION['colour'];
+$nameStyle = $_SESSION["nameStyle"];
+$numberStyle = $_SESSION["numberStyle"];
+
+function echoIfEqual($val1, $val2, $str){
+    if($val1 == $val2){
+        echo $str;
+    }
+}
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -16,32 +40,6 @@
                 <a href="members-front.php" class="button back-button white-button">Back</a>
                 <div class="cboth"></div>
             </div>
-
-            <?php
-            function echoIfEqual($val1, $val2, $str){
-                if($val1 == $val2){
-                    echo $str;
-                }
-            }
-
-
-            session_start();
-            if(isset($_POST['style'])){
-                $_SESSION["style"] = $_POST['style'];
-            }
-            if(isset($_POST['position'])){
-                $_SESSION["position"] = $_POST['position'];
-            }
-            if(isset($_POST['nameStyle'])){
-                $_SESSION["nameStyle"] = $_POST['nameStyle'];
-            }
-
-
-            $gender = $_SESSION['gender'];
-            $colour = $_SESSION['colour'];
-            $nameStyle = $_SESSION["nameStyle"];
-            $numberStyle = $_SESSION["numberStyle"];
-            ?>
 
             <div class="showcase">
                 <div id="garment-display" class="display back <?php echo $gender; ?>">

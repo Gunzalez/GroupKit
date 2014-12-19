@@ -31,15 +31,14 @@
                 $('html').addClass('desktop');
             }
 
-
-            //$('.back-button').on('click', function(evt) {
-            //    evt.preventDefault();
-            //    if($(this).attr('href') == '#'){
-            //        history.back(1);
-            //    } else {
-            //        location.assign($(this).attr('href'));
-            //    }
-            //})
+            $('.back-button').on('click', function(evt) {
+                evt.preventDefault();
+                if($(this).attr('href') == '#'){
+                    history.back(1);
+                } else {
+                    location.assign($(this).attr('href'));
+                }
+            })
         }
 
     };
