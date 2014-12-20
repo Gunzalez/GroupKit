@@ -51,7 +51,7 @@ $position = $_SESSION['position'];
                 </div>
             </div>
 
-            <form class="form" id="choose-garment-form" action="members-back.php" method="post" name="choose-garment-form" novalidate="novalidate">
+            <form class="form" id="personalise-front-form" action="members-back.php" method="post" name="personalise-front-form" novalidate="novalidate">
                 <!--
                 TODO:
                 Why is this repeated in PSD, you can uncomment if you want
@@ -72,20 +72,20 @@ $position = $_SESSION['position'];
                     <div class="like-label">Position</div>
                     <div class="like-input position-switch">
                         <input id="left" type="radio" name="position" value="left"<?php echoIfEqual('left', $position, ' checked'); ?>>
-                        <label for="left">Left chest</label>
+                        <label for="left" class="left">Left chest</label>
                         <input id="right" type="radio" name="position" value="right"<?php echoIfEqual('right', $position, ' checked'); ?>>
-                        <label for="right">Right chest</label>
+                        <label for="right" class="right">Right chest</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="like-label">Name style</div>
                     <div class="like-input style-switch block">
                         <input id="style4" type="radio" name="nameStyle" value="signikabold"<?php echoIfEqual('signikabold', $nameStyle, ' checked'); ?>>
-                        <label for="style4">Signika Bold</label><br />
+                        <label for="style4">Signika Bold</label><br class="cleft" />
                         <input id="style1" type="radio" name="nameStyle" value="Verdana"<?php echoIfEqual('Verdana', $nameStyle, ' checked'); ?>>
-                        <label for="style1">Verdana</label><br />
+                        <label for="style1">Verdana</label><br class="cleft" />
                         <input id="style2" type="radio" name="nameStyle" value="Arial"<?php echoIfEqual('Arial', $nameStyle, ' checked'); ?>>
-                        <label for="style2">Some-long FontName</label><br />
+                        <label for="style2">Some-long FontName</label><br class="cleft" />
                         <input id="style3" type="radio" name="nameStyle" value="Century Gothic"<?php echoIfEqual('Century Gothic', $nameStyle, ' checked'); ?>>
                         <label for="style3">Century Gothic</label>
                     </div>

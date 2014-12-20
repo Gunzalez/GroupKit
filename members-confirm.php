@@ -9,6 +9,7 @@ $gender = $_SESSION['gender'];
 $colour = $_SESSION['colour'];
 $nameStyle = $_SESSION["nameStyle"];
 $numberStyle = $_SESSION["numberStyle"];
+$position = $_SESSION["position"];
 
 function echoIfEqual($val1, $val2, $str){
     if($val1 == $val2){
@@ -38,20 +39,23 @@ function echoIfEqual($val1, $val2, $str){
 
             <div class="showcase">
                 <div id="garment-display" class="display back <?php echo $gender; ?>">
-                    <span class="figure small" data-figure="name" style="color: <?php echo $colour; ?>; font-family: '<?php echo $nameStyle; ?>';">
+                    <span class="figure small front <?php echo $position; ?>" data-figure="name" style="color: <?php echo $colour; ?>; font-family: '<?php echo $nameStyle; ?>';">
                         XXXX
                     </span>
-                    <span class="figure big" data-figure="number" style="color: <?php echo $colour; ?>; font-family: '<?php echo $numberStyle; ?>';">
+                    <span class="figure small back" data-figure="name" style="color: <?php echo $colour; ?>; font-family: '<?php echo $nameStyle; ?>';">
+                        XXXX
+                    </span>
+                    <span class="figure big back" data-figure="number" style="color: <?php echo $colour; ?>; font-family: '<?php echo $numberStyle; ?>';">
                         10
                     </span>
                 </div>
-                <div class="gender-switch">
-                    <a href="#" class="button white-button selected" data-gender="back">Back</a>
-                    <a href="#" class="button white-button" data-gender="front">Front</a>
+                <div class="view-switch switch">
+                    <a href="#" class="button white-button selected" data-view="back">Back</a>
+                    <a href="#" class="button white-button" data-view="front">Front</a>
                 </div>
             </div>
 
-            <form class="form" id="choose-garment-form" action="#" method="post" name="choose-garment-form" novalidate="novalidate">
+            <form class="form" id="confirm-and-pay-form" action="#" method="post" name="confirm-and-pay-form" novalidate="novalidate">
                 <div style="min-height: 180px">
                     <p>There are no PSDs or wire-frames for the page, I presume it will contain a summary of their selection. Please supply, or Rob can build it.</p>
                     <p>See those buttons below the display there, lets user see front and back of their selection before payment, I did good, yes?</p>

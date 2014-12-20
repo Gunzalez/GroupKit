@@ -38,7 +38,7 @@ if(isset($_GET['view'])){
                 </div>
             </div>
 
-            <form class="form" id="choose-garment-form" action="#" method="post" name="choose-garment-form" novalidate="novalidate">
+            <div class="like-form">
                 <div style="min-height: 180px">
                     <h3><?php echo $_GET['topic']; ?></h3>
                     <p>Ipm struff in hesum strur tabelsum struff in her tam struff in her tabelbelt ennis</p>
@@ -47,7 +47,7 @@ if(isset($_GET['view'])){
                 <div class="helpers">
                     <a href="members-start-over.php" class="button white-button">Start over</a>
                 </div>
-            </form>
+            </div>
             <div class="cboth"></div>
 
 

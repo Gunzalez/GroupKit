@@ -79,19 +79,20 @@ select.select { width: 200px; box-sizing: border-box; }
 .page .title h2 { float: left; }
 .page .form-heading { width: 340px; margin: 0 auto 10px auto; }
 .page .form-subheading { width: 340px; margin: 0 auto; }
-.page .form { width: 340px; padding-bottom: 10px; margin: 0 auto 20px auto; }
-.page .form .divider { border-bottom: 1px solid #e8e8e8; height: 2px; width: 100%; }
-.page .form .row { float: left; clear: left; padding-bottom: 15px; width: 100%; }
-.page .form .row .like-label, .page .form .row label { float: left; padding-top: 5px; width: 140px; }
-.page .form .row .select, .page .form .row .input { float: left; }
-.page .form .row .like-input { float: left; width: 200px; }
-.page .form .row .like-input label { padding: 5px 15px 0 0; width: auto; cursor: pointer; }
-.page .form .row .like-input input { float: left; margin: 7px 5px 0 0; }
-.page .form .row .like-input.block label { float: none; }
-.page .form .row .like-input.swatches label { padding: 5px 0 0 0; width: auto; cursor: pointer; }
-.page .form .row .like-input.swatches input { margin: 5px 16px 0 5px; }
-.page .form .row .info { width: 200px; margin-left: 140px; float: left; text-align: left; padding-top: 4px; padding-bottom: 0; }
-.page .form .row.button-row .button { margin-left: 140px; }
+.page .like-form, .page .form { width: 340px; padding-bottom: 10px; margin: 0 auto 20px auto; }
+.page .like-form .divider, .page .form .divider { border-bottom: 1px solid #e8e8e8; height: 2px; width: 100%; }
+.page .like-form .row, .page .form .row { float: left; clear: left; padding-bottom: 15px; width: 100%; }
+.page .like-form .row .like-label, .page .like-form .row label, .page .form .row .like-label, .page .form .row label { float: left; padding-top: 5px; width: 140px; }
+.page .like-form .row .select, .page .like-form .row .input, .page .form .row .select, .page .form .row .input { float: left; }
+.page .like-form .row .like-input, .page .form .row .like-input { float: left; width: 200px; }
+.page .like-form .row .like-input label, .page .form .row .like-input label { padding: 5px 15px 0 0; width: auto; cursor: pointer; }
+.page .like-form .row .like-input label.right, .page .form .row .like-input label.right { padding-right: 0; }
+.page .like-form .row .like-input input, .page .form .row .like-input input { float: left; margin: 7px 5px 0 0; display: inline-block; }
+.page .like-form .row .like-input.block label, .page .form .row .like-input.block label { float: none; display: inline-block; }
+.page .like-form .row .like-input.swatches label, .page .form .row .like-input.swatches label { padding: 5px 0 0 0; width: auto; cursor: pointer; }
+.page .like-form .row .like-input.swatches input, .page .form .row .like-input.swatches input { margin: 5px 16px 0 5px; }
+.page .like-form .row .info, .page .form .row .info { width: 200px; margin-left: 140px; float: left; text-align: left; padding-top: 4px; padding-bottom: 0; }
+.page .like-form .row.button-row .button, .page .form .row.button-row .button { margin-left: 140px; }
 
 .inner .main .content { width: 670px; }
 .inner .showcase { float: left; width: 268px; }
@@ -102,9 +103,9 @@ select.select { width: 200px; box-sizing: border-box; }
 .inner .showcase .figure.small.right { padding-left: 40px; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
 .inner .showcase .display.back .small { padding-top: 140px; }
 .inner .showcase .display.back .big { margin-top: -12px; padding-top: 0; }
-.inner .form { float: right; }
-.inner .form .chosen-name { font-size: 1.3em; line-height: 130%; display: block; padding-top: 5px; padding-bottom: 5px; }
-.inner .form .chosen-name.big { font-size: 2.5em; line-height: 100%; }
+.inner .like-form, .inner .form { float: right; }
+.inner .like-form .chosen-name, .inner .form .chosen-name { font-size: 1.3em; line-height: 130%; display: block; padding-top: 5px; padding-bottom: 5px; }
+.inner .like-form .chosen-name.big, .inner .form .chosen-name.big { font-size: 2.5em; line-height: 100%; }
 .inner span.colour { display: inline-block; width: 20px; height: 20px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; cursor: pointer; border: 1px solid #d9e024; }
 .inner span.colour.colour2 { background: #2AA9E0; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
 .inner span.colour.colour1 { background: #000000; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
@@ -115,10 +116,12 @@ select.select { width: 200px; box-sizing: border-box; }
 #garment-display.womens.front { background: url("../images/garment-womens-front.jpg") 0 0 no-repeat; }
 #garment-display.mens { background: url("../images/garment-mens.jpg") 0 0 no-repeat; }
 #garment-display.mens.front { background: url("../images/garment-mens-front.jpg") 0 0 no-repeat; }
+#garment-display.back .front { display: none; }
+#garment-display.front .back { display: none; }
 
-.gender-switch { padding-bottom: 15px; text-align: center; }
-.gender-switch a { display: inline-block; color: #cccccc !important; border-color: #cccccc !important; width: 60px; text-align: center; background-color: #ffffff !important; }
-.gender-switch a.selected { color: #76a741 !important; border-color: #76a741 !important; background-color: #ffffff !important; }
+.switch { padding-bottom: 15px; text-align: center; }
+.switch a { display: inline-block; color: #cccccc !important; border-color: #cccccc !important; width: 60px; text-align: center; background-color: #ffffff !important; }
+.switch a.selected { color: #76a741 !important; border-color: #76a741 !important; background-color: #ffffff !important; }
 
 .footer { width: 100%; padding: 30px 0; border-top: 1px solid #d9e024; -webkit-box-shadow: inset 0px 24px 30px -4px rgba(50, 50, 50, 0.05); -moz-box-shadow: inset 0px 24px 30px -4px rgba(50, 50, 50, 0.05); box-shadow: inset 0px 24px 30px -4px rgba(50, 50, 50, 0.05); }
 .footer .content p { padding-bottom: 35px; }
@@ -153,7 +156,7 @@ select.select { width: 200px; box-sizing: border-box; }
   .inner .main .content { width: 380px; }
   .inner .showcase { float: none; width: 100%; padding-bottom: 20px; margin: 0 auto; }
   .inner .showcase .display { margin: 0 auto; }
-  .inner .form { float: none; }
+  .inner .like-form, .inner .form { float: none; }
   .main .carousel { width: 100%; }
   .main .content { padding-bottom: 15px; }
   .main .content .entry-points { margin: 0 auto; width: 100%; padding: 0; }
@@ -176,14 +179,14 @@ select.select { width: 200px; box-sizing: border-box; }
   .footer .content .company-details { text-align: center; }
   .footer .content .company-details li { width: 100%; box-sizing: border-box; text-align: center; padding-bottom: 5px; font-size: 1.1em !important; float: left; border: none; } }
 @media only screen and (max-width: 400px) { .page .form-heading, .page .form-subheading { width: 100%; }
-  .page .form { width: 100%; }
-  .page .form .row .like-label, .page .form .row label { float: none; padding-top: 0; padding-bottom: 5px; width: 100%; }
-  .page .form .row .select, .page .form .row .input { float: none; width: 100%; }
-  .page .form .row.button-row .button { margin: 0; width: 100%; text-align: left; }
-  .page .form .row .info { width: 100%; margin: 0; }
-  .page .form .row .like-input { width: 100%; }
-  .page .form .row .like-input label { float: left; }
-  .page .form .helpers { padding-top: 15px; padding-left: 0; }
+  .page .like-form, .page .form { width: 100%; }
+  .page .like-form .row .like-label, .page .like-form .row label, .page .form .row .like-label, .page .form .row label { float: none; padding-top: 0; padding-bottom: 5px; width: 100%; }
+  .page .like-form .row .select, .page .like-form .row .input, .page .form .row .select, .page .form .row .input { float: none; width: 100%; }
+  .page .like-form .row.button-row .button, .page .form .row.button-row .button { margin: 0; width: 100%; text-align: left; }
+  .page .like-form .row .info, .page .form .row .info { width: 100%; margin: 0; }
+  .page .like-form .row .like-input, .page .form .row .like-input { width: 100%; }
+  .page .like-form .row .like-input label, .page .form .row .like-input label { float: left; }
+  .page .like-form .helpers, .page .form .helpers { padding-top: 15px; padding-left: 0; }
   .page.inner .main .content { width: 100%; }
   .page.inner .showcase { padding-bottom: 10px; }
   .footer .content ul.auxiliary-navigation { float: none; text-align: center; padding-bottom: 15px; }

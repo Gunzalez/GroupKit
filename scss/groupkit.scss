@@ -338,6 +338,7 @@ select {
         margin: 0 auto;
     }
 
+    .like-form,
     .form {
         width: 340px;
         padding-bottom: 10px;
@@ -375,16 +376,23 @@ select {
                     padding: 5px 15px 0 0;
                     width: auto;
                     cursor: pointer;
+
+                    &.right {
+                        padding-right: 0;
+                    }
                 }
 
                 input {
                     float: left;
                     margin: 7px 5px 0 0;
+                    display: inline-block;
                 }
 
                 &.block {
+
                     label {
                         float: none;
+                        display: inline-block;
                     }
                 }
 
@@ -461,23 +469,21 @@ select {
             }
         }
 
+        .display {
+            &.back {
+                .small {
+                    padding-top: 140px;
 
-            .display {
-                &.back {
-                    .small {
-                        padding-top: 140px;
-
-                    }
-                    .big {
-                        margin-top: -12px;
-                        padding-top: 0;
-                    }
+                }
+                .big {
+                    margin-top: -12px;
+                    padding-top: 0;
                 }
             }
-
+        }
     }
 
-
+    .like-form,
     .form {
         float: right;
 
@@ -547,9 +553,21 @@ select {
             background: url("../images/garment-mens-front.jpg") 0 0 no-repeat;
         }
     }
+
+    &.back {
+        .front {
+            display: none;
+        }
+    }
+
+    &.front {
+        .back {
+            display: none;
+        }
+    }
 }
 
-.gender-switch {
+.switch {
     padding-bottom: 15px;
     text-align: center;
 
@@ -782,6 +800,7 @@ select {
             }
         }
 
+        .like-form,
         .form {
             float: none;
         }
@@ -935,6 +954,7 @@ select {
             width: 100%;
         }
 
+        .like-form,
         .form {
             width: 100%;
 

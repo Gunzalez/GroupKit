@@ -58,7 +58,9 @@
                 $positionSwitcher = $('.position-switch', self.$html),
                 $positionSwitches = $('input', $positionSwitcher),
                 $styleSwitcher = $('.style-switch', self.$html),
-                $styleSwitches = $('input', $styleSwitcher);
+                $styleSwitches = $('input', $styleSwitcher),
+                $viewSwitcher = $('.view-switch', self.$html),
+                $viewSwitches = $('a', $viewSwitcher);
 
             $genderSwitches.on('click', function(evt){
                 evt.preventDefault();
@@ -96,6 +98,19 @@
                     newStyle = $(this).val();
 
                 $figure.css('font-family', newStyle);
+            });
+
+            $viewSwitches.on('click', function(evt){
+                evt.preventDefault();
+                if(!$(this).hasClass('selected')){
+                    $viewSwitches.removeClass('selected');
+                    $(this).addClass('selected');
+
+                    var view = $(this).data('view');
+                    self.$garmentDisplay.removeClass('back')
+                        .removeClass('front')
+                        .addClass(view);
+                }
             });
         }
 

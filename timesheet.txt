@@ -8,6 +8,7 @@ Rejigged the responsive aspect, as PSDs did not make sense              1.5 hrs 
 Members sign in page                                                    1.5 hrs   - Tuesday (Mid night)
 Members choose garment, responsive                                      3.0 hrs   - Wednesday night, 2am
 Members personalise front, responsive                                   3.0 hrs   - Thursday morning, (took day off)
+Ringleaders sing in page, refactoring css and clearing TODOs            2.0 hrs   - Friday night (midnight)
 
 
 
@@ -23,8 +24,6 @@ Members personalise front, responsive                                   3.0 hrs 
 
 TODO
 ================================
-Fix IE radio buttons in IE, e.g 'Position' field
-Front/Back views for Confirm and Pay, finish it
 
 
 

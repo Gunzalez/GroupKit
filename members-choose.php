@@ -56,7 +56,7 @@ function echoIfEqual($val1, $val2, $str){
                         XX
                     </span>
                 </div>
-                <div class="gender-switch">
+                <div class="gender-switch switch">
                     <a href="#" class="button white-button<?php echoIfEqual('womens', $gender, ' selected'); ?>" data-gender="womens">Womens</a>
                     <a href="#" class="button white-button<?php echoIfEqual('mens', $gender, ' selected'); ?>" data-gender="mens">Mens</a>
                 </div>
