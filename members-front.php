@@ -93,7 +93,7 @@ $position = $_SESSION['position'];
                 <div class="row">
                     <div class="like-label">Name</div>
                     <div class="like-input">
-                        <span class="chosen-name" style="color: <?php echo $colour; ?>">Coke Zero</span>
+                        <span id="chosen-name" class="chosen-name" style="color: <?php echo $colour; ?>; font-family: <?php echo $nameStyle; ?>">Coke Zero</span>
                         <p>This is the name selected by your Ringleader.</p>
                     </div>
                 </div>

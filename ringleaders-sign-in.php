@@ -17,7 +17,7 @@
                 <div class="cboth"></div>
             </div>
 
-            <form class="form" id="ringleaders-sign-in-form" action="members-start-over.php" method="post" name="ringleaders-sign-in-form" novalidate="novalidate">
+            <form class="form" id="ringleaders-sign-in-form" action="ringleaders-manage-orders.php" method="post" name="ringleaders-sign-in-form" novalidate="novalidate">
                 <div class="row">
                     <label for="email">Email address</label>
                     <input type="email" name="email" id="email" value="" class="input" tabindex="1" />
@@ -49,7 +49,7 @@
                 <h2>...Or create an account</h2>
                 <div class="cboth"></div>
             </div>
-            <form class="form last-element" id="create-account" action="" method="post" name="create-account" novalidate="novalidate">
+            <form class="form last-element" id="create-account" action="ringleaders-welcome.php" method="post" name="create-account" novalidate="novalidate">
                 <div class="row">
                     <label for="firstname">First name</label>
                     <input type="text" name="firstname" id="firstname" value="" class="input"  />

@@ -270,7 +270,6 @@ select {
     color: #ffffff;
     background-color: $green;
     @include transitions();
-    border: none;
     font-family: 'signikaregular';
     text-transform: uppercase;
     border: 1px solid $green;
@@ -289,6 +288,10 @@ select {
         &:hover {
             background-color: #ffffff;
         }
+    }
+
+    &.standalone-button {
+        display: block;
     }
 }
 
@@ -328,6 +331,12 @@ select {
         }
     }
 
+    .divider {
+        border-bottom:  1px solid #e8e8e8;
+        height: 2px;
+        width: 100%;
+    }
+
     .form-heading {
         width: 340px;
         margin: 0 auto 10px auto;
@@ -343,12 +352,6 @@ select {
         width: 340px;
         padding-bottom: 10px;
         margin: 0 auto 20px auto;
-
-        .divider {
-            border-bottom:  1px solid #e8e8e8;
-            height: 2px;
-            width: 100%;
-        }
 
         .row {
             float: left;
@@ -407,6 +410,10 @@ select {
                     input {
                         margin: 5px 16px 0 5px;
                     }
+                }
+
+                &.summary {
+                    padding-top: 5px;
                 }
             }
 
@@ -481,6 +488,26 @@ select {
                 }
             }
         }
+
+        ul {
+            margin: 0;
+            padding: 0 0 15px 15px;
+
+            li {
+                padding-bottom: 5px;
+            }
+        }
+
+        p {
+            a {
+                color: $green;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
     }
 
     .like-form,
@@ -493,10 +520,85 @@ select {
             display: block;
             padding-top: 5px;
             padding-bottom: 5px;
+        }
 
+        .chosen-number {
             &.big {
                 font-size: 2.5em;
                 line-height: 100%;
+                height: 32px;
+                display: block;
+            }
+        }
+
+        $tableHeader: #cfcfcf;
+        $tableOdd: #f7f7f7;
+        $tableEven: #ededed;
+
+        .orders-list {
+            width: 100%;
+            margin-bottom: 30px;
+            border-bottom: 1px solid $tableOdd;
+
+            caption {
+                text-align: left;
+                padding-bottom: 10px;
+                font-size: 1.2em;
+            }
+
+            th, td {
+                padding: 10px 14px;
+                vertical-align: top;
+            }
+
+            th {
+                font-weight: normal;
+                text-align: left;
+                background: $tableHeader;
+                color: #000000;
+                white-space: nowrap;
+            }
+
+            td {
+                cursor: pointer;
+            }
+
+            tr {
+                td {
+                    @include transition-background(0.1s);
+                }
+
+                &:hover {
+                    td {
+                        @include transition-background(0.1s);
+                        color: #000000;
+                        background: #ffffff;
+                    }
+                }
+            }
+
+            .odd {
+                td {
+                    background: $tableOdd;
+                }
+            }
+
+            .even {
+                td {
+                    background: $tableEven;
+                }
+            }
+
+            .empty-list {
+                td {
+                    cursor: default;
+                    background: #ffffff;
+                    color: $black;
+                }
+
+                &:hover {
+                    color: $black;
+                }
             }
         }
     }
@@ -949,6 +1051,7 @@ select {
 @media only screen and (max-width: 400px) {
 
     .page {
+
         .form-heading,
         .form-subheading {
             width: 100%;
@@ -978,6 +1081,10 @@ select {
                         margin: 0;
                         width: 100%;
                         text-align: left;
+
+                        &.standalone-button {
+                            width: auto;
+                        }
                     }
                 }
 
@@ -986,11 +1093,15 @@ select {
                     margin: 0;
                 }
 
-                .like-input{
+                .like-input {
                     width: 100%;
 
                     label {
                         float: left;
+                    }
+
+                    &.summary {
+                        padding-top: 0;
                     }
                 }
             }
@@ -998,7 +1109,6 @@ select {
             .helpers {
                 padding-top: 15px;
                 padding-left: 0;
-
             }
         }
 
@@ -1012,10 +1122,15 @@ select {
             }
 
             .showcase {
-                padding-bottom: 10px;
+                padding-bottom: 5px;
+            }
+
+            .orders-list {
+                .order-date {
+                    display: none;
+                }
             }
         }
-
     }
 
     .footer {

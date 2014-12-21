@@ -85,7 +85,7 @@ function echoIfEqual($val1, $val2, $str){
                 <div class="row">
                     <div class="like-label">Number</div>
                     <div class="like-input">
-                        <span class="chosen-name big" style="color: <?php echo $colour; ?>">10</span>
+                        <span id="chosen-number" class="chosen-number big" style="color: <?php echo $colour; ?>; font-family: <?php echo $numberStyle; ?>">10</span>
                         <p>This is the number selected by your Ringleader.</p>
                     </div>
                 </div>

@@ -56,9 +56,15 @@ function echoIfEqual($val1, $val2, $str){
             </div>
 
             <form class="form" id="confirm-and-pay-form" action="#" method="post" name="confirm-and-pay-form" novalidate="novalidate">
-                <div style="min-height: 180px">
-                    <p>There are no PSDs or wire-frames for the page, I presume it will contain a summary of their selection. Please supply, or Rob can build it.</p>
-                    <p>See those buttons below the display there, lets user see front and back of their selection before payment, I did good, yes?</p>
+                <div class="row">
+                    <div class="like-label">Summary</div>
+                    <div class="like-input summary">
+                        <p>No PSDs/wire-frames for this page, I presume full summary of selection. Meanwhile, Front/Back buttons let users see their selection before payment, nice touch, yes?</p>
+                    </div>
+                    <div class="like-label">Cost</div>
+                    <div class="like-input summary">
+                        <p>Perhaps some table here with costs, images of PayPal or credit/debit cards, y'know the usual.</p>
+                    </div>
                 </div>
                 <div class="row button-row">
                     <input type="submit" value="Make payment" class="button" />

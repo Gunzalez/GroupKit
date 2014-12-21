@@ -43,11 +43,28 @@
 
     };
 
+    groupkit.orders = {
+        $html: $('.orders-list'),
+
+        init: function(){
+            var self = this,
+                $orderRows = $('tr', self.$html);
+
+            $orderRows.each(function(i, obj){
+                $(obj).on('click', function(){
+                    var orderId = $(this).data('order-id');
+                    if(orderId !== undefined){
+                        location.assign('ringleaders-order-detail.php?id='+orderId);
+                    }
+                });
+            });
+        }
+    };
+
     groupkit.garmentSelection = {
         $html: $('.garment-selection'),
         $garmentDisplay: $('#garment-display', this.$html),
         $form: $('.form', this.$html),
-
 
         init: function(){
             var self = this,
@@ -94,10 +111,15 @@
 
             $styleSwitches.on('change', function(){
                 var figureAttr = $(this).attr('name').replace('Style',''),
-                    $figure = $('[data-figure="'+figureAttr+'"]', self.$garmentDisplay),
+                    $figureNameOrNumber = $('[data-figure="'+figureAttr+'"]', self.$garmentDisplay),
                     newStyle = $(this).val();
 
-                $figure.css('font-family', newStyle);
+                $figureNameOrNumber.css('font-family', newStyle);
+
+                // a little extra UX
+                var chosenNameOrNumberId = '#chosen-'+figureAttr;
+                console.log(chosenNameOrNumberId);
+                $(chosenNameOrNumberId).css('font-family', newStyle);
             });
 
             $viewSwitches.on('click', function(evt){
@@ -113,15 +135,6 @@
                 }
             });
         }
-
-
-
-
-
-
-
-
-
     };
 
 	groupkit.init = function(){
@@ -129,6 +142,7 @@
         // Other init
         groupkit.environment.init();
         groupkit.garmentSelection.init();
+        groupkit.orders.init();
         //
         //
         //

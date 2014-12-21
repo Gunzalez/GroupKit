@@ -61,7 +61,7 @@ function echoIfEqual($val1, $val2, $str){
                     <a href="#" class="button white-button<?php echoIfEqual('mens', $gender, ' selected'); ?>" data-gender="mens">Mens</a>
                 </div>
                 <div class="details">
-                    <p>100% Cotton Ladies T-Shirt. Lorem Ipsum is simply dummy text of the printing and typesetting industry ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.It survived not only five centuries.</p>
+                    <p>100% Cotton Ladies T-Shirt. Lorem Ipsum is simply dummy text of the printing and typesetting industry ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It survived not only five centuries...</p>
                 </div>
             </div>
 
@@ -102,7 +102,6 @@ function echoIfEqual($val1, $val2, $str){
                 </div>
             </form>
             <div class="cboth"></div>
-
 
         </div>
     </div>
