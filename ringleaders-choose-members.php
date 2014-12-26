@@ -71,7 +71,7 @@ function echoIfEqual($val1, $val2, $str){
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit - Ringleaders Admin Members</title>
+    <title>Group Kit - Ringleaders Choose Members</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body class="page inner">
@@ -99,20 +99,20 @@ function echoIfEqual($val1, $val2, $str){
             <div class="showcase">
                 <h3>#<?php echo $teamId; ?> / <?php echo $teamName; ?></h3>
                 <ul>
-                    <li<?php echoIfEqual('1', $memberId, ' class="selected"'); ?>><a href="ringleaders-admin-members.php?teamId=<?php echo $teamId; ?>&memberId=1">Michael Jackson</a></li>
-                    <li<?php echoIfEqual('2', $memberId, ' class="selected"'); ?>><a href="ringleaders-admin-members.php?teamId=<?php echo $teamId; ?>&memberId=2">Jim Caviezel</a></li>
-                    <li<?php echoIfEqual('3', $memberId, ' class="selected"'); ?>><a href="ringleaders-admin-members.php?teamId=<?php echo $teamId; ?>&memberId=3">Rob Curle</a></li>
+                    <li<?php echoIfEqual('1', $memberId, ' class="selected"'); ?>><a href="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>&memberId=1">Michael Jackson</a></li>
+                    <li<?php echoIfEqual('2', $memberId, ' class="selected"'); ?>><a href="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>&memberId=2">Jim Caviezel</a></li>
+                    <li<?php echoIfEqual('3', $memberId, ' class="selected"'); ?>><a href="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>&memberId=3">Rob Curle</a></li>
                 </ul>
                 <?php
                 if(isset($_GET['memberId'])){
                     ?>
-                    <a href="ringleaders-admin-members.php?teamId=<?php echo $teamId; ?>" class="button standalone-button">Add new member</a>
+                    <a href="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>" class="button standalone-button">Add new member</a>
                 <?php
                 }
                 ?>
             </div>
 
-            <form class="form" id="" action="#" method="post" name="" novalidate="novalidate">
+            <form class="form" id="" action="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>&memberId=1" method="post" name="" novalidate="novalidate">
                 <input type="hidden" id="memberId" name="memberId" value="<?php echo $memberId; ?>" />
                 <input type="hidden" id="teamId" name="teamId" value="<?php echo $teamId; ?>" />
                 <div class="row">
@@ -131,23 +131,22 @@ function echoIfEqual($val1, $val2, $str){
                     <label for="phone">Phone</label>
                     <input type="number" id="phone" name="phone" value="<?php echo $memberPhone; ?>" class="input" />
                 </div>
-<!--                <div class="row">-->
-<!--                    <label for="garment-name">Garment name</label>-->
-<!--                    <input type="text" id="garment-name" name="garment-name" value="--><?php //echo $garmentName; ?><!--" class="input" />-->
-<!--                </div>-->
-<!--                <div class="row">-->
-<!--                    <label for="garment-number">Big number</label>-->
-<!--                    <input type="text" id="garment-number" name="garment-number" maxlength="4" style="width: 50px;" value="--><?php //echo $garmentNumber; ?><!--" class="input" />-->
-<!--                    <p class="info">Unique Personalisation Number</p>-->
-<!--                </div>-->
-
+                <div class="row">
+                    <label for="garment-name">Garment name</label>
+                    <input type="text" id="garment-name" name="garment-name" value="<?php echo $garmentName; ?>" class="input" />
+                </div>
+                <div class="row">
+                    <label for="garment-number">Big number</label>
+                    <input type="text" id="garment-number" name="garment-number" maxlength="4" style="width: 50px;" value="<?php echo $garmentNumber; ?>" class="input" />
+                    <p class="info">Unique Personalisation Number</p>
+                </div>
                 <div class="row button-row">
                     <?php
                     if(isset($_GET['memberId'])){
                         ?>
                         <input type="submit" value="Update member" class="button" />
                         <div class="links">
-                            <a href="ringleaders-choose-garment.php?id=<?php echo $memberId; ?>" class="button">Edit Member's Garment</a>
+                            <a href="ringleaders-choose-garment.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button">Edit Member's Garment</a>
                         </div>
                     <?php
                     } else {

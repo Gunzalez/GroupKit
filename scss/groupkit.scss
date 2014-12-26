@@ -286,7 +286,7 @@ textarea {
     }
 
     &.white-button {
-        background-color: #f2f2f2;
+        background-color: #ecebeb;
         border: 1px solid #f2f2f2;
         color: $black;
 
@@ -380,6 +380,7 @@ textarea {
                 float: left;
                 padding-top: 5px;
                 width: 140px;
+                font-size: 1.1em;
             }
 
             .select,
@@ -390,6 +391,10 @@ textarea {
             .like-input {
                 float: left;
                 width: 200px;
+
+                &.just-text {
+                    padding-top: 6px;
+                }
 
                 label {
                     padding: 5px 15px 0 0;
