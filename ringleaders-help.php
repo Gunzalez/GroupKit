@@ -13,7 +13,7 @@
 
             <div class="title">
                 <h2>Ringleaders help</h2>
-                <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>" class="button back-button white-button">Back</a>
+                <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
 

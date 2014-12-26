@@ -93,7 +93,7 @@ function echoIfEqual($val1, $val2, $str){
                 <?php
                 }
                 ?>
-                <a href="ringleaders-order-detail.php?id=<?php echo $teamId; ?>" class="button back-button white-button">Back</a>
+                <a href="ringleaders-order-detail.php?id=<?php echo $teamId; ?>" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
             <div class="showcase">
@@ -106,7 +106,7 @@ function echoIfEqual($val1, $val2, $str){
                 <?php
                 if(isset($_GET['memberId'])){
                     ?>
-                    <a href="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>" class="button standalone-button">Add new member</a>
+                    <a href="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>" class="button standalone-button"><i class="fa fa-fw"></i> Add new member</a>
                 <?php
                 }
                 ?>
@@ -144,14 +144,14 @@ function echoIfEqual($val1, $val2, $str){
                     <?php
                     if(isset($_GET['memberId'])){
                         ?>
-                        <input type="submit" value="Update member" class="button" />
+                        <button type="button" class="button"><i class="fa fa-fw"></i> Update member</button>
                         <div class="links">
-                            <a href="ringleaders-choose-garment.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button">Edit Member's Garment</a>
+                            <a href="ringleaders-choose-garment.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button"><i class="fa fa-fw"></i> Edit Member's Garment</a>
                         </div>
                     <?php
                     } else {
                         ?>
-                        <input type="submit" value="Add member" class="button" />
+                        <button type="button" class="button"><i class="fa fa-fw"></i> Add member</button>
                     <?php
                     }
                     ?>
@@ -159,12 +159,12 @@ function echoIfEqual($val1, $val2, $str){
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Admin%20Members" class="button white-button">Help with this page</a>
+                    <a href="ringleaders-help.php?topic=Admin%20Members" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a>
                     <?php
                     if(isset($_GET['memberId'])){
                         ?>
                         <br/>
-                        <a href="ringleaders-delete-member.php?id=<?php echo $memberId; ?>" class="button yellow-button">Delete member</a>
+                        <a href="ringleaders-delete-member.php?id=<?php echo $memberId; ?>" class="button yellow-button"><i class="fa fa-fw"></i> Delete member</a>
                     <?php
                     }
                     ?>

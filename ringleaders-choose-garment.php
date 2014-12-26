@@ -81,7 +81,7 @@ if(isset($_GET['teamId'])) {
 
             <div class="title">
                 <h2>Choose member garment</h2>
-                <a href="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button back-button white-button">Back</a>
+                <a href="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
 
@@ -120,7 +120,7 @@ if(isset($_GET['teamId'])) {
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Editing%20Member%20Garments" class="button white-button">Help with this page</a>
+                    <a href="ringleaders-help.php?topic=Editing%20Member%20Garments" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a>
                 </div>
             </form>
             <div class="cboth"></div>

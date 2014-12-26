@@ -10,7 +10,7 @@
         <ul class="auxiliary-navigation">
             <li class="first-li"><a href="#"><i class="fa fa-fw"></i><span>HELP</span></a></li>
             <li><a href="#"><i class="fa fa-fw"></i><span>CONTACT</span></a></li>
-            <li class="last-li"><a href="#"><i class="fa fa-fw"></i><span>RINGLEADER LOGIN</span></a></li>
+            <li class="last-li"><a href="ringleaders-sign-in.php"><i class="fa fa-fw"></i><span>RINGLEADER LOGIN</span></a></li>
         </ul>
         <div class="cboth"></div>
     </div>

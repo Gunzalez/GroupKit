@@ -12,6 +12,7 @@ Ringleaders sign in page, refactoring css and clearing TODOs            2.0 hrs 
 Ringleaders welcome page, manage orders, order detail, help page        5.0 hrs   - Saturday, (afternoon)
 RL members + RL team, Order details, Manage orders, refactors           6.0 hrs   - Thursday, Christmas Day (all day)
 RL choose team garment, choose member garment                           2.0 hrs   - Boxing day
+Icons everywhere, <submit> to <buttons>                                 1.0 hrs   - Boxing day
 
 
 

@@ -13,7 +13,7 @@
 
             <div class="title">
                 <h2>Manage your orders</h2>
-                <a href="ringleaders-sign-in.php" class="button back-button white-button">Back</a>
+                <a href="ringleaders-sign-in.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
 
@@ -58,12 +58,12 @@
                     </tr>
                 </table>
                 <div class="row button-row">
-                    <a href="ringleaders-order-detail.php" class="button standalone-button">Create new order</a>
+                    <a href="ringleaders-order-detail.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new order</a>
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Managing%20Your%20Orders" class="button white-button">Help with this page</a>
+                    <a href="ringleaders-help.php?topic=Managing%20Your%20Orders" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a>
                 </div>
             </div>
             <div class="cboth"></div>

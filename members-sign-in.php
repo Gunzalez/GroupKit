@@ -13,7 +13,7 @@
 
             <div class="title form-heading">
                 <h2>Members sign in</h2>
-                <a href="index.php" class="button back-button white-button">Back</a>
+                <a href="index.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
 
@@ -27,7 +27,7 @@
                     <input type="password" name="password" id="password" value="" class="input" tabindex="2" />
                 </div>
                 <div class="row button-row">
-                    <input type="submit" value="Sign in" class="button" tabindex="3" />
+                    <button type="button" class="button" tabindex="3"><i class="fa fa-fw"></i> Sign in</button>
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>
@@ -40,7 +40,7 @@
                     <input type="email" name="email" id="email" value="" class="input" tabindex="4" />
                 </div>
                 <div class="row button-row">
-                    <input type="submit" value="Help, I forgot" class="button" tabindex="5" />
+                    <button type="button" class="button" tabindex="5"><i class="fa fa-fw"></i> Help, I forgot</button>
                 </div>
                 <div class="cleft"></div>
             </form>

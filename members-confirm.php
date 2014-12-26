@@ -33,7 +33,7 @@ function echoIfEqual($val1, $val2, $str){
 
             <div class="title">
                 <h2>Confirm and pay</h2>
-                <a href="members-back.php" class="button back-button white-button">Back</a>
+                <a href="members-back.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
 
@@ -67,13 +67,13 @@ function echoIfEqual($val1, $val2, $str){
                     </div>
                 </div>
                 <div class="row button-row">
-                    <input type="submit" value="Make payment" class="button" />
+                    <button type="button" class="button"><i class="fa fa-fw"></i> Make payment</button>
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="members-help.php?topic=Confirm%20and%20Pay" class="button white-button">Help with this page</a><br />
-                    <a href="members-start-over.php" class="button white-button">Start over</a>
+                    <a href="members-help.php?topic=Confirm%20and%20Pay" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
+                    <a href="members-start-over.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a>
                 </div>
             </form>
             <div class="cboth"></div>

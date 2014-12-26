@@ -38,6 +38,15 @@
                 } else {
                     location.assign($(this).attr('href'));
                 }
+            });
+
+
+            var $allForms = $('.form');
+            $allForms.each(function(){
+                var $thisForm = $(this);
+                $('.button', $thisForm).on('click', function(){
+                    $thisForm.trigger('submit');
+                });
             })
         }
 

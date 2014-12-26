@@ -39,7 +39,7 @@ $position = $_SESSION['position'];
 
             <div class="title">
                 <h2>Personalise the front</h2>
-                <a href="members-choose.php" class="button back-button white-button">Back</a>
+                <a href="members-choose.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
 
@@ -98,15 +98,14 @@ $position = $_SESSION['position'];
                     </div>
                 </div>
 
-
                 <div class="row button-row">
-                    <input type="submit" value="Personalise the back" class="button" />
+                    <button type="button" class="button"><i class="fa fa-fw"></i> Personalise the back</button>
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="members-help.php?topic=Personalise%20The%20Front&view=front" class="button white-button">Help with this page</a><br />
-                    <a href="members-start-over.php" class="button white-button">Start over</a>
+                    <a href="members-help.php?topic=Personalise%20The%20Front&view=front" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
+                    <a href="members-start-over.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a>
                 </div>
             </form>
             <div class="cboth"></div>

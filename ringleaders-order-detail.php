@@ -45,7 +45,7 @@ if(isset($_GET['id'])) {
                 <?php
                 }
                 ?>
-                <a href="ringleaders-manage-orders.php" class="button back-button white-button">Back</a>
+                <a href="ringleaders-manage-orders.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
 
@@ -55,8 +55,8 @@ if(isset($_GET['id'])) {
                     ?>
                     <h3><?php echo $teamName; ?></h3>
                     <p>Admin - add/edit/remove members and garments for this team.</p>
-                    <a href="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>" class="button standalone-button">Team members</a><br />
-                    <a href="ringleaders-team-garments.php?teamId=<?php echo $teamId; ?>" class="button standalone-button">Admin team garment</a>
+                    <a href="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>" class="button standalone-button"><i class="fa fa-fw"></i> Team members</a><br />
+                    <a href="ringleaders-team-garments.php?teamId=<?php echo $teamId; ?>" class="button standalone-button"><i class="fa fa-fw"></i> Admin team garment</a>
                 <?php
                 } else {
                     ?>
@@ -80,11 +80,11 @@ if(isset($_GET['id'])) {
                     <?php
                     if(isset($_GET['id'])){
                         ?>
-                        <input type="submit" value="Update team" class="button" />
+                        <button type="button" class="button"><i class="fa fa-fw"></i> Update team</button>
                     <?php
                     } else {
                         ?>
-                        <input type="submit" value="Save team" class="button" />
+                        <button type="button" class="button"><i class="fa fa-fw"></i> Save team</button>
                     <?php
                     }
                     ?>
@@ -92,12 +92,12 @@ if(isset($_GET['id'])) {
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Creating%20/%20Editing%20Yours%20Orders" class="button white-button">Help with this page</a>
+                    <a href="ringleaders-help.php?topic=Creating%20/%20Editing%20Yours%20Orders" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a>
                     <?php
                     if(isset($_GET['id'])){
                         ?>
                         <br/>
-                        <a href="ringleaders-delete-order.php?id=<?php echo $teamId; ?>" class="button yellow-button">Delete order</a>
+                        <a href="ringleaders-delete-order.php?id=<?php echo $teamId; ?>" class="button yellow-button"><i class="fa fa-fw"></i> Delete order</a>
                     <?php
                     }
                     ?>

@@ -28,7 +28,7 @@ if(isset($_GET['teamId'])) {
 
             <div class="title">
                 <h2>Choose Team Garment</h2>
-                <a href="ringleaders-order-detail.php?id=<?php echo $teamId; ?>" class="button back-button white-button">Back</a>
+                <a href="ringleaders-order-detail.php?id=<?php echo $teamId; ?>" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
             <div class="showcase">
@@ -49,7 +49,7 @@ if(isset($_GET['teamId'])) {
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Admin%20Members" class="button white-button">Help with this page</a>
+                    <a href="ringleaders-help.php?topic=Admin%20Members" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a>
                 </div>
             </form>
             <div class="cboth"></div>

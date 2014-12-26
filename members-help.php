@@ -26,7 +26,7 @@ if(isset($_GET['view'])){
 
             <div class="title">
                 <h2>Members help</h2>
-                <a href="<?php echo $_SERVER['HTTP_REFERER']; ?> " class="button back-button white-button">Back</a>
+                <a href="<?php echo $_SERVER['HTTP_REFERER']; ?> " class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
 
@@ -46,7 +46,7 @@ if(isset($_GET['view'])){
                 </div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="members-start-over.php" class="button white-button">Start over</a>
+                    <a href="members-start-over.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a>
                 </div>
             </div>
             <div class="cboth"></div>
