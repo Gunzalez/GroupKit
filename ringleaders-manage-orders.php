@@ -52,7 +52,7 @@
                         <td class="order-status">100%</td>
                     </tr>
                     <tr data-order-id="419" class="odd">
-                        <td class="order-name">109&nbsp;/ LongOrderName...</td><!-- TODO. Rob, figured you might want to truncate, just incase. If so, do it in PHP, I tried CSS but difficult in a table cell, 25 characters in total I count  -->
+                        <td class="order-name">419&nbsp;/ LongOrderName...</td><!-- TODO. Rob, figured you might want to truncate, just incase. If so, do it in PHP, I tried CSS but difficult in a table cell, 25 characters in total I count  -->
                         <td class="order-date">09/11/2014</td>
                         <td class="order-status">75%</td>
                     </tr>

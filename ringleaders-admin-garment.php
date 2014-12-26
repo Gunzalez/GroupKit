@@ -5,25 +5,23 @@ $fakeTeamArray = array(
     "109" => "Go Ritchie Go!",
     "210" => "Wedding",
     "419" => "LongOrderNameLong OrderName",
-    "111" => "NewTeamName"
+    "111" => "New Team"
 );
 
 $teamName = '';
 $teamId = 'new';
 $teamDescription = '';
-$pageState = 'Create';
 
 if(isset($_GET['id'])) {
     $teamName = $fakeTeamArray[$_GET['id']];
     $teamId = $_GET['id'];
     $teamDescription = 'Cras in leo faucibus, consectetur lectus a, egestas ligula. Ut vel finibus est.';
-    $pageState = 'Edit';
 }
 ?>
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit - Ringleaders <?php echo $pageState; ?> Order</title>
+    <title>Group Kit - Ringleaders Admin Garment</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body class="page inner">
@@ -45,7 +43,7 @@ if(isset($_GET['id'])) {
                 <?php
                 }
                 ?>
-                <a href="ringleaders-manage-orders.php" class="button back-button white-button">Back</a>
+                <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>" class="button back-button white-button">Back</a>
                 <div class="cboth"></div>
             </div>
 
@@ -53,10 +51,10 @@ if(isset($_GET['id'])) {
                 <?php
                 if(isset($_GET['id'])){
                     ?>
-                    <h3><?php echo $teamName; ?></h3>
+                    <h2><?php echo $teamName; ?></h2>
                     <p>Admin - add/edit/remove members and garments from this team.</p>
-                    <a href="ringleaders-admin-members.php?teamId=<?php echo $teamId; ?>" class="button standalone-button">Team members</a><br />
-                    <a href="ringleaders-admin-garment.php?teamId=<?php echo $teamId; ?>" class="button standalone-button">Admin team garment</a>
+                    <a href="#" class="button standalone-button">Team members</a><br />
+                    <a href="#" class="button standalone-button">Admin team garment</a>
                 <?php
                 } else {
                     ?>
@@ -80,11 +78,11 @@ if(isset($_GET['id'])) {
                     <?php
                     if(isset($_GET['id'])){
                         ?>
-                        <input type="submit" value="Update team" class="button" />
+                        <input type="submit" value="Update order" class="button" />
                     <?php
                     } else {
                         ?>
-                        <input type="submit" value="Save team" class="button" />
+                        <input type="submit" value="Save order" class="button" />
                     <?php
                     }
                     ?>
@@ -92,12 +90,12 @@ if(isset($_GET['id'])) {
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Creating%20/%20Editing%20Yours%20Orders" class="button white-button">Help with this page</a>
+                    <a href="ringleaders-help.php?topic=Creating%20/%20Editing%20Garments" class="button white-button">Help with this page</a>
                     <?php
                     if(isset($_GET['id'])){
                         ?>
                         <br/>
-                        <a href="ringleaders-delete-order.php?id=<?php echo $teamId; ?>" class="button yellow-button">Delete order</a>
+                        <a href="ringleaders-delete-order.php?id=<?php echo $teamId; ?>" class="button yellow-button">Delete garment</a>
                     <?php
                     }
                     ?>

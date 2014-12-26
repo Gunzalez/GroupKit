@@ -259,6 +259,11 @@ select {
     }
 }
 
+textarea {
+    height: 120px;
+    resize: none;
+}
+
 
 .button {
     -webkit-appearance: none;
@@ -275,14 +280,25 @@ select {
     border: 1px solid $green;
 
     &:hover {
-        background-color: $lime;
+        background-color: #ffffff;
         color: $black;
         @include transitions();
     }
 
     &.white-button {
         background-color: #f2f2f2;
-        border: 1px solid $green;
+        border: 1px solid #f2f2f2;
+        color: $black;
+
+        &:hover {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+        }
+    }
+
+    &.yellow-button {
+        background-color: $lime;
+        border: 1px solid $lime;
         color: $black;
 
         &:hover {
@@ -447,6 +463,29 @@ select {
         float: left;
         width: 268px;
 
+        li {
+            a {
+                color: $green;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &.selected {
+                a {
+                    font-weight: bold;
+                    color: $black;
+                    cursor: default;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
         .figure {
             display: block;
             font-weight: bold;
@@ -507,6 +546,11 @@ select {
                     text-decoration: none;
                 }
             }
+        }
+
+        .standalone-button {
+            display: inline-block;
+            margin-bottom: 12px;
         }
     }
 
@@ -599,6 +643,14 @@ select {
                 &:hover {
                     color: $black;
                 }
+            }
+        }
+
+        .links {
+            float: left;
+            .button {
+                margin-top: 12px;
+                float: left;
             }
         }
     }
@@ -1110,6 +1162,18 @@ select {
                 padding-top: 15px;
                 padding-left: 0;
             }
+
+
+
+            .links {
+                float: none;
+                .button {
+                    margin-top: 12px !important;
+                    float: none;
+                    display: block;
+                    width: auto !important;
+                }
+            }
         }
 
 
@@ -1123,6 +1187,17 @@ select {
 
             .showcase {
                 padding-bottom: 5px;
+
+                .standalone-button {
+                    float: none;
+                    display: block;
+
+                    & + br {
+                        display: none;
+                    }
+                }
+
+
             }
 
             .orders-list {
