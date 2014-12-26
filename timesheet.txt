@@ -10,6 +10,7 @@ Members choose garment, responsive                                      3.0 hrs 
 Members personalise front, responsive                                   3.0 hrs   - Thursday morning, (took day off)
 Ringleaders sign in page, refactoring css and clearing TODOs            2.0 hrs   - Friday night (midnight)
 Ringleaders welcome page, manage orders, order detail, help page        5.0 hrs   - Saturday, (afternoon)
+Admin members, Admin team, Order details, Manage orders, refactors      6.0 hrs   - Thursday, Christmas Day (all day)
 
 
 
