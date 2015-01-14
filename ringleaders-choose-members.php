@@ -82,17 +82,7 @@ function echoIfEqual($val1, $val2, $str){
         <div class="content">
 
             <div class="title">
-                <?php
-                if(isset($_GET['memberId'])){
-                    ?>
-                    <h2>Edit member</h2>
-                <?php
-                } else {
-                    ?>
-                    <h2>Add new member</h2>
-                <?php
-                }
-                ?>
+                <h2>Team members</h2>
                 <a href="ringleaders-order-detail.php?id=<?php echo $teamId; ?>" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>

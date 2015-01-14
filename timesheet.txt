@@ -13,6 +13,8 @@ Ringleaders welcome page, manage orders, order detail, help page        5.0 hrs 
 RL members + RL team, Order details, Manage orders, refactors           6.0 hrs   - Thursday, Christmas Day (all day)
 RL choose team garment, choose member garment                           2.0 hrs   - Boxing day
 Icons everywhere, <submit> to <buttons>                                 1.0 hrs   - Boxing day
+Meeting, I called it and it's part of work, you bitches!                1.5 hrs   - First week Jan, I forget the exact day now.
+Better swatches, dynamic garments                                       2.5 hrs   - Wednesday, 14 January 2015
 
 
 
@@ -20,7 +22,8 @@ Icons everywhere, <submit> to <buttons>                                 1.0 hrs 
 
 TODO
 ================================
-Icons on buttons
+Carousel
+
 
 
 

@@ -41,7 +41,7 @@ if(isset($_GET['id'])) {
                 <?php
                 } else {
                     ?>
-                    <h2>Create new order</h2>
+                    <h2>Create new team</h2>
                 <?php
                 }
                 ?>
@@ -56,7 +56,7 @@ if(isset($_GET['id'])) {
                     <h3><?php echo $teamName; ?></h3>
                     <p>Admin - add/edit/remove members and garments for this team.</p>
                     <a href="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>" class="button standalone-button"><i class="fa fa-fw"></i> Team members</a><br />
-                    <a href="ringleaders-team-garments.php?teamId=<?php echo $teamId; ?>" class="button standalone-button"><i class="fa fa-fw"></i> Admin team garment</a>
+                    <a href="ringleaders-team-garments.php?teamId=<?php echo $teamId; ?>" class="button standalone-button"><i class="fa fa-fw"></i> Choose team garment</a>
                 <?php
                 } else {
                     ?>
@@ -97,7 +97,7 @@ if(isset($_GET['id'])) {
                     if(isset($_GET['id'])){
                         ?>
                         <br/>
-                        <a href="ringleaders-delete-order.php?id=<?php echo $teamId; ?>" class="button yellow-button"><i class="fa fa-fw"></i> Delete order</a>
+                        <a href="ringleaders-delete-order.php?id=<?php echo $teamId; ?>" class="button yellow-button"><i class="fa fa-fw"></i> Delete team</a>
                     <?php
                     }
                     ?>

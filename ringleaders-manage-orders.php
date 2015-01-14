@@ -25,7 +25,6 @@
 
             <div class="like-form">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" summary="Order table" class="orders-list">
-                    <caption>Your orders</caption>
                     <tr>
                         <th scope="col" class="order-name">Order No / Team name</th>
                         <th scope="col" class="order-date">Date</th>
@@ -58,7 +57,7 @@
                     </tr>
                 </table>
                 <div class="row button-row">
-                    <a href="ringleaders-order-detail.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new order</a>
+                    <a href="ringleaders-order-detail.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>

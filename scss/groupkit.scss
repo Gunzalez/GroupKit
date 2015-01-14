@@ -1,10 +1,11 @@
 // brand colours
 $blue:              #2AA9E0;
 $lime:              #D9E024;
-$pink:              #ED1F7A;
 $green:             #76A741;
 $black:             #231F20;
 $grey:              #666666;
+$eLgrey:            #f0f0f0;
+$offblack:          #111111;
 
 $borderColour:      #cccccc;
 
@@ -71,6 +72,10 @@ img { border: none; }
                 background: $blue;
                 display: block;
             }
+        }
+
+        .title {
+            border: none !important;
         }
     }
 
@@ -279,6 +284,10 @@ textarea {
     text-transform: uppercase;
     border: 1px solid $green;
 
+    &.back-button {
+        font-size: 0.9em;
+    }
+
     &:hover {
         background-color: #ffffff;
         color: $black;
@@ -381,6 +390,7 @@ textarea {
                 padding-top: 5px;
                 width: 140px;
                 font-size: 1.1em;
+                color: $offblack;
             }
 
             .select,
@@ -423,13 +433,14 @@ textarea {
                 &.swatches {
 
                     label {
-                        padding: 5px 0 0 0;
+                        padding: 0 8px 4px 0;
                         width: auto;
                         cursor: pointer;
                     }
 
                     input {
-                        margin: 5px 16px 0 5px;
+                        margin: 5px 12px 0 6px;
+                        display: none;
                     }
                 }
 
@@ -663,22 +674,15 @@ textarea {
     span {
         &.colour {
             display: inline-block;
-            width: 20px;
-            height: 20px;
+            width: 32px;
+            height: 32px;
             @include border-radius(3px);
             cursor: pointer;
-            border: 1px solid $lime;
+            border: 5px solid $eLgrey;
+            @include transitions();
 
-            &.colour2 {
-                background: #2AA9E0;
-                @include transitions();
-            }
-            &.colour1 {
-                background: #000000;
-                @include transitions();
-            }
-            &.colour3 {
-                background: #ED1F7A;
+            &.selected {
+                border-color: $green;
                 @include transitions();
             }
         }
@@ -697,21 +701,21 @@ textarea {
     border-bottom: 1px solid $green;
     margin-bottom: 15px;
 
-    &.womens {
-        background: url("../images/garment-womens.jpg") 0 0 no-repeat;
-
-        &.front {
-            background: url("../images/garment-womens-front.jpg") 0 0 no-repeat;
-        }
-    }
-
-    &.mens {
-        background: url("../images/garment-mens.jpg") 0 0 no-repeat;
-
-        &.front {
-            background: url("../images/garment-mens-front.jpg") 0 0 no-repeat;
-        }
-    }
+//    &.womens {
+//        background: url("../images/garment-womens.jpg") 0 0 no-repeat;
+//
+//        &.front {
+//            background: url("../images/garment-womens-front.jpg") 0 0 no-repeat;
+//        }
+//    }
+//
+//    &.mens {
+//        background: url("../images/garment-mens.jpg") 0 0 no-repeat;
+//
+//        &.front {
+//            background: url("../images/garment-mens-front.jpg") 0 0 no-repeat;
+//        }
+//    }
 
     &.back {
         .front {

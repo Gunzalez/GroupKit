@@ -74,6 +74,7 @@
         $html: $('.garment-selection'),
         $garmentDisplay: $('#garment-display', this.$html),
         $form: $('.form', this.$html),
+        upLoadedImagesPath: "../uploaded/",
 
         init: function(){
             var self = this,
@@ -94,19 +95,28 @@
                     $genderSwitches.removeClass('selected');
                     $(this).addClass('selected');
 
-                    var gender = $(this).data('gender');
-                    self.$garmentDisplay.removeClass('womens')
-                        .removeClass('mens')
-                        .addClass(gender);
+                    var gender = $(this).data('gender'),
+                        genderImage = $(self.$garmentDisplay).attr("data-gender-"+gender);
+
+                    self.$garmentDisplay.css('background','url(uploaded/'+genderImage+') 0 0 no-repeat');
 
                     // update value in form
                     $('#gender', self.$form).val(gender);
                 }
             });
+            var initialGender = $('#gender', self.$form).val(), // comes from PHP
+                genderImage = $(self.$garmentDisplay).attr("data-gender-"+initialGender);
+                self.$garmentDisplay.css('background','url(uploaded/'+genderImage+') 0 0 no-repeat');
 
             $colourSwitches.on('change', function(){
-                var $figure = $('.figure', self.$garmentDisplay),
-                    newColour = $(this).val();
+                var self = this,
+                    $figure = $('.figure', self.$garmentDisplay),
+                    newColour = $(this).val(),
+                    varColourRef = $(this).attr('id');
+
+                $(this).siblings().find('span').removeClass("selected");
+                $("[for='"+ varColourRef+"']", self.$form).find('.colour').addClass('selected');
+
 
                 $figure.css('color',newColour);
             });

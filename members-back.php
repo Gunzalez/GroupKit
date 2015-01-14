@@ -20,6 +20,9 @@ function echoIfEqual($val1, $val2, $str){
         echo $str;
     }
 }
+
+$mensImage = "garment-mens.jpg";
+$womensImage = "garment-womens.jpg";
 ?>
 
 <!doctype html>
@@ -42,7 +45,7 @@ function echoIfEqual($val1, $val2, $str){
             </div>
 
             <div class="showcase">
-                <div id="garment-display" class="display back <?php echo $gender; ?>">
+                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display back">
                     <span class="figure small" data-figure="name" style="color: <?php echo $colour; ?>; font-family: '<?php echo $nameStyle; ?>';">
                         XXXX
                     </span>
@@ -53,6 +56,7 @@ function echoIfEqual($val1, $val2, $str){
             </div>
 
             <form class="form" id="personalise-back-form" action="members-confirm.php" method="post" name="personalise-back-form" novalidate="novalidate">
+                <input type="hidden" id="gender" name="gender" value="<?php echo $gender; ?>" /> <!-- needed for gender display -->
                 <!--
                 TODO:
                 Why is this repeated in PSD, you can uncomment if you want

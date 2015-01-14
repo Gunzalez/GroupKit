@@ -22,6 +22,9 @@ $colour = $_SESSION['colour'];
 $size = $_SESSION['size'];
 $nameStyle = $_SESSION['nameStyle'];
 $position = $_SESSION['position'];
+
+$mensImage = "garment-mens-front.jpg";
+$womensImage = "garment-womens-front.jpg";
 ?>
 
 <!doctype html>
@@ -44,7 +47,7 @@ $position = $_SESSION['position'];
             </div>
 
             <div class="showcase">
-                <div id="garment-display" class="display front <?php echo $gender; ?>">
+                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display front">
                     <span class="figure small <?php echo $position; ?>" data-figure="name" style="color: <?php echo $colour; ?>; font-family: '<?php echo $nameStyle; ?>';">
                         XXXX
                     </span>
@@ -52,6 +55,7 @@ $position = $_SESSION['position'];
             </div>
 
             <form class="form" id="personalise-front-form" action="members-back.php" method="post" name="personalise-front-form" novalidate="novalidate">
+                <input type="hidden" id="gender" name="gender" value="<?php echo $gender; ?>" /> <!-- needed for gender display -->
                 <!--
                 TODO:
                 Why is this repeated in PSD, you can uncomment if you want

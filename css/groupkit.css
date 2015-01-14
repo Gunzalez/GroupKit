@@ -99,6 +99,9 @@ img {
   background: #2aa9e0;
   display: block;
 }
+.status-bar .order .title {
+  border: none !important;
+}
 .status-bar .auxiliary-navigation {
   float: right;
   margin: 0;
@@ -284,6 +287,9 @@ textarea {
   text-transform: uppercase;
   border: 1px solid #76a741;
 }
+.button.back-button {
+  font-size: 0.9em;
+}
 .button:hover {
   background-color: #ffffff;
   color: #231f20;
@@ -374,6 +380,7 @@ textarea {
   padding-top: 5px;
   width: 140px;
   font-size: 1.1em;
+  color: #111111;
 }
 .page .like-form .row .select,
 .page .like-form .row .input,
@@ -413,13 +420,14 @@ textarea {
 }
 .page .like-form .row .like-input.swatches label,
 .page .form .row .like-input.swatches label {
-  padding: 5px 0 0 0;
+  padding: 0 8px 4px 0;
   width: auto;
   cursor: pointer;
 }
 .page .like-form .row .like-input.swatches input,
 .page .form .row .like-input.swatches input {
-  margin: 5px 16px 0 5px;
+  margin: 5px 12px 0 6px;
+  display: none;
 }
 .page .like-form .row .like-input.summary,
 .page .form .row .like-input.summary {
@@ -610,30 +618,20 @@ textarea {
 }
 .inner span.colour {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   cursor: pointer;
-  border: 1px solid #d9e024;
-}
-.inner span.colour.colour2 {
-  background: #2AA9E0;
+  border: 5px solid #f0f0f0;
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
   transition: all 0.25s;
 }
-.inner span.colour.colour1 {
-  background: #000000;
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
-}
-.inner span.colour.colour3 {
-  background: #ED1F7A;
+.inner span.colour.selected {
+  border-color: #76a741;
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
@@ -645,18 +643,6 @@ textarea {
   height: 307px;
   border-bottom: 1px solid #76a741;
   margin-bottom: 15px;
-}
-#garment-display.womens {
-  background: url("../images/garment-womens.jpg") 0 0 no-repeat;
-}
-#garment-display.womens.front {
-  background: url("../images/garment-womens-front.jpg") 0 0 no-repeat;
-}
-#garment-display.mens {
-  background: url("../images/garment-mens.jpg") 0 0 no-repeat;
-}
-#garment-display.mens.front {
-  background: url("../images/garment-mens-front.jpg") 0 0 no-repeat;
 }
 #garment-display.back .front {
   display: none;

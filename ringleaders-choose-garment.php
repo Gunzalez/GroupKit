@@ -80,13 +80,12 @@ if(isset($_GET['teamId'])) {
         <div class="content">
 
             <div class="title">
-                <h2>Choose member garment</h2>
+                <h2>Member garment</h2>
                 <a href="ringleaders-choose-members.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
 
             <div class="showcase">
-                <h3>#<?php echo $teamId; ?> / <?php echo $teamName; ?></h3>
                 <div id="garment-display" class="display womens">
                     <span class="figure big" style="color: rgb(0, 0, 0);">
                         XX
@@ -96,6 +95,12 @@ if(isset($_GET['teamId'])) {
 
             <form class="form" id="" action="huh.php" method="post" name="" novalidate="novalidate">
                 <input type="hidden" id="teamId" name="teamId" value="<?php echo $teamId; ?>" />
+                <div class="row">
+                    <div class="like-label">Team</div>
+                    <div class="like-input just-text">
+                        #<?php echo $teamId; ?> / <?php echo $teamName; ?>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="like-label">Garment name</div>
                     <div class="like-input just-text">
@@ -112,9 +117,9 @@ if(isset($_GET['teamId'])) {
 
                 </div>
                 <div class="row button-row">
-                    <input type="submit" value="Save Garment" class="button" />
+                    <button type="button" class="button"><i class="fa fa-fw"></i> Save Garment</button>
                     <div class="links">
-                        <a href="huh.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button">Pay For Garment</a>
+                        <a href="huh.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button"><i class="fa fa-fw"></i> Pay For Garment</a>
                     </div>
                 </div>
                 <div class="cleft"></div>

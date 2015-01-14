@@ -27,7 +27,7 @@ if(isset($_GET['teamId'])) {
         <div class="content">
 
             <div class="title">
-                <h2>Choose Team Garment</h2>
+                <h2>Team Garment</h2>
                 <a href="ringleaders-order-detail.php?id=<?php echo $teamId; ?>" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
@@ -44,7 +44,7 @@ if(isset($_GET['teamId'])) {
                 </div>
                 <div style="height: 200px"></div>
                 <div class="row button-row">
-                    <input type="submit" value="Edit Team Garment" class="button" />
+                    <button type="button" class="button"><i class="fa fa-fw"></i> Edit team garment</button>
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>

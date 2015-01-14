@@ -29,18 +29,17 @@
 
             <div class="like-form">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0" summary="Order table" class="orders-list">
-                    <caption>Your orders</caption>
                     <tr>
                         <th scope="col">Order No / Team name</th>
                         <th scope="col">Date</th>
                         <th scope="col">Status</th>
                     </tr>
                     <tr class="odd empty-list">
-                        <td colspan="3">There are no orders to display.</td>
+                        <td colspan="3">You currently have no teams to display.</td>
                     </tr>
                 </table>
                 <div class="row button-row">
-                    <a href="ringleaders-order-detail.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new order</a>
+                    <a href="ringleaders-order-detail.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>
