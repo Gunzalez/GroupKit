@@ -667,6 +667,7 @@ textarea {
   color: #76a741 !important;
   border-color: #76a741 !important;
   background-color: #ffffff !important;
+  cursor: default;
 }
 
 .footer {
