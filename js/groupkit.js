@@ -70,13 +70,24 @@
         }
     };
 
+    groupkit.summary = {
+        $html: $('table.summary'),
+
+        init: function(){
+            var self = this,
+                $summaryOddRows = $('tr:odd', self.$html);
+
+            $summaryOddRows.addClass('odd');
+        }
+    };
+
     groupkit.garmentSelection = {
         $html: $('.garment-selection'),
         $garmentDisplay: $('#garment-display', this.$html),
         $form: $('.form', this.$html),
         upLoadedImagesPath: "../uploaded/",
 
-        init: function(){
+        init: function() {
             var self = this,
                 $genderSwitcher = $('.gender-switch', self.$html),
                 $genderSwitches = $('a', $genderSwitcher),
@@ -89,70 +100,87 @@
                 $viewSwitcher = $('.view-switch', self.$html),
                 $viewSwitches = $('a', $viewSwitcher);
 
-            $genderSwitches.on('click', function(evt){
-                evt.preventDefault();
-                if(!$(this).hasClass('selected')){
-                    $genderSwitches.removeClass('selected');
-                    $(this).addClass('selected');
+            if ($genderSwitcher.length > 0) {
+                $genderSwitches.on('click', function (evt) {
+                    evt.preventDefault();
+                    if (!$(this).hasClass('selected')) {
+                        $genderSwitches.removeClass('selected');
+                        $(this).addClass('selected');
 
-                    var gender = $(this).data('gender'),
-                        genderImage = $(self.$garmentDisplay).attr("data-gender-"+gender);
+                        var gender = $(this).data('gender'),
+                            genderImage = $(self.$garmentDisplay).attr("data-gender-" + gender);
 
-                    self.$garmentDisplay.css('background','url(uploaded/'+genderImage+') 0 0 no-repeat');
+                        self.$garmentDisplay.css('background', 'url(uploaded/' + genderImage + ') 0 0 no-repeat');
 
-                    // update value in form
-                    $('#gender', self.$form).val(gender);
-                }
-            });
-            var initialGender = $('#gender', self.$form).val(), // comes from PHP
-                genderImage = $(self.$garmentDisplay).attr("data-gender-"+initialGender);
-                self.$garmentDisplay.css('background','url(uploaded/'+genderImage+') 0 0 no-repeat');
+                        // update value in form
+                        $('#gender', self.$form).val(gender);
+                    }
+                });
+            }
 
-            $colourSwitches.on('change', function(){
-                var self = this,
-                    $figure = $('.figure', self.$garmentDisplay),
-                    newColour = $(this).val(),
-                    varColourRef = $(this).attr('id');
+            if(self.$garmentDisplay.hasClass('preset')){
+                var initialGender = $('#gender', self.$form).val(), // comes from PHP
+                    genderImage = $(self.$garmentDisplay).attr("data-gender-" + initialGender);
+                    self.$garmentDisplay.css('background', 'url(uploaded/' + genderImage + ') 0 0 no-repeat');
+            }
 
-                $(this).siblings().find('span').removeClass("selected");
-                $("[for='"+ varColourRef+"']", self.$form).find('.colour').addClass('selected');
+            if ($colourSwitcher.length > 0) {
+                $colourSwitches.on('change', function(){
+                    var self = this,
+                        $figure = $('.figure', self.$garmentDisplay),
+                        newColour = $(this).val(),
+                        varColourRef = $(this).attr('id');
 
+                    $(this).siblings().find('span').removeClass("selected");
+                    $("[for='"+ varColourRef+"']", self.$form).find('.colour').addClass('selected');
 
-                $figure.css('color',newColour);
-            });
+                    $figure.css('color',newColour);
+                });
+            }
 
-            $positionSwitches.on('change', function(){
-                var $figure = $('.figure', self.$garmentDisplay),
-                    newPosition = $(this).val();
+            if($positionSwitcher.length > 0){
+                $positionSwitches.on('change', function(){
+                    var $figure = $('.figure', self.$garmentDisplay),
+                        newPosition = $(this).val();
 
-                $figure.removeClass('left').removeClass('right').addClass(newPosition);
-            });
+                    $figure.removeClass('left').removeClass('right').addClass(newPosition);
+                });
+            }
 
-            $styleSwitches.on('change', function(){
-                var figureAttr = $(this).attr('name').replace('Style',''),
-                    $figureNameOrNumber = $('[data-figure="'+figureAttr+'"]', self.$garmentDisplay),
-                    newStyle = $(this).val();
+            if($styleSwitcher.length > 0){
+                $styleSwitches.on('change', function(){
+                    var figureAttr = $(this).attr('name').replace('Style',''),
+                        $figureNameOrNumber = $('[data-figure="'+figureAttr+'"]', self.$garmentDisplay),
+                        newStyle = $(this).val();
 
-                $figureNameOrNumber.css('font-family', newStyle);
+                    $figureNameOrNumber.css('font-family', newStyle);
 
-                // a little extra UX
-                var chosenNameOrNumberId = '#chosen-'+figureAttr;
-                console.log(chosenNameOrNumberId);
-                $(chosenNameOrNumberId).css('font-family', newStyle);
-            });
+                    // a little extra UX
+                    var chosenNameOrNumberId = '#chosen-'+figureAttr;
+                    console.log(chosenNameOrNumberId);
+                    $(chosenNameOrNumberId).css('font-family', newStyle);
+                });
+            }
 
-            $viewSwitches.on('click', function(evt){
-                evt.preventDefault();
-                if(!$(this).hasClass('selected')){
-                    $viewSwitches.removeClass('selected');
-                    $(this).addClass('selected');
+            if($viewSwitcher.length > 0){
+                $viewSwitches.on('click', function(evt){
+                    evt.preventDefault();
+                    if(!$(this).hasClass('selected')){
+                        $viewSwitches.removeClass('selected');
+                        $(this).addClass('selected');
 
-                    var view = $(this).data('view');
-                    self.$garmentDisplay.removeClass('back')
-                        .removeClass('front')
-                        .addClass(view);
-                }
-            });
+                        var view = $(this).data('view'),
+                            genderImage = $(self.$garmentDisplay).attr("data-garment-"+view);
+
+                        self.$garmentDisplay.removeClass('back')
+                            .removeClass('front')
+                            .addClass(view)
+                            .css('background','url(uploaded/'+genderImage+') 0 0 no-repeat');
+                    }
+                });
+                var garmentImage = $(self.$garmentDisplay).attr("data-garment-back");
+                    self.$garmentDisplay.css('background','url(uploaded/'+garmentImage+') 0 0 no-repeat');
+            }
         }
     };
 
@@ -162,6 +190,7 @@
         groupkit.environment.init();
         groupkit.garmentSelection.init();
         groupkit.orders.init();
+        groupkit.summary.init();
         //
         //
         //

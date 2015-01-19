@@ -54,7 +54,7 @@ function echoIfEqual($val1, $val2, $str){
             </div>
 
             <div class="showcase">
-                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display">
+                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display preset">
                     <span class="figure big" style="color: <?php echo $colour; ?>">
                         XX
                     </span>
@@ -86,21 +86,21 @@ function echoIfEqual($val1, $val2, $str){
                 <div class="row">
                     <div class="like-label">Choose your colour</div>
                     <div class="like-input colour-switch swatches">
-                        <label for="colour1"><span class="colour selected" style="background-color: #000000"></span></label>
+                        <label for="colour1"><span class="colour <?php echoIfEqual('#000000', $colour, ' selected'); ?>" style="background-color: #000000"></span></label>
                         <input id="colour1" type="radio" name="colour" value="#000000"<?php echoIfEqual('#000000', $colour, ' checked'); ?>>
-                        <label for="colour8"><span class="colour" style="background-color: #0000FF"></span></label>
-                        <input id="colour8" type="radio" name="colour" value="#0000FF"<?php echoIfEqual('#0000FF', $colour, ' checked'); ?>>
-                        <label for="colour2"><span class="colour" style="background-color: #2AA9E0"></span></label>
+                        <label for="colour8"><span class="colour <?php echoIfEqual('#ffffff', $colour, ' selected'); ?>" style="background-color: #ffffff"></span></label>
+                        <input id="colour8" type="radio" name="colour" value="#ffffff"<?php echoIfEqual('#ffffff', $colour, ' checked'); ?>>
+                        <label for="colour2"><span class="colour <?php echoIfEqual('#2AA9E0', $colour, ' selected'); ?>" style="background-color: #2AA9E0"></span></label>
                         <input id="colour2" type="radio" name="colour" value="#2AA9E0"<?php echoIfEqual('#2AA9E0', $colour, ' checked'); ?>>
-                        <label for="colour3"><span class="colour" style="background-color: #ED1F7A"></span></label>
+                        <label for="colour3"><span class="colour <?php echoIfEqual('#ED1F7A', $colour, ' selected'); ?>" style="background-color: #ED1F7A"></span></label>
                         <input id="colour3" type="radio" name="colour" value="#ED1F7A"<?php echoIfEqual('#ED1F7A', $colour, ' checked'); ?>>
-                        <label for="colour7"><span class="colour" style="background-color: #880000"></span></label>
+                        <label for="colour7"><span class="colour <?php echoIfEqual('#880000', $colour, ' selected'); ?>" style="background-color: #880000"></span></label>
                         <input id="colour7" type="radio" name="colour" value="#880000"<?php echoIfEqual('#880000', $colour, ' checked'); ?>>
-                        <label for="colour4"><span class="colour" style="background-color: #FF00FF"></span></label>
+                        <label for="colour4"><span class="colour <?php echoIfEqual('#FF00FF', $colour, ' selected'); ?>" style="background-color: #FF00FF"></span></label>
                         <input id="colour4" type="radio" name="colour" value="#FF00FF"<?php echoIfEqual('#FF00FF', $colour, ' checked'); ?>>
-                        <label for="colour5"><span class="colour" style="background-color: #C8C847"></span></label>
+                        <label for="colour5"><span class="colour <?php echoIfEqual('#C8C847', $colour, ' selected'); ?>" style="background-color: #C8C847"></span></label>
                         <input id="colour5" type="radio" name="colour" value="#C8C847"<?php echoIfEqual('#C8C847', $colour, ' checked'); ?>>
-                        <label for="colour6"><span class="colour" style="background-color: #76A741"></span></label>
+                        <label for="colour6"><span class="colour <?php echoIfEqual('#76A741', $colour, ' selected'); ?>" style="background-color: #76A741"></span></label>
                         <input id="colour6" type="radio" name="colour" value="#76A741"<?php echoIfEqual('#76A741', $colour, ' checked'); ?>>
                     </div>
                 </div>

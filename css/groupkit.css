@@ -307,6 +307,16 @@ textarea {
   background-color: #ffffff;
   border: 1px solid #cccccc;
 }
+.button.disabled-button {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color: #231f20;
+  cursor: default;
+}
+.button.disabled-button:hover {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+}
 .button.yellow-button {
   background-color: #d9e024;
   border: 1px solid #d9e024;
@@ -428,10 +438,6 @@ textarea {
 .page .form .row .like-input.swatches input {
   margin: 5px 12px 0 6px;
   display: none;
-}
-.page .like-form .row .like-input.summary,
-.page .form .row .like-input.summary {
-  padding-top: 5px;
 }
 .page .like-form .row .info,
 .page .form .row .info {
@@ -636,6 +642,34 @@ textarea {
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
   transition: all 0.25s;
+}
+.inner .summary {
+  margin-bottom: 10px;
+}
+.inner .summary .colour {
+  width: 20px;
+  height: 20px;
+  cursor: default;
+}
+.inner .summary td,
+.inner .summary th {
+  padding: 5px 10px;
+  text-align: left;
+  width: 50%;
+  font-weight: normal;
+  vertical-align: top;
+}
+.inner .summary th {
+  color: #231f20;
+}
+.inner .summary tr.odd th, .inner .summary tr.odd td {
+  background-color: #f0f0f0;
+}
+.inner .summary.cost {
+  border-top: 1px solid #76a741;
+  margin-bottom: 0;
+  font-size: 1.1em;
+  color: #231f20;
 }
 
 #garment-display {
@@ -950,10 +984,6 @@ textarea {
   .page .like-form .row .like-input label,
   .page .form .row .like-input label {
     float: left;
-  }
-  .page .like-form .row .like-input.summary,
-  .page .form .row .like-input.summary {
-    padding-top: 0;
   }
   .page .like-form .helpers,
   .page .form .helpers {

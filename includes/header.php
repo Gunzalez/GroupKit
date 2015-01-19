@@ -5,7 +5,7 @@
                 <span class="percentage">
                     <span class="bar" style="width: 70%"></span>
                 </span>
-            <span class="figure">70%</span>
+            <span>70%</span>
         </div>
         <ul class="auxiliary-navigation">
             <li class="first-li"><a href="#"><i class="fa fa-fw"></i><span>HELP</span></a></li>
