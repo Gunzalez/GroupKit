@@ -52,6 +52,9 @@ $womensImage = "garment-womens-front.jpg";
                         XXXX
                     </span>
                 </div>
+                <div class="details">
+                    <p>100% Cotton Ladies T-Shirt. Lorem Ipsum is simply dummy text of the printing and typesetting industry ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It survived not only five centuries...</p>
+                </div>
             </div>
 
             <form class="form" id="personalise-front-form" action="members-back.php" method="post" name="personalise-front-form" novalidate="novalidate">
@@ -97,7 +100,7 @@ $womensImage = "garment-womens-front.jpg";
                 <div class="row">
                     <div class="like-label">Name</div>
                     <div class="like-input">
-                        <span id="chosen-name" class="chosen-name" style="color: <?php echo $colour; ?>; font-family: <?php echo $nameStyle; ?>">Coke Zero</span>
+                        <span id="chosen-name" class="chosen-name" style="font-family: <?php echo $nameStyle; ?>">Coke Zero</span>
                         <p>This is the name selected by your Ringleader.</p>
                     </div>
                 </div>
@@ -109,7 +112,8 @@ $womensImage = "garment-womens-front.jpg";
                 <div class="divider"></div>
                 <div class="helpers">
                     <a href="members-help.php?topic=Personalise%20The%20Front&view=front" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
-                    <a href="members-start-over.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a>
+                    <a href="members-start-over.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a><br />
+                    <a href="members-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
                 </div>
             </form>
             <div class="cboth"></div>

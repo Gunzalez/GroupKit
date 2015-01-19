@@ -456,9 +456,6 @@ textarea {
                     }
                 }
 
-//                &.summary {
-//                    padding-top: 5px;
-//                }
             }
 
             .info {
@@ -701,7 +698,9 @@ textarea {
     }
 
     .summary {
-        margin-bottom: 10px;
+        border-top: 1px solid $eLgrey;
+        border-bottom: 1px solid $eLgrey;
+        padding: 8px 0;
 
         .colour {
             width: 20px;
@@ -711,15 +710,16 @@ textarea {
 
         td,
         th {
-            padding: 5px 10px;
+            padding: 5px 0;
             text-align: left;
-            width: 50%;
             font-weight: normal;
             vertical-align: top;
         }
 
         th {
             color: $black;
+            width: 140px;
+            box-sizing: border-box;
         }
 
         tr {
@@ -731,10 +731,15 @@ textarea {
         }
 
         &.cost {
-            border-top: 1px solid $green;
-            margin-bottom: 0;
+            border: none;
+            padding: 0;
+            margin: 0;
             font-size: 1.1em;
             color: $black;
+
+            td {
+                text-align: right;
+            }
         }
     }
 }
@@ -750,22 +755,6 @@ textarea {
     height: 307px;
     border-bottom: 1px solid $green;
     margin-bottom: 15px;
-
-//    &.womens {
-//        background: url("../images/garment-womens.jpg") 0 0 no-repeat;
-//
-//        &.front {
-//            background: url("../images/garment-womens-front.jpg") 0 0 no-repeat;
-//        }
-//    }
-//
-//    &.mens {
-//        background: url("../images/garment-mens.jpg") 0 0 no-repeat;
-//
-//        &.front {
-//            background: url("../images/garment-mens-front.jpg") 0 0 no-repeat;
-//        }
-//    }
 
     &.back {
         .front {
@@ -798,6 +787,10 @@ textarea {
             border-color: $green !important;
             background-color: #ffffff !important;
             cursor: default;
+        }
+
+        &:hover {
+            color: $green !important;
         }
     }
 }
@@ -1209,9 +1202,6 @@ textarea {
                         float: left;
                     }
 
-//                    &.summary {
-//                        padding-top: 0;
-//                    }
                 }
             }
 

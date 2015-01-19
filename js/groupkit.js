@@ -70,17 +70,6 @@
         }
     };
 
-    groupkit.summary = {
-        $html: $('table.summary'),
-
-        init: function(){
-            var self = this,
-                $summaryOddRows = $('tr:odd', self.$html);
-
-            $summaryOddRows.addClass('odd');
-        }
-    };
-
     groupkit.garmentSelection = {
         $html: $('.garment-selection'),
         $garmentDisplay: $('#garment-display', this.$html),
@@ -190,7 +179,6 @@
         groupkit.environment.init();
         groupkit.garmentSelection.init();
         groupkit.orders.init();
-        groupkit.summary.init();
         //
         //
         //

@@ -53,6 +53,9 @@ $womensImage = "garment-womens.jpg";
                         10
                     </span>
                 </div>
+                <div class="details">
+                    <p>100% Cotton Ladies T-Shirt. Lorem Ipsum is simply dummy text of the printing and typesetting industry ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It survived not only five centuries...</p>
+                </div>
             </div>
 
             <form class="form" id="personalise-back-form" action="members-confirm.php" method="post" name="personalise-back-form" novalidate="novalidate">
@@ -89,7 +92,7 @@ $womensImage = "garment-womens.jpg";
                 <div class="row">
                     <div class="like-label">Number</div>
                     <div class="like-input">
-                        <span id="chosen-number" class="chosen-number big" style="color: <?php echo $colour; ?>; font-family: <?php echo $numberStyle; ?>">10</span>
+                        <span id="chosen-number" class="chosen-number big" style="sfont-family: <?php echo $numberStyle; ?>">10</span>
                         <p>This is the number selected by your Ringleader.</p>
                     </div>
                 </div>
@@ -101,7 +104,8 @@ $womensImage = "garment-womens.jpg";
                 <div class="divider"></div>
                 <div class="helpers">
                     <a href="members-help.php?topic=Personalise%20The%20Back" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
-                    <a href="members-start-over.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a>
+                    <a href="members-start-over.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a><br />
+                    <a href="members-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
                 </div>
             </form>
             <div class="cboth"></div>

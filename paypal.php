@@ -13,7 +13,7 @@
             padding-top: 60px;
         }
     </style>
-    <meta http-equiv="refresh" content="5;URL=members-paid.php">
+    <meta http-equiv="refresh" content="3;URL=members-paid.php">
 </head>
 <body>
 <div class="sample">

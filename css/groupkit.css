@@ -644,7 +644,9 @@ textarea {
   transition: all 0.25s;
 }
 .inner .summary {
-  margin-bottom: 10px;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 8px 0;
 }
 .inner .summary .colour {
   width: 20px;
@@ -653,23 +655,28 @@ textarea {
 }
 .inner .summary td,
 .inner .summary th {
-  padding: 5px 10px;
+  padding: 5px 0;
   text-align: left;
-  width: 50%;
   font-weight: normal;
   vertical-align: top;
 }
 .inner .summary th {
   color: #231f20;
+  width: 140px;
+  box-sizing: border-box;
 }
 .inner .summary tr.odd th, .inner .summary tr.odd td {
   background-color: #f0f0f0;
 }
 .inner .summary.cost {
-  border-top: 1px solid #76a741;
-  margin-bottom: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
   font-size: 1.1em;
   color: #231f20;
+}
+.inner .summary.cost td {
+  text-align: right;
 }
 
 #garment-display {
@@ -702,6 +709,9 @@ textarea {
   border-color: #76a741 !important;
   background-color: #ffffff !important;
   cursor: default;
+}
+.switch a:hover {
+  color: #76a741 !important;
 }
 
 .footer {
