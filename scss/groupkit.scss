@@ -269,6 +269,9 @@ textarea {
     resize: none;
 }
 
+.new-team {
+    color: $eLgrey;
+}
 
 .button {
     -webkit-appearance: none;
@@ -605,9 +608,8 @@ textarea {
         $tableEven: #ededed;
 
         .orders-list {
-            width: 100%;
-            margin-bottom: 30px;
-            border-bottom: 1px solid $tableOdd;
+            width: 340px;
+            box-sizing: border-box;
 
             caption {
                 text-align: left;
@@ -616,7 +618,7 @@ textarea {
             }
 
             th, td {
-                padding: 10px 14px;
+                padding: 10px 12px;
                 vertical-align: top;
             }
 
@@ -625,7 +627,10 @@ textarea {
                 text-align: left;
                 background: $tableHeader;
                 color: #000000;
+                text-overflow: ellipsis;
+                width: 200px;
                 white-space: nowrap;
+                overflow: hidden;
             }
 
             td {
@@ -1210,7 +1215,9 @@ textarea {
                 padding-left: 0;
             }
 
-
+            .orders-list {
+                width: 100%;
+            }
 
             .links {
                 float: none;

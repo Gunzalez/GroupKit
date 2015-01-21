@@ -268,6 +268,10 @@ textarea {
   resize: none;
 }
 
+.new-team {
+  color: #f0f0f0;
+}
+
 .button {
   -webkit-appearance: none;
   -webkit-border-radius: 3px;
@@ -551,9 +555,8 @@ textarea {
 }
 .inner .like-form .orders-list,
 .inner .form .orders-list {
-  width: 100%;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #f7f7f7;
+  width: 340px;
+  box-sizing: border-box;
 }
 .inner .like-form .orders-list caption,
 .inner .form .orders-list caption {
@@ -564,7 +567,7 @@ textarea {
 .inner .like-form .orders-list th, .inner .like-form .orders-list td,
 .inner .form .orders-list th,
 .inner .form .orders-list td {
-  padding: 10px 14px;
+  padding: 10px 12px;
   vertical-align: top;
 }
 .inner .like-form .orders-list th,
@@ -573,7 +576,10 @@ textarea {
   text-align: left;
   background: #cfcfcf;
   color: #000000;
+  text-overflow: ellipsis;
+  width: 200px;
   white-space: nowrap;
+  overflow: hidden;
 }
 .inner .like-form .orders-list td,
 .inner .form .orders-list td {
@@ -999,6 +1005,10 @@ textarea {
   .page .form .helpers {
     padding-top: 15px;
     padding-left: 0;
+  }
+  .page .like-form .orders-list,
+  .page .form .orders-list {
+    width: 100%;
   }
   .page .like-form .links,
   .page .form .links {

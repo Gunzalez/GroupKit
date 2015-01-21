@@ -19,7 +19,7 @@
 
             <div class="showcase">
                 <p>Welcome to your Orders! With advanced features of activating account and new login widgets, you will definitely have a great experience of using GroupKit, it's pure dynamite!</p>
-                <p><a href="ringleaders-order-detail.php">Create a new order</a>, once done you can -</p>
+                <p><a href="ringleaders-edit-order.php">Create a new order</a>, once done you can -</p>
                 <ul>
                     <li>Remind cheap teammates about their orders</li>
                     <li>Pay for items on their behalf, either individually or all the fools together</li>
@@ -39,7 +39,7 @@
                     </tr>
                 </table>
                 <div class="row button-row">
-                    <a href="ringleaders-order-detail.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
+                    <a href="ringleaders-new-order.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>

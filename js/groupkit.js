@@ -63,10 +63,12 @@
                 $(obj).on('click', function(){
                     var orderId = $(this).data('order-id');
                     if(orderId !== undefined){
-                        location.assign('ringleaders-order-detail.php?id='+orderId);
+                        location.assign('ringleaders-edit-order.php?teamId='+orderId);
                     }
                 });
             });
+
+            $('tr:odd', self.$html).addClass('odd');
         }
     };
 
