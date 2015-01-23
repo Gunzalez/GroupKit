@@ -18,7 +18,7 @@ Better swatches, dynamic garments                                       2.5 hrs 
 Refactor dynamic garments JS                                            0.5 hrs   - Thursday, 15, 2015
 Members journey completed                                               3.0 hrs   - Sunday, 18, 2015
 Ringleaders Returning, 80%                                              2.5 hrs   - Tuesday, 21, 2015
-
+Ringleaders refactor                                                    1.0 hrs   - Thursday, 23, 2015
 
 TODO
 ================================

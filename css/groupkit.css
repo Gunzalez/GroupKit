@@ -684,6 +684,9 @@ textarea {
 .inner .summary.cost td {
   text-align: right;
 }
+.inner .summary.cost .total th, .inner .summary.cost .total td {
+  border-top: 1px solid #f0f0f0;
+}
 
 #garment-display {
   width: 268px;

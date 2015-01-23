@@ -117,15 +117,18 @@ if(isset($_GET['teamId'])) {
 
                 </div>
                 <div class="row button-row">
-                    <button type="button" class="button"><i class="fa fa-fw"></i> Save Garment</button>
+                    <button type="button" class="button"><i class="fa fa-fw"></i> Save</button>
                     <div class="links">
-                        <a href="huh.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button"><i class="fa fa-fw"></i> Pay For Garment</a>
+                        <a href="huh.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button"><i class="fa fa-fw"></i> Pay For Member</a><br />
+                        <a href="ringleaders-edit-garment.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button"><i class="fa fa-fw"></i> Remind</a> <!-- TODO Rob, you can hide this button if member is 100% -->
+
                     </div>
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Editing%20Member%20Garments" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a>
+                    <a href="ringleaders-help.php?topic=Editing%20Member%20Garments" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
+                    <a href="members-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
                 </div>
             </form>
             <div class="cboth"></div>

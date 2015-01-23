@@ -97,8 +97,8 @@ function returnIfEqual($val1, $val2, $str){
 
                     <button type="button" class="button"><i class="fa fa-fw"></i> Update details</button>
                     <div class="links">
-                        <a href="ringleaders-edit-garment.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button"><i class="fa fa-fw"></i> Garment</a>
-                        <a href="ringleaders-edit-garment.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button"><i class="fa fa-fw"></i> Remind Member</a> <!-- TODO Rob, you can hide this button if member is 100% -->
+                        <a href="ringleaders-edit-garment.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button"><i class="fa fa-fw"></i> Edit Garment</a>
+                        <!-- <a href="ringleaders-edit-garment.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button"><i class="fa fa-fw"></i> Remind</a> TODO Rob, should this button even be here, should be on garment page. If you have to then you can hide this button if member is 100% -->
                     </div>
 
                 </div>
@@ -110,7 +110,8 @@ function returnIfEqual($val1, $val2, $str){
                     if(isset($_GET['memberId'])){
                         ?>
                         <br/>
-                        <a href="ringleaders-delete-member.php?id=<?php echo $memberId; ?>" class="button yellow-button"><i class="fa fa-fw"></i> Delete member</a>
+                        <a href="ringleaders-delete-member.php?id=<?php echo $memberId; ?>" class="button yellow-button"><i class="fa fa-fw"></i> Delete member</a><br />
+                        <a href="members-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
                     <?php
                     }
                     ?>

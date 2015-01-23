@@ -22,7 +22,7 @@
                 <p>Welcome back #Mr Rob Curle#,</p>
                 <p><a href="ringleaders-edit-order.php">Create a new order</a> or manage an existing one from the list.</p>
                 <p>Remember you can remind teammates about their order and you can also pay for items on their behalf, either individually or all together.</p>
-                <a href="ringleaders-new-order.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
+                <a href="ringleaders-add-order.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
             </div>
 
             <div class="like-form">
@@ -42,17 +42,12 @@
                         echo "</tr>";
                     }
                     ?>
-
-<!--                    <tr data-order-id="131" class="odd">-->
-<!--                        <td class="order-name">131&nbsp;/ Coke Zero</td>-->
-<!--                        <td class="order-date">09/11/2014</td>-->
-<!--                        <td class="order-status">90%</td>-->
-<!--                    </tr>-->
                 </table>
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Managing%20Your%20Orders" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a>
+                    <a href="ringleaders-help.php?topic=Managing%20Your%20Orders" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
+                    <a href="members-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
                 </div>
             </div>
             <div class="cboth"></div>

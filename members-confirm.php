@@ -114,7 +114,7 @@ function echoIfEqual($val1, $val2, $str){
                                 <th scope="row">(p&amp;p)</th>
                                 <td>&pound;4.00</td>
                             </tr>
-                            <tr>
+                            <tr class="total">
                                 <th scope="row">Total</th>
                                 <td>&pound;24.00</td>
                             </tr>

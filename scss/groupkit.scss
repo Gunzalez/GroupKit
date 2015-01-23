@@ -745,6 +745,12 @@ textarea {
             td {
                 text-align: right;
             }
+
+            .total {
+                th, td {
+                    border-top: 1px solid $eLgrey;
+                }
+            }
         }
     }
 }

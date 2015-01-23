@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Gunzalez
- * Date: 20/01/2015
- * Time: 22:07
- */
-
 $fakeTeamArray = array(
     "131" => "Coke Zero",
     "023" => "Tigers",
@@ -51,3 +44,4 @@ $fakeNamesArray = array(
     "2" => $name2,
     "3" => $name3
 );
+?>

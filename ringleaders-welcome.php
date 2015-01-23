@@ -25,6 +25,7 @@
                     <li>Pay for items on their behalf, either individually or all the fools together</li>
                     <li>Wear your underwear backwards</li>
                 </ul>
+                <a href="ringleaders-new-order.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
             </div>
 
             <div class="like-form">
@@ -38,9 +39,6 @@
                         <td colspan="3">You currently have no teams to display.</td>
                     </tr>
                 </table>
-                <div class="row button-row">
-                    <a href="ringleaders-new-order.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
-                </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
