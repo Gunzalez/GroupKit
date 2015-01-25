@@ -24,8 +24,8 @@ $gender = $_SESSION["gender"];
 $colour = $_SESSION["colour"];
 $size = $_SESSION["size"];
 
-$mensImage = "garment-mens.jpg";
-$womensImage = "garment-womens.jpg";
+$mensImage = "garment-mens-front.jpg";
+$womensImage = "garment-womens-front.jpg";
 
 function echoIfEqual($val1, $val2, $str){
     if($val1 == $val2){
@@ -55,9 +55,7 @@ function echoIfEqual($val1, $val2, $str){
 
             <div class="showcase">
                 <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display preset">
-                    <span class="figure big" style="color: <?php echo $colour; ?>">
-                        XX
-                    </span>
+                    &nbsp;
                 </div>
                 <div class="gender-switch switch">
                     <a href="#" class="button white-button<?php echoIfEqual('womens', $gender, ' selected'); ?>" data-gender="womens">Womens</a>
@@ -71,7 +69,7 @@ function echoIfEqual($val1, $val2, $str){
             <form class="form" id="choose-garment-form" action="members-front.php" method="post" name="choose-garment-form" novalidate="novalidate">
                 <input type="hidden" id="gender" name="gender" value="<?php echo $gender; ?>" />
                 <div class="row">
-                    <label for="size">Choose your size</label>
+                    <label for="size">Garment size</label>
                     <select id="size" name="size" class="select" tabindex="1">
                         <option value="nil"<?php echoIfEqual('nil', $size, ' selected="selected"'); ?>>Select a size</option>
                         <option value="09"<?php echoIfEqual('09', $size, ' selected="selected"'); ?>>9</option>
@@ -84,7 +82,7 @@ function echoIfEqual($val1, $val2, $str){
                     </p>
                 </div>
                 <div class="row">
-                    <div class="like-label">Choose your colour</div>
+                    <div class="like-label">Garment colour</div>
                     <div class="like-input colour-switch swatches">
                         <label for="colour1"><span class="colour <?php echoIfEqual('#000000', $colour, ' selected'); ?>" style="background-color: #000000"></span></label>
                         <input id="colour1" type="radio" name="colour" value="#000000"<?php echoIfEqual('#000000', $colour, ' checked'); ?>>

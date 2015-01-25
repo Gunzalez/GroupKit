@@ -40,25 +40,29 @@ function echoIfEqual($val1, $val2, $str){
 
             <div class="title">
                 <h2>Thank you</h2>
-                <!-- <a href="members-back.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a> -->
                 <div class="cboth"></div>
             </div>
 
+            <div class="full-width">
+                <p>Thank you for your payment, made on the #00/00/2015#.  Your item should be at the submitted address by #00/00/2015#.</p>
+                <p>Otherwise contact your ringleader at <a href="mailto:ringleader@emailaddress.com">ringleader@emailaddress.com</a> and give him what for, or better still if you know where they live turn up at midnight with two midgets in gimp costumes, has always worked for me.</p>
+            </div>
+
             <div class="showcase">
-                <div id="garment-display" data-garment-front="<?php echo $garmentImageFront; ?>" data-garment-back="<?php echo $garmentImageBack; ?>" class="display back">
-                    <span class="figure small front <?php echo $position; ?>" data-figure="name" style="color: <?php echo $colour; ?>; font-family: '<?php echo $nameStyle; ?>';">
+                <div id="garment-display" data-garment-front="<?php echo $garmentImageFront; ?>" data-garment-back="<?php echo $garmentImageBack; ?>" class="display front">
+                    <span class="figure small front <?php echo $position; ?>" data-figure="name" style="font-family: '<?php echo $nameStyle; ?>';">
                         XXXX
                     </span>
-                    <span class="figure small back" data-figure="name" style="color: <?php echo $colour; ?>; font-family: '<?php echo $nameStyle; ?>';">
+                    <span class="figure small back" data-figure="name" style="font-family: '<?php echo $nameStyle; ?>';">
                         XXXX
                     </span>
-                    <span class="figure big back" data-figure="number" style="color: <?php echo $colour; ?>; font-family: '<?php echo $numberStyle; ?>';">
+                    <span class="figure big back" data-figure="number" style="font-family: '<?php echo $numberStyle; ?>';">
                         10
                     </span>
                 </div>
                 <div class="view-switch switch">
-                    <a href="#" class="button white-button selected" data-view="back">Back</a>
-                    <a href="#" class="button white-button" data-view="front">Front</a>
+                    <a href="#" class="button white-button selected" data-view="front">Front</a>
+                    <a href="#" class="button white-button" data-view="back">Back</a>
                 </div>
                 <div class="details">
                     <p>100% Cotton Ladies T-Shirt. Lorem Ipsum is simply dummy text of the printing and typesetting industry ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It survived not only five centuries...</p>
@@ -67,7 +71,7 @@ function echoIfEqual($val1, $val2, $str){
 
             <form class="form" id="thank-you-form" action="#" method="post" name="thank-you-form" novalidate="novalidate">
                 <div class="row">
-                    <h3>Summary</h3>
+                    <h3>Garment summary</h3>
                     <table width="100%" border="0" cellspacing="0" cellpadding="0" class="summary">
                         <tr>
                             <th scope="row">Gender</th>

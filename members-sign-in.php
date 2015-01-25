@@ -33,18 +33,6 @@
                 <div class="divider"></div>
             </form>
 
-            <h3 class="form-subheading">Forgotten your password?</h3>
-            <form class="form last-element" id="members-forgot-password" action="" method="post" name="members-forgot-password" novalidate="novalidate">
-                <div class="row">
-                    <label for="email">Email address</label>
-                    <input type="email" name="email" id="email" value="" class="input" tabindex="4" />
-                </div>
-                <div class="row button-row">
-                    <button type="button" class="button" tabindex="5"><i class="fa fa-fw"></i> Help, I forgot</button>
-                </div>
-                <div class="cleft"></div>
-            </form>
-
         </div>
     </div>
 

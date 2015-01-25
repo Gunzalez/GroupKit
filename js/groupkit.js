@@ -169,7 +169,7 @@
                             .css('background','url(uploaded/'+genderImage+') 0 0 no-repeat');
                     }
                 });
-                var garmentImage = $(self.$garmentDisplay).attr("data-garment-back");
+                var garmentImage = $(self.$garmentDisplay).attr("data-garment-front");
                     self.$garmentDisplay.css('background','url(uploaded/'+garmentImage+') 0 0 no-repeat');
             }
         }

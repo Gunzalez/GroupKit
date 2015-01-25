@@ -19,6 +19,8 @@ Refactor dynamic garments JS                                            0.5 hrs 
 Members journey completed                                               3.0 hrs   - Sunday, 18, 2015
 Ringleaders Returning, 80%                                              2.5 hrs   - Tuesday, 21, 2015
 Ringleaders refactor                                                    1.0 hrs   - Thursday, 23, 2015
+Meeting with Rob, I called it again, so it's part of work               1.5 hrs   - Saturday, 24, 2015
+Member route tweaked to reflect meeting decisions                       0.5 hrs   - Sunday, 25, 2015
 
 TODO
 ================================

@@ -227,6 +227,15 @@ img {
   font-size: 1.7em;
   padding-bottom: 35px;
 }
+.content .full-width {
+  padding-bottom: 10px;
+}
+.content a {
+  color: #76a741;
+}
+.content a:hover {
+  text-decoration: none;
+}
 
 label {
   font-size: 1.1em;
@@ -245,6 +254,9 @@ label {
   -webkit-appearance: none;
   width: 200px;
   box-sizing: border-box;
+}
+.input.short-input {
+  width: 70px;
 }
 
 select {
@@ -693,6 +705,7 @@ textarea {
   height: 307px;
   border-bottom: 1px solid #76a741;
   margin-bottom: 15px;
+  color: #231f20;
 }
 #garment-display.back .front {
   display: none;

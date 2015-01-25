@@ -48,7 +48,7 @@ $womensImage = "garment-womens-front.jpg";
 
             <div class="showcase">
                 <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display front preset">
-                    <span class="figure small <?php echo $position; ?>" data-figure="name" style="color: <?php echo $colour; ?>; font-family: '<?php echo $nameStyle; ?>';">
+                    <span class="figure small <?php echo $position; ?>" data-figure="name" style="font-family: '<?php echo $nameStyle; ?>';">
                         XXXX
                     </span>
                 </div>
@@ -58,23 +58,7 @@ $womensImage = "garment-womens-front.jpg";
             </div>
 
             <form class="form" id="personalise-front-form" action="members-back.php" method="post" name="personalise-front-form" novalidate="novalidate">
-                <input type="hidden" id="gender" name="gender" value="<?php echo $gender; ?>" /> <!-- needed for gender display -->
-                <!--
-                TODO:
-                Why is this repeated in PSD, you can uncomment if you want
-
-                <div class="row">
-                    <div class="like-label">Choose your colour</div>
-                    <div class="like-input colour-switch swatches">
-                        <label for="colour1"><span class="colour colour1"></span></label>
-                        <input id="colour1" type="radio" name="colour" value="#000000"<?php echoIfEqual('#000000', $colour, ' checked'); ?>>
-                        <label for="colour2"><span class="colour colour2"></span></label>
-                        <input id="colour2" type="radio" name="colour" value="#2AA9E0"<?php echoIfEqual('#2AA9E0', $colour, ' checked'); ?>>
-                        <label for="colour3"><span class="colour colour3"></span></label>
-                        <input id="colour3" type="radio" name="colour" value="#ED1F7A"<?php echoIfEqual('#ED1F7A', $colour, ' checked'); ?>>
-                    </div>
-                </div>
-                //-->
+                <input type="hidden" id="gender" name="gender" value="<?php echo $gender; ?>" /> <!-- needed for gender display, but you can do it your way -->
                 <div class="row">
                     <div class="like-label">Position</div>
                     <div class="like-input position-switch">
@@ -97,6 +81,12 @@ $womensImage = "garment-womens-front.jpg";
                         <label for="style3">Century Gothic</label>
                     </div>
                 </div>
+
+                <div class="row">
+                    <label for="front-text">Name</label>
+                    <input type="text" id="front-text" value="Coke Zero" class="input">
+                </div>
+
                 <div class="row">
                     <div class="like-label">Name</div>
                     <div class="like-input">

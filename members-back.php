@@ -46,10 +46,10 @@ $womensImage = "garment-womens.jpg";
 
             <div class="showcase">
                 <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display back preset">
-                    <span class="figure small" data-figure="name" style="color: <?php echo $colour; ?>; font-family: '<?php echo $nameStyle; ?>';">
+                    <span class="figure small" data-figure="name" style="font-family: '<?php echo $nameStyle; ?>';">
                         XXXX
                     </span>
-                    <span class="figure big" data-figure="number" style="color: <?php echo $colour; ?>; font-family: '<?php echo $numberStyle; ?>';">
+                    <span class="figure big" data-figure="number" style="font-family: '<?php echo $numberStyle; ?>';">
                         10
                     </span>
                 </div>
@@ -59,23 +59,7 @@ $womensImage = "garment-womens.jpg";
             </div>
 
             <form class="form" id="personalise-back-form" action="members-confirm.php" method="post" name="personalise-back-form" novalidate="novalidate">
-                <input type="hidden" id="gender" name="gender" value="<?php echo $gender; ?>" /> <!-- needed for gender display -->
-                <!--
-                TODO:
-                Why is this repeated in PSD, you can uncomment if you want
-
-                <div class="row">
-                    <div class="like-label">Choose your colour</div>
-                    <div class="like-input colour-switch swatches">
-                        <label for="colour1"><span class="colour colour1"></span></label>
-                        <input id="colour1" type="radio" name="colour" value="#000000"<?php echoIfEqual('#000000', $colour, ' checked'); ?>>
-                        <label for="colour2"><span class="colour colour2"></span></label>
-                        <input id="colour2" type="radio" name="colour" value="#2AA9E0"<?php echoIfEqual('#2AA9E0', $colour, ' checked'); ?>>
-                        <label for="colour3"><span class="colour colour3"></span></label>
-                        <input id="colour3" type="radio" name="colour" value="#ED1F7A"<?php echoIfEqual('#ED1F7A', $colour, ' checked'); ?>>
-                    </div>
-                </div>
-                //-->
+                <input type="hidden" id="gender" name="gender" value="<?php echo $gender; ?>" /> <!-- needed for gender display, but you can do it your way -->
                 <div class="row">
                     <div class="like-label">Number style</div>
                     <div class="like-input style-switch block">
@@ -89,10 +73,16 @@ $womensImage = "garment-womens.jpg";
                         <label for="style3">Century Gothic</label>
                     </div>
                 </div>
+
+                <div class="row">
+                    <label for="front-text">Number</label>
+                    <input type="text" id="front-text" value="10" maxlength="5" class="input short-input">
+                </div>
+
                 <div class="row">
                     <div class="like-label">Number</div>
                     <div class="like-input">
-                        <span id="chosen-number" class="chosen-number big" style="sfont-family: <?php echo $numberStyle; ?>">10</span>
+                        <span id="chosen-number" class="chosen-number big" style="font-family: <?php echo $numberStyle; ?>">10</span>
                         <p>This is the number selected by your Ringleader.</p>
                     </div>
                 </div>
