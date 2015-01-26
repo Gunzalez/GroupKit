@@ -3,10 +3,10 @@
 include_once('includes/fakedata.php');
 
 if(isset($_GET['teamId'])) {
-    $teamName = $fakeTeamArray[$_GET['teamId']];
+    $teamName = $fakeTeamArray[$_GET['teamId']]['name'];
     $teamId = $_GET['teamId'];
 } else if(isset($_POST['teamId'])) {
-    $teamName = $fakeTeamArray[$_GET['teamId']];
+    $teamName = $fakeTeamArray[$_GET['teamId']]['name'];
     $teamId = $_GET['teamId'];
 }
 
@@ -27,8 +27,6 @@ if(isset($_GET['memberId']) && $_GET['memberId'] != '') {
     $garmentName = $fakeNamesArray[$_GET['memberId']]["Garment Name"];
     $garmentNumber = $fakeNamesArray[$_GET['memberId']]["Garment Number"];
 }
-
-
 
 function returnIfEqual($val1, $val2, $str){
     if($val1 == $val2){

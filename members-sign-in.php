@@ -30,7 +30,6 @@
                     <button type="button" class="button" tabindex="3"><i class="fa fa-fw"></i> Sign in</button>
                 </div>
                 <div class="cleft"></div>
-                <div class="divider"></div>
             </form>
 
         </div>

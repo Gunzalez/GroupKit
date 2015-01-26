@@ -2,10 +2,10 @@
 <?php
 
 if(isset($_GET['teamId'])) {
-    $teamName = $fakeTeamArray[$_GET['teamId']];
+    $teamName = $fakeTeamArray[$_GET['teamId']]['name'];
     $teamId = $_GET['teamId'];
 } else if(isset($_POST['teamId'])) {
-    $teamName = $fakeTeamArray[$_GET['teamId']];
+    $teamName = $fakeTeamArray[$_GET['teamId']]['name'];
     $teamId = $_GET['teamId'];
 }
 

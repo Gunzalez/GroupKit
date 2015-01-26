@@ -1,8 +1,7 @@
 <?php
-
 include_once('includes/fakedata.php');
 
-$teamName = $fakeTeamArray[$_GET['teamId']];
+$teamName = $fakeTeamArray[$_GET['teamId']]['name'];
 $teamId = $_GET['teamId'];
 $teamDescription = 'Cras in leo faucibus, consectetur lectus a, egestas ligula. Ut vel finibus est.';
 
@@ -34,11 +33,13 @@ if(isset($_GET['memberId'])) {
             <div class="showcase">
                 <h3>#<?php echo $teamId; ?> / <?php echo $teamName; ?></h3>
                 <?php if( $teamId == '111'){ ?>
-                    <p>There are no members for this team yet.</p>
                     <?php if($memberId == 'new'){ ?>
+                        <p>Click on a member name for full details, where you can edit details or remind them about their garment.</p>
                         <ul>
                             <li><a href="ringleaders-edit-member.php?teamId=<?php echo $teamId; ?>">New MemberName (0%)</a></li>
                         </ul>
+                    <?php } else { ?>
+                        <p>There are no members for this team yet.</p>
                     <?php } ?>
                 <?php } else { ?>
                     <p>Click on a member name for full details, where you can edit details or remind them about their garment.</p>

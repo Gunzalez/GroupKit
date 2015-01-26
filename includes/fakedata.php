@@ -8,6 +8,33 @@ $fakeTeamArray = array(
     "111" => "NewTeamName"
 );
 
+$fakeTeamArray = array(
+    "131" => array(
+        'name' => 'Coke Zero',
+        'percentage' => '60%'
+    ),
+    "023" => array(
+        'name' => 'Tigers',
+        'percentage' => '100%'
+    ),
+    "109" => array(
+        'name' => 'Go Ritchie Go!',
+        'percentage' => '70%'
+    ),
+    "210" => array(
+        'name' => 'Wedding',
+        'percentage' => '70%'
+    ),
+    "419" => array(
+        'name' => 'LongOrderNameLong OrderName',
+        'percentage' => '90%'
+    ),
+    "111" => array(
+        'name' => 'NewTeamName',
+        'percentage' => '0%'
+    )
+);
+
 $name1 = array(
     "First Name" => "Michael",
     "Last Name" => "Jackson",

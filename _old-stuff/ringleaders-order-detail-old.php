@@ -1,12 +1,5 @@
 <?php
-$fakeTeamArray = array(
-    "131" => "Coke Zero",
-    "023" => "Tigers",
-    "109" => "Go Ritchie Go!",
-    "210" => "Wedding",
-    "419" => "LongOrderNameLong OrderName",
-    "111" => "NewTeamName"
-);
+include_once('includes/fakedata.php');
 
 $teamName = '';
 $teamId = 'new';

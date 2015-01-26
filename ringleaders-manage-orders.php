@@ -32,13 +32,12 @@
                         <th scope="col" class="order-date">Date</th>
                         <th scope="col" class="order-status">Status</th>
                     </tr>
-
                     <?php
-                    foreach($fakeTeamArray as $team => $details) {
+                    foreach($fakeTeamArray as $team => $detail) {
                         echo "<tr data-order-id=". $team  .">";
-                        echo "<td class='order-name'>#" . $team  . "&nbsp;/&nbsp;" . $details  . "</td>";
+                        echo "<td class='order-name'>#" . $team  . "&nbsp;/&nbsp;" . $detail['name']  . "</td>";
                         echo "<td class='order-date'>09/11/2014</td>";
-                        echo "<td class='order-status'>90%</td>";
+                        echo "<td class='order-status'>" . $detail['percentage']  . "</td>";
                         echo "</tr>";
                     }
                     ?>

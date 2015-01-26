@@ -1076,6 +1076,9 @@ textarea {
   .page.inner .orders-list .order-date {
     display: none;
   }
+  .page.inner .orders-list .order-status {
+    width: 50px;
+  }
 
   .footer .content ul.auxiliary-navigation {
     float: none;
