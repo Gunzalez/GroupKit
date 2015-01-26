@@ -5,13 +5,17 @@ include_once('includes/fakedata.php');
 $teamName = $fakeTeamArray[$_GET['teamId']];
 $teamId = $_GET['teamId'];
 $teamDescription = 'Cras in leo faucibus, consectetur lectus a, egestas ligula. Ut vel finibus est.';
-$pageState = 'Edit';
+
+$memberId = '';
+if(isset($_GET['memberId'])) {
+    $memberId = $_GET['memberId'];
+}
 
 ?>
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit - Ringleaders <?php echo $pageState; ?> Order</title>
+    <title>Group Kit - Ringleaders Edit Order</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body class="page inner">
@@ -29,13 +33,23 @@ $pageState = 'Edit';
 
             <div class="showcase">
                 <h3>#<?php echo $teamId; ?> / <?php echo $teamName; ?></h3>
-                <ul>
-                    <?php
-                    foreach($fakeNamesArray as $member) {
-                        echo "<li><a href='ringleaders-edit-member.php?teamId=" . $teamId . "&memberId=". $member['Id'] . "'>". $member['First Name'] . " " . $member['Last Name'] . " (" . $member['Percentage'] . ")</a></li>";
-                    }
-                    ?>
-                </ul>
+                <?php if( $teamId == '111'){ ?>
+                    <p>There are no members for this team yet.</p>
+                    <?php if($memberId == 'new'){ ?>
+                        <ul>
+                            <li><a href="ringleaders-edit-member.php?teamId=<?php echo $teamId; ?>">New MemberName (0%)</a></li>
+                        </ul>
+                    <?php } ?>
+                <?php } else { ?>
+                    <p>Click on a member name for full details, where you can edit details or remind them about their garment.</p>
+                    <ul>
+                        <?php
+                        foreach($fakeNamesArray as $member) {
+                            echo "<li><a href='ringleaders-edit-member.php?teamId=" . $teamId . "&memberId=". $member['Id'] . "'>". $member['First Name'] . " " . $member['Last Name'] . " (" . $member['Percentage'] . ")</a></li>";
+                        }
+                        ?>
+                    </ul>
+                <?php } ?>
                 <a href="ringleaders-add-member.php?teamId=<?php echo $teamId; ?>" class="button standalone-button"><i class="fa fa-fw"></i> Add new member</a>
             </div>
 
@@ -43,14 +57,24 @@ $pageState = 'Edit';
                 <input type="hidden" id="teamId" name="teamId" value="<?php echo $teamId; ?>" />
                 <div class="row">
                     <label for="team-name">Team name</label>
-                    <input type="text" id="team-name" name="team-name" value="<?php echo $teamName; ?>" class="input" />
+                    <div class="like-input read-only-mode">
+                        <span class="value"><?php echo $teamName; ?></span>
+                    </div>
+                    <input type="text" id="team-name" name="team-name" value="<?php echo $teamName; ?>" class="input edit-mode display-none" />
                 </div>
                 <div class="row">
                     <label for="team-description">Description</label>
-                    <textarea id="team-description" name="team-description" class="input"><?php echo $teamDescription; ?></textarea>
+                    <div class="like-input read-only-mode">
+                        <span class="value"><?php echo $teamDescription; ?></span>
+                    </div>
+                    <textarea id="team-description" name="team-description" class="input edit-mode display-none"><?php echo $teamDescription; ?></textarea>
+                </div>
+                <div class="row button-row edit-mode display-none">
+                    <button type="button" class="button"><i class="fa fa-fw"></i> Update team</button>
                 </div>
                 <div class="row button-row">
-                    <button type="button" class="button"><i class="fa fa-fw"></i> Update team</button>
+                    <a href="#" class="button read-only-mode" id="editable"><i class="fa fa-fw"></i> Click to edit</a>
+                    <a href="#" class="button edit-mode display-none white-button" id="nonEditable"><i class="fa fa-fw"></i> Cancel edit</a>
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>

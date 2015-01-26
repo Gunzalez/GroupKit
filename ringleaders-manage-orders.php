@@ -20,7 +20,7 @@
 
             <div class="showcase">
                 <p>Welcome back #Mr Rob Curle#,</p>
-                <p><a href="ringleaders-edit-order.php">Create a new order</a> or manage an existing one from the list.</p>
+                <p><a href="ringleaders-add-order.php">Create a new team</a> or manage an existing one from the list.</p>
                 <p>Remember you can remind teammates about their order and you can also pay for items on their behalf, either individually or all together.</p>
                 <a href="ringleaders-add-order.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
             </div>

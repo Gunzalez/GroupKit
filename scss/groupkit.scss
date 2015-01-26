@@ -242,6 +242,68 @@ img { border: none; }
             text-decoration: none;
         }
     }
+
+    .button {
+        -webkit-appearance: none;
+        @include border-radius(3px);
+        padding: 6px 10px 6px 7px;
+        font-size: 1.0em;
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: $green;
+        @include transitions();
+        font-family: 'signikaregular';
+        text-transform: uppercase;
+        border: 1px solid $green;
+
+        &.back-button {
+            font-size: 0.9em;
+        }
+
+        &:hover {
+            background-color: #ffffff;
+            color: $black;
+            @include transitions();
+        }
+
+        &.white-button {
+            background-color: #ecebeb;
+            border: 1px solid #f2f2f2;
+            color: $black;
+
+            &:hover {
+                background-color: #ffffff;
+                border: 1px solid #cccccc;
+            }
+        }
+
+        &.disabled-button {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            color: $black;
+            cursor: default;
+
+            &:hover {
+                background-color: #ffffff;
+                border: 1px solid #cccccc;
+            }
+        }
+
+        &.yellow-button {
+            background-color: $lime;
+            border: 1px solid $lime;
+            color: $black;
+
+            &:hover {
+                background-color: #ffffff;
+            }
+        }
+
+        &.standalone-button {
+            display: block;
+        }
+    }
 }
 
 label {
@@ -289,66 +351,14 @@ textarea {
     color: $eLgrey;
 }
 
-.button {
-    -webkit-appearance: none;
-    @include border-radius(3px);
-    padding: 6px 10px 6px 7px;
-    font-size: 1.0em;
-    cursor: pointer;
-    text-decoration: none;
-    color: #ffffff;
-    background-color: $green;
-    @include transitions();
-    font-family: 'signikaregular';
-    text-transform: uppercase;
-    border: 1px solid $green;
+.reminded-text {
+    margin-top: -12px;
+    font-size: 0.9em;
+}
 
-    &.back-button {
-        font-size: 0.9em;
-    }
-
-    &:hover {
-        background-color: #ffffff;
-        color: $black;
-        @include transitions();
-    }
-
-    &.white-button {
-        background-color: #ecebeb;
-        border: 1px solid #f2f2f2;
-        color: $black;
-
-        &:hover {
-            background-color: #ffffff;
-            border: 1px solid #cccccc;
-        }
-    }
-
-    &.disabled-button {
-        background-color: #ffffff;
-        border: 1px solid #cccccc;
-        color: $black;
-        cursor: default;
-
-        &:hover {
-            background-color: #ffffff;
-            border: 1px solid #cccccc;
-        }
-    }
-
-    &.yellow-button {
-        background-color: $lime;
-        border: 1px solid $lime;
-        color: $black;
-
-        &:hover {
-            background-color: #ffffff;
-        }
-    }
-
-    &.standalone-button {
-        display: block;
-    }
+// Edit/Non-edit mode
+.display-none {
+    display: none !important;
 }
 
 .last-element {
@@ -433,6 +443,12 @@ textarea {
                 float: left;
                 width: 200px;
 
+                &.ellipsis {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
                 &.just-text {
                     padding-top: 6px;
                 }
@@ -475,6 +491,12 @@ textarea {
                     }
                 }
 
+                .value {
+                    display: block;
+                    padding-top: 6px;
+                    font-size: 1.0em;
+                }
+
             }
 
             .info {
@@ -489,6 +511,12 @@ textarea {
             &.button-row {
                 .button {
                     margin-left: 140px;
+                }
+
+                a {
+                    &.button {
+                        float: left;
+                    }
                 }
             }
         }
@@ -581,20 +609,9 @@ textarea {
             }
         }
 
-        p {
-            a {
-                color: $green;
-                text-decoration: underline;
-
-                &:hover {
-                    text-decoration: none;
-                }
-            }
-        }
-
         .standalone-button {
             display: inline-block;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
     }
 
@@ -695,7 +712,7 @@ textarea {
         .links {
             float: left;
             .button {
-                margin-top: 12px;
+                margin-bottom: 15px;
                 float: left;
             }
         }
@@ -1216,6 +1233,14 @@ textarea {
                             width: auto;
                         }
                     }
+
+                    a {
+                        &.button {
+                            float: none;
+                            display: block;
+                            width: auto;
+                        }
+                    }
                 }
 
                 .info {
@@ -1229,7 +1254,6 @@ textarea {
                     label {
                         float: left;
                     }
-
                 }
             }
 
@@ -1245,7 +1269,7 @@ textarea {
             .links {
                 float: none;
                 .button {
-                    margin-top: 12px !important;
+                    margin-bottom: 15px !important;
                     float: none;
                     display: block;
                     width: auto !important;

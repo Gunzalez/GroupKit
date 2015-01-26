@@ -30,16 +30,21 @@ if(isset($_GET['teamId'])) {
             </div>
             <div class="showcase">
                 <h3>#<?php echo $teamId; ?> / <?php echo $teamName; ?></h3>
-                <ul>
-                    <?php
-                    foreach($fakeNamesArray as $member) {
-                        echo "<li><a href='ringleaders-edit-member.php?teamId=" . $teamId . "&memberId=". $member['Id'] . "'>". $member['First Name'] . " " . $member['Last Name'] . " (" . $member['Percentage'] . ")</a></li>";
-                    }
-                    ?>
-                </ul>
+                <?php if( $teamId == '111'){ ?>
+                    <p>There are no members for this team yet.</p>
+                <?php } else { ?>
+                    <p>Click on a member name for full details, where you can edit details or remind them about their garment.</p>
+                    <ul>
+                        <?php
+                        foreach($fakeNamesArray as $member) {
+                            echo "<li><a href='ringleaders-edit-member.php?teamId=" . $teamId . "&memberId=". $member['Id'] . "'>". $member['First Name'] . " " . $member['Last Name'] . " (" . $member['Percentage'] . ")</a></li>";
+                        }
+                        ?>
+                    </ul>
+                <?php } ?>
             </div>
 
-            <form class="form" id="" action="ringleaders-edit-order.php?teamId=<?php echo $teamId; ?>&memberId=1" method="post" name="" novalidate="novalidate">
+            <form class="form" id="" action="ringleaders-edit-order.php?teamId=<?php echo $teamId; ?>&memberId=new" method="post" name="" novalidate="novalidate">
                 <input type="hidden" id="teamId" name="teamId" value="<?php echo $teamId; ?>" />
                 <div class="row">
                     <label for="first-name">First name</label>

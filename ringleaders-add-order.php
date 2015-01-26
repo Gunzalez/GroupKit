@@ -19,7 +19,7 @@
 
             <div class="showcase">
                 <h3>#<span class="new-team">new team</span></h3>
-                <!-- <a href="ringleaders-add-member.php" class="button standalone-button"><i class="fa fa-fw"></i> Add new member</a>I recommend you disable before a team is created -->
+                <p>There are no members for this team yet.</p>
             </div>
 
             <form class="form" id="" action="ringleaders-manage-orders.php" method="post" name="" novalidate="novalidate">

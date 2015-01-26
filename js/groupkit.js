@@ -44,7 +44,7 @@
             var $allForms = $('.form');
             $allForms.each(function(){
                 var $thisForm = $(this);
-                $('.button', $thisForm).on('click', function(){
+                $('button.button', $thisForm).on('click', function(){
                     $thisForm.trigger('submit');
                 });
             })
@@ -148,7 +148,7 @@
 
                     // a little extra UX
                     var chosenNameOrNumberId = '#chosen-'+figureAttr;
-                    console.log(chosenNameOrNumberId);
+                    //console.log(chosenNameOrNumberId);
                     $(chosenNameOrNumberId).css('font-family', newStyle);
                 });
             }
@@ -175,12 +175,34 @@
         }
     };
 
+    groupkit.editables = {
+        init: function(){
+            var $editableController = $('#editable'),
+                $nonEditableController = $('#nonEditable'),
+                $readOnly = $('.read-only-mode'),
+                $editable = $('.edit-mode');
+
+            $editableController.on('click',function(evt){
+                evt.preventDefault();
+                $readOnly.addClass('display-none');
+                $editable.removeClass('display-none');
+            });
+
+            $nonEditableController.on('click',function(evt){
+                evt.preventDefault();
+                $readOnly.removeClass('display-none');
+                $editable.addClass('display-none');
+            });
+        }
+    };
+
 	groupkit.init = function(){
 
         // Other init
         groupkit.environment.init();
         groupkit.garmentSelection.init();
         groupkit.orders.init();
+        groupkit.editables.init();
         //
         //
         //
