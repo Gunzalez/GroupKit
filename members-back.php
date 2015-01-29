@@ -28,7 +28,7 @@ $womensImage = "garment-womens.jpg";
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit - Members personalise the back</title>
+    <title>Group Kit - Members personalise back</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body class="page inner garment-selection">

@@ -37,7 +37,7 @@ function returnIfEqual($val1, $val2, $str){
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit - Ringleaders Choose Members</title>
+    <title>Group Kit - Ringleaders edit members</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body class="page inner">

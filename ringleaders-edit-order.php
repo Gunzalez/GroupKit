@@ -14,7 +14,7 @@ if(isset($_GET['memberId'])) {
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit - Ringleaders Edit Order</title>
+    <title>Group Kit - Ringleaders edit order</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body class="page inner">

@@ -23,14 +23,14 @@ $size = $_SESSION['size'];
 $nameStyle = $_SESSION['nameStyle'];
 $position = $_SESSION['position'];
 
-$mensImage = "ringleaders-garment-mens-front.jpg";
-$womensImage = "ringleaders-garment-womens-front.jpg";
+$mensImage = "ringleaders-garment-mens-back.jpg";
+$womensImage = "ringleaders-garment-womens-back.jpg";
 ?>
 
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit - Ringleaders personalise front</title>
+    <title>Group Kit - Ringleaders personalise back</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body class="page inner garment-selection">
@@ -41,13 +41,13 @@ $womensImage = "ringleaders-garment-womens-front.jpg";
         <div class="content">
 
             <div class="title">
-                <h2>Personalise the front</h2>
-                <a href="ringleaders-choose-garment.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
+                <h2>Personalise the back</h2>
+                <a href="ringleaders-personalise-front.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
 
             <div class="showcase">
-                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display front preset">
+                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display back preset">
 
                 </div>
                 <div class="gender-switch switch">
@@ -60,7 +60,7 @@ $womensImage = "ringleaders-garment-womens-front.jpg";
                 </div>
             </div>
 
-            <form class="form" id="ringleaders-front-form" action="ringleaders-personalise-back.php" method="post" name="ringleaders-front-form" novalidate="novalidate">
+            <form class="form" id="ringleaders-front-form" action="ringleaders-new-add-member.php" method="post" name="ringleaders-front-form" novalidate="novalidate">
                 <input type="hidden" id="gender" name="gender" value="<?php echo $gender; ?>" /> <!-- needed for gender display, but you can do it your way -->
                 <div class="row">
                     <div class="like-label">Choose allowed font colours</div>
@@ -86,7 +86,7 @@ $womensImage = "ringleaders-garment-womens-front.jpg";
                 <div class="divider"></div>
                 <div class="row">
                     <label for="front-text">Personalise name</label>
-                    <input type="text" id="front-text" value="" placeholder="Team" class="input">
+                    <input type="text" id="front-text" value="" placeholder="Big number" class="input">
                 </div>
                 <div class="row">
                     <div class="like-label">Choose allowed fonts</div>
@@ -124,7 +124,7 @@ $womensImage = "ringleaders-garment-womens-front.jpg";
 
 
                 <div class="row button-row">
-                    <button type="button" class="button"><i class="fa fa-fw"></i> Personalise the back</button>
+                    <button type="button" class="button"><i class="fa fa-fw"></i> Choose members</button>
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>

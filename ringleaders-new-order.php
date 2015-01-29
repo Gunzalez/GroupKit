@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit - Ringleaders New Order</title>
+    <title>Group Kit - Ringleaders new order</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body class="page inner">
