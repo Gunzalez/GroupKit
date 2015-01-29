@@ -268,7 +268,7 @@ img { border: none; }
         }
 
         &.white-button {
-            background-color: #ecebeb;
+            background-color: #dbdbdb;
             border: 1px solid #f2f2f2;
             color: $black;
 
@@ -368,7 +368,7 @@ textarea {
 }
 
 .helpers {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-left: 140px;
 
     a {
@@ -398,9 +398,16 @@ textarea {
     }
 
     .divider {
-        border-bottom:  1px solid #e8e8e8;
+        border-top:  1px solid #e8e8e8;
         height: 2px;
         width: 100%;
+        clear: left;
+    }
+
+    .form {
+        .divider {
+            padding-bottom: 10px;
+        }
     }
 
     .form-heading {
@@ -432,6 +439,8 @@ textarea {
                 width: 140px;
                 font-size: 1.1em;
                 color: $offblack;
+                padding-right: 15px;
+                box-sizing: border-box;
             }
 
             .select,
@@ -442,6 +451,7 @@ textarea {
             .like-input {
                 float: left;
                 width: 200px;
+                padding-top: 7px;
 
                 &.ellipsis {
                     text-overflow: ellipsis;
@@ -454,9 +464,11 @@ textarea {
                 }
 
                 label {
-                    padding: 5px 15px 0 0;
+                    padding: 0 15px 0 0;
                     width: auto;
                     cursor: pointer;
+                    margin-top: -1px;
+                    font-size: 1.0em;
 
                     &.right {
                         padding-right: 0;
@@ -465,7 +477,7 @@ textarea {
 
                 input {
                     float: left;
-                    margin: 7px 5px 0 0;
+                    margin: 0 5px 0 0;
                     display: inline-block;
                 }
 
@@ -474,6 +486,7 @@ textarea {
                     label {
                         float: none;
                         display: inline-block;
+                        margin-bottom: 12px;
                     }
                 }
 
@@ -506,6 +519,11 @@ textarea {
                 text-align: left;
                 padding-top: 4px;
                 padding-bottom: 0;
+
+                label {
+                    font-size: 1.0em;
+                    cursor: pointer;
+                }
             }
 
             &.button-row {
@@ -517,6 +535,15 @@ textarea {
                     &.button {
                         float: left;
                     }
+                }
+            }
+
+            .important {
+                strong {
+                    text-transform: uppercase;
+                    color: $green;
+                    font-size: 0.9em;
+                    font-weight: normal;
                 }
             }
         }

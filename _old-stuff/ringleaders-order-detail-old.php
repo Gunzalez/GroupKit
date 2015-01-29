@@ -49,7 +49,7 @@ if(isset($_GET['id'])) {
                     <h3><?php echo $teamName; ?></h3>
                     <p>Admin - add/edit/remove members and garments for this team.</p>
                     <a href="../ringleaders-add-member.php?teamId=<?php echo $teamId; ?>" class="button standalone-button"><i class="fa fa-fw"></i> Team members</a><br />
-                    <a href="../ringleaders-team-garments.php?teamId=<?php echo $teamId; ?>" class="button standalone-button"><i class="fa fa-fw"></i> Choose team garment</a>
+                    <a href="ringleaders-team-garments.php?teamId=<?php echo $teamId; ?>" class="button standalone-button"><i class="fa fa-fw"></i> Choose team garment</a>
                 <?php
                 } else {
                     ?>

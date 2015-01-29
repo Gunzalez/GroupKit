@@ -267,7 +267,7 @@ img {
   transition: all 0.25s;
 }
 .content .button.white-button {
-  background-color: #ecebeb;
+  background-color: #dbdbdb;
   border: 1px solid #f2f2f2;
   color: #231f20;
 }
@@ -360,7 +360,7 @@ textarea {
 }
 
 .helpers {
-  padding-top: 30px;
+  padding-top: 20px;
   padding-left: 140px;
 }
 .helpers a {
@@ -381,9 +381,13 @@ textarea {
   float: left;
 }
 .page .divider {
-  border-bottom: 1px solid #e8e8e8;
+  border-top: 1px solid #e8e8e8;
   height: 2px;
   width: 100%;
+  clear: left;
+}
+.page .form .divider {
+  padding-bottom: 10px;
 }
 .page .form-heading {
   width: 340px;
@@ -415,6 +419,8 @@ textarea {
   width: 140px;
   font-size: 1.1em;
   color: #111111;
+  padding-right: 15px;
+  box-sizing: border-box;
 }
 .page .like-form .row .select,
 .page .like-form .row .input,
@@ -426,6 +432,7 @@ textarea {
 .page .form .row .like-input {
   float: left;
   width: 200px;
+  padding-top: 7px;
 }
 .page .like-form .row .like-input.ellipsis,
 .page .form .row .like-input.ellipsis {
@@ -439,9 +446,11 @@ textarea {
 }
 .page .like-form .row .like-input label,
 .page .form .row .like-input label {
-  padding: 5px 15px 0 0;
+  padding: 0 15px 0 0;
   width: auto;
   cursor: pointer;
+  margin-top: -1px;
+  font-size: 1.0em;
 }
 .page .like-form .row .like-input label.right,
 .page .form .row .like-input label.right {
@@ -450,13 +459,14 @@ textarea {
 .page .like-form .row .like-input input,
 .page .form .row .like-input input {
   float: left;
-  margin: 7px 5px 0 0;
+  margin: 0 5px 0 0;
   display: inline-block;
 }
 .page .like-form .row .like-input.block label,
 .page .form .row .like-input.block label {
   float: none;
   display: inline-block;
+  margin-bottom: 12px;
 }
 .page .like-form .row .like-input.swatches label,
 .page .form .row .like-input.swatches label {
@@ -484,6 +494,11 @@ textarea {
   padding-top: 4px;
   padding-bottom: 0;
 }
+.page .like-form .row .info label,
+.page .form .row .info label {
+  font-size: 1.0em;
+  cursor: pointer;
+}
 .page .like-form .row.button-row .button,
 .page .form .row.button-row .button {
   margin-left: 140px;
@@ -491,6 +506,13 @@ textarea {
 .page .like-form .row.button-row a.button,
 .page .form .row.button-row a.button {
   float: left;
+}
+.page .like-form .row .important strong,
+.page .form .row .important strong {
+  text-transform: uppercase;
+  color: #76a741;
+  font-size: 0.9em;
+  font-weight: normal;
 }
 
 .inner .main .content {

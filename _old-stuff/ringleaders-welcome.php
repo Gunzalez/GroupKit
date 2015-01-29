@@ -13,19 +13,19 @@
 
             <div class="title">
                 <h2>Ringleaders welcome</h2>
-                <a href="ringleaders-sign-in.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
+                <a href="../ringleaders-sign-in.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
 
             <div class="showcase">
                 <p>Welcome to your Orders! With advanced features of activating account and new login widgets, you will definitely have a great experience of using GroupKit, it's pure dynamite!</p>
-                <p><a href="ringleaders-edit-order.php">Create a new order</a>, once done you can -</p>
+                <p><a href="../ringleaders-edit-order.php">Create a new order</a>, once done you can -</p>
                 <ul>
                     <li>Remind cheap teammates about their orders</li>
                     <li>Pay for items on their behalf, either individually or all the fools together</li>
                     <li>Wear your underwear backwards</li>
                 </ul>
-                <a href="ringleaders-new-order.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
+                <a href="../ringleaders-new-order.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
             </div>
 
             <div class="like-form">
@@ -42,7 +42,7 @@
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Managing%20Your%20Orders" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a>
+                    <a href="../ringleaders-help.php?topic=Managing%20Your%20Orders" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a>
                 </div>
             </div>
             <div class="cboth"></div>

@@ -12,7 +12,7 @@
         <div class="content">
 
             <div class="carousel">
-                <a href="ringleaders-welcome.php"><img src="images/holder-carousel.jpg" /></a>
+                <a href="ringleaders-choose-garment.php"><img src="images/holder-carousel.jpg" /></a>
             </div>
             <p class="introduction">Ringleaders choose your garment above</p>
 
