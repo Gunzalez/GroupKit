@@ -23,8 +23,9 @@ $size = $_SESSION['size'];
 $nameStyle = $_SESSION['nameStyle'];
 $position = $_SESSION['position'];
 
-$mensImage = "garment-mens-front.jpg";
-$womensImage = "garment-womens-front.jpg";
+$imageFront = "garment-" . $gender ."-front-" . substr($colour, -1) . ".jpg";
+$leftOverlay = "garment-" . $gender ."-front-left.png";
+$rightOverlay = "garment-" . $gender ."-front-right.png";
 ?>
 
 <!doctype html>
@@ -47,10 +48,8 @@ $womensImage = "garment-womens-front.jpg";
             </div>
 
             <div class="showcase">
-                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display front preset">
-                    <span class="figure small <?php echo $position; ?>" data-figure="name" style="font-family: '<?php echo $nameStyle; ?>';">
-                        XXXX
-                    </span>
+                <div id="garment-display" style="background: url('uploaded/<?php echo $imageFront; ?>') 0 0 no-repeat" class="display">
+                    <div id="garment-overlay" data-image-left="<?php echo $leftOverlay; ?>"  data-image-right="<?php echo $rightOverlay; ?>">&nbsp;</div>
                 </div>
                 <div class="details">
                     <p>100% Cotton Ladies T-Shirt. Lorem Ipsum is simply dummy text of the printing and typesetting industry ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It survived not only five centuries...</p>

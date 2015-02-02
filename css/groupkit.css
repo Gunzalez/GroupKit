@@ -341,7 +341,7 @@ textarea {
 }
 
 .new-team {
-  color: #f0f0f0;
+  color: lightgrey;
 }
 
 .reminded-text {
@@ -381,7 +381,7 @@ textarea {
   float: left;
 }
 .page .divider {
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid #cccccc;
   height: 2px;
   width: 100%;
   clear: left;
@@ -482,7 +482,6 @@ textarea {
 .page .like-form .row .like-input .value,
 .page .form .row .like-input .value {
   display: block;
-  padding-top: 6px;
   font-size: 1.0em;
 }
 .page .like-form .row .info,
@@ -537,36 +536,6 @@ textarea {
 .inner .showcase li.selected a:hover {
   text-decoration: none;
 }
-.inner .showcase .figure {
-  display: block;
-  font-weight: bold;
-  font-family: 'signikabold';
-  text-align: center;
-}
-.inner .showcase .figure.big {
-  padding-top: 140px;
-  font-size: 4.6em;
-  padding-left: 10px;
-}
-.inner .showcase .figure.small {
-  padding-top: 90px;
-  font-size: 2.0em;
-  padding-left: 10px;
-}
-.inner .showcase .figure.small.left {
-  padding-right: 40px;
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
-}
-.inner .showcase .figure.small.right {
-  padding-left: 40px;
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
-}
 .inner .showcase .display.back .small {
   padding-top: 140px;
 }
@@ -597,7 +566,6 @@ textarea {
   font-size: 1.3em;
   line-height: 130%;
   display: block;
-  padding-top: 5px;
   padding-bottom: 5px;
 }
 .inner .like-form .chosen-number.big,
@@ -690,7 +658,7 @@ textarea {
   -moz-border-radius: 3px;
   border-radius: 3px;
   cursor: pointer;
-  border: 5px solid #f0f0f0;
+  border: 5px solid lightgrey;
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
@@ -704,8 +672,8 @@ textarea {
   transition: all 0.25s;
 }
 .inner .summary {
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
   padding: 8px 0;
 }
 .inner .summary .colour {
@@ -726,7 +694,7 @@ textarea {
   box-sizing: border-box;
 }
 .inner .summary tr.odd th, .inner .summary tr.odd td {
-  background-color: #f0f0f0;
+  background-color: lightgrey;
 }
 .inner .summary.cost {
   border: none;
@@ -739,7 +707,7 @@ textarea {
   text-align: right;
 }
 .inner .summary.cost .total th, .inner .summary.cost .total td {
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid lightgrey;
 }
 
 #garment-display {
@@ -748,12 +716,17 @@ textarea {
   border-bottom: 1px solid #76a741;
   margin-bottom: 15px;
   color: #231f20;
+  position: relative;
 }
-#garment-display.back .front {
+#garment-display.back #garment-overlay {
   display: none;
 }
-#garment-display.front .back {
-  display: none;
+#garment-display #garment-overlay {
+  width: 268px;
+  height: 307px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .switch {

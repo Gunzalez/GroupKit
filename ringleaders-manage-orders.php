@@ -46,7 +46,7 @@
                 <div class="divider"></div>
                 <div class="helpers">
                     <a href="ringleaders-help.php?topic=Managing%20Your%20Orders" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
-                    <a href="members-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
+                    <a href="ringleaders-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
                 </div>
             </div>
             <div class="cboth"></div>

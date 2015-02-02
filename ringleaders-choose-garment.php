@@ -54,7 +54,7 @@ function echoIfEqual($val1, $val2, $str){
             </div>
 
             <div class="showcase">
-                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display preset">
+                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display set-image">
                     &nbsp;
                 </div>
                 <div class="gender-switch switch">

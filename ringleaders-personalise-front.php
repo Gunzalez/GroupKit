@@ -47,7 +47,7 @@ $womensImage = "ringleaders-garment-womens-front.jpg";
             </div>
 
             <div class="showcase">
-                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display front preset">
+                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display front set-image">
 
                 </div>
                 <div class="gender-switch switch">

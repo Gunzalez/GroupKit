@@ -21,8 +21,7 @@ function echoIfEqual($val1, $val2, $str){
     }
 }
 
-$mensImage = "garment-mens.jpg";
-$womensImage = "garment-womens.jpg";
+$garmentBackImage = "garment-" . $gender . "-back.jpg";
 ?>
 
 <!doctype html>
@@ -45,14 +44,7 @@ $womensImage = "garment-womens.jpg";
             </div>
 
             <div class="showcase">
-                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display back preset">
-                    <span class="figure small" data-figure="name" style="font-family: '<?php echo $nameStyle; ?>';">
-                        XXXX
-                    </span>
-                    <span class="figure big" data-figure="number" style="font-family: '<?php echo $numberStyle; ?>';">
-                        10
-                    </span>
-                </div>
+                <div id="garment-display" style="background: url('uploaded/<?php echo $garmentBackImage; ?>') 0 0 no-repeat" class="display">&nbsp;</div>
                 <div class="details">
                     <p>100% Cotton Ladies T-Shirt. Lorem Ipsum is simply dummy text of the printing and typesetting industry ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book. It survived not only five centuries...</p>
                 </div>

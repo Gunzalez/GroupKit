@@ -27,6 +27,11 @@
                     <h3><?php echo $_GET['topic']; /* Or make up some more helpful title based on topic */ ?></h3>
                     <p>Ipm struff in hesum strur tabelsum struff in her tam struff in her tabelbelt ennis</p>
                 </div>
+
+                <div class="divider"></div>
+                <div class="helpers">
+                    <a href="ringleaders-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
+                </div>
             </div>
             <div class="cboth"></div>
 

@@ -1,5 +1,12 @@
 <?php
 session_start();
+
+function echoIfEqual($val1, $val2, $str){
+    if($val1 == $val2){
+        echo $str;
+    }
+}
+
 if(isset($_POST['numberStyle'])){
     $_SESSION["numberStyle"] = $_POST['numberStyle'];
 }
@@ -11,18 +18,20 @@ $numberStyle = $_SESSION["numberStyle"];
 $position = $_SESSION["position"];
 $size = $_SESSION["size"];
 
-$garmentImageFront = "garment-womens-front.jpg";
-$garmentImageBack = "garment-womens.jpg";
-if($gender == 'mens'){
-    $garmentImageFront = "garment-mens-front.jpg";
-    $garmentImageBack = "garment-mens.jpg";
-}
+$colourArray = array (
+    "colour1" => "#000000",
+    "colour2" => "#FFFFFF",
+    "colour3" => "#2AA9E0",
+    "colour4" => "#ED1F7A",
+    "colour5" => "#880000",
+    "colour6" => "#FF00FF",
+    "colour7" => "#C8C847",
+    "colour8" => "#76A741"
+);
 
-function echoIfEqual($val1, $val2, $str){
-    if($val1 == $val2){
-        echo $str;
-    }
-}
+$garmentImageFront = "garment-" . $gender ."-front-" . substr($colour, -1) . ".jpg";
+$garmentImageBack = "garment-" . $gender ."-back.jpg";
+$leftOrRightOverlay = "garment-" . $gender ."-front-" . $position .".png";
 ?>
 
 <!doctype html>
@@ -46,15 +55,7 @@ function echoIfEqual($val1, $val2, $str){
 
             <div class="showcase">
                 <div id="garment-display" data-garment-front="<?php echo $garmentImageFront; ?>" data-garment-back="<?php echo $garmentImageBack; ?>" class="display front">
-                    <span class="figure small front <?php echo $position; ?>" data-figure="name" style="font-family: '<?php echo $nameStyle; ?>';">
-                        XXXX
-                    </span>
-                    <span class="figure small back" data-figure="name" style="font-family: '<?php echo $nameStyle; ?>';">
-                        XXXX
-                    </span>
-                    <span class="figure big back" data-figure="number" style="font-family: '<?php echo $numberStyle; ?>';">
-                        10
-                    </span>
+                    <div id="garment-overlay" style="background: url('uploaded/<?php echo $leftOrRightOverlay; ?>') 0 0 no-repeat">&nbsp;</div>
                 </div>
                 <div class="view-switch switch">
                     <a href="#" class="button white-button selected" data-view="front">Front</a>
@@ -79,7 +80,7 @@ function echoIfEqual($val1, $val2, $str){
                         </tr>
                         <tr>
                             <th scope="row">Colour</th>
-                            <td><span class="colour" style="background-color: <?php echo $colour ?>">&nbsp;</span></td>
+                            <td><span class="colour" style="background-color: <?php echo $colourArray[$colour]; ?>">&nbsp;</span></td>
                         </tr>
                         <tr>
                             <th scope="row">Chest position</th>

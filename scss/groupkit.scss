@@ -4,7 +4,7 @@ $lime:              #D9E024;
 $green:             #76A741;
 $black:             #231F20;
 $grey:              #666666;
-$eLgrey:            #f0f0f0;
+$eLgrey:            #d3d3d3;
 $offblack:          #111111;
 
 $borderColour:      #cccccc;
@@ -398,7 +398,7 @@ textarea {
     }
 
     .divider {
-        border-top:  1px solid #e8e8e8;
+        border-top:  1px solid #cccccc;
         height: 2px;
         width: 100%;
         clear: left;
@@ -506,7 +506,7 @@ textarea {
 
                 .value {
                     display: block;
-                    padding-top: 6px;
+                    //padding-top: 6px;
                     font-size: 1.0em;
                 }
 
@@ -585,35 +585,6 @@ textarea {
             }
         }
 
-        .figure {
-            display: block;
-            font-weight: bold;
-            font-family: 'signikabold';
-            text-align: center;
-
-            &.big {
-                padding-top: 140px;
-                font-size: 4.6em;
-                padding-left: 10px;
-            }
-
-            &.small {
-                padding-top: 90px;
-                font-size: 2.0em;
-                padding-left: 10px;
-
-                &.left {
-                    padding-right: 40px;
-                    @include transitions();
-                }
-
-                &.right {
-                    padding-left: 40px;
-                    @include transitions();
-                }
-            }
-        }
-
         .display {
             &.back {
                 .small {
@@ -656,7 +627,6 @@ textarea {
             font-size: 1.3em;
             line-height: 130%;
             display: block;
-            padding-top: 5px;
             padding-bottom: 5px;
         }
 
@@ -821,29 +791,26 @@ textarea {
     }
 }
 
-
-
-
-
-
-
 #garment-display {
     width: 268px;
     height: 307px;
     border-bottom: 1px solid $green;
     margin-bottom: 15px;
     color: $black;
+    position: relative;
 
     &.back {
-        .front {
+        #garment-overlay {
             display: none;
         }
     }
 
-    &.front {
-        .back {
-            display: none;
-        }
+    #garment-overlay {
+        width: 268px;
+        height: 307px;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
 

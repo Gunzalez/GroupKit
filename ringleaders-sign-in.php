@@ -17,7 +17,7 @@
                 <div class="cboth"></div>
             </div>
 
-            <form class="form" id="ringleaders-sign-in-form" action="ringleaders-manage-orders.php" method="post" name="ringleaders-sign-in-form" novalidate="novalidate">
+            <form class="form" id="ringleaders-sign-in-form" action="ringleaders-start-over.php" method="post" name="ringleaders-sign-in-form" novalidate="novalidate">
                 <div class="row">
                     <label for="email">Email address</label>
                     <input type="email" name="email" id="email" value="" class="input" tabindex="1" />

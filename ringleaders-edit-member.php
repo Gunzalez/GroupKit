@@ -149,7 +149,7 @@ function returnIfEqual($val1, $val2, $str){
                         ?>
                         <br/>
                         <a href="ringleaders-delete-member.php?id=<?php echo $memberId; ?>" class="button yellow-button"><i class="fa fa-fw"></i> Delete member</a><br />
-                        <a href="members-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
+                        <a href="ringleaders-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
                     <?php
                     }
                     ?>
