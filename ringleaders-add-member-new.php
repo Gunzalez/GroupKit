@@ -33,6 +33,14 @@ $teamId = 'nil';
                 <?php } else { ?>
                     <p>There are no members for this team yet.</p>
                 <?php } ?>
+                <?php if(isset($_GET['new-member']) && $_GET['new-member'] != ''){ ?>
+                    <div class="row button-row">
+                        <div class="links">
+                            <a href="#" class="button standalone-button"><i class="fa fa-fw"></i> Complete - I pay for all</a>
+                            <a href="#" class="button standalone-button"><i class="fa fa-fw"></i> Complete - Members pay</a>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
 
             <form class="form" id="" action="ringleaders-add-member-new.php?new-member=1" method="post" name="" novalidate="novalidate">
@@ -57,14 +65,6 @@ $teamId = 'nil';
                 <div class="row button-row">
                     <button type="button" class="button"><i class="fa fa-fw"></i> Save details</button>
                 </div>
-                <?php if(isset($_GET['new-member']) && $_GET['new-member'] != ''){ ?>
-                    <div class="row button-row">
-                        <div class="links">
-                            <a href="#" class="button"><i class="fa fa-fw"></i> Complete - I pay for all</a>
-                            <a href="#" class="button bottom-button"><i class="fa fa-fw"></i> Complete - Members pay</a>
-                        </div>
-                    </div>
-                <?php } ?>
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">

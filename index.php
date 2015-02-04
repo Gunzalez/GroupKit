@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li class="last-li">
-                    <a href="#">
+                    <a href="template-double.php">
                         <span class="icon"><i class="fa fa-fw"></i></span>
                         <span class="title">Everybody</span>
                         <span class="intro">Click icon above for help, contact details or our FAQ section.</span>

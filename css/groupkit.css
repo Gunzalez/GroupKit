@@ -227,8 +227,33 @@ img {
   font-size: 1.7em;
   padding-bottom: 35px;
 }
-.content .full-width {
+.content .full-width,
+.content .free-text {
   padding-bottom: 10px;
+}
+.content .full-width ul, .content .full-width ol,
+.content .free-text ul,
+.content .free-text ol {
+  margin: 0;
+  padding: 0 0 10px 20px;
+}
+.content .full-width ul li, .content .full-width ol li,
+.content .free-text ul li,
+.content .free-text ol li {
+  padding-bottom: 4px;
+}
+.content .full-width blockquote,
+.content .free-text blockquote {
+  padding: 16px 20px;
+  background: #e8e8e8;
+  margin: 0 0 15px 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.content .full-width blockquote p,
+.content .free-text blockquote p {
+  padding-bottom: 0;
 }
 .content a {
   color: #76a741;
@@ -475,6 +500,10 @@ textarea {
 .page .form .row .like-input.swatches label {
   padding: 0 8px 4px 0;
   width: auto;
+  cursor: default;
+}
+.page .like-form .row .like-input.swatches label .span,
+.page .form .row .like-input.swatches label .span {
   cursor: pointer;
 }
 .page .like-form .row .like-input.swatches input,
@@ -610,25 +639,13 @@ textarea {
 .inner .form .orders-list td {
   cursor: pointer;
 }
-.inner .like-form .orders-list tr td,
-.inner .form .orders-list tr td {
-  -webkit-transition: background 0.1s;
-  -moz-transition: background 0.1s;
-  -o-transition: background 0.1s;
-  transition: background 0.1s;
-}
 .inner .like-form .orders-list tr:hover td,
 .inner .form .orders-list tr:hover td {
-  -webkit-transition: background 0.1s;
-  -moz-transition: background 0.1s;
-  -o-transition: background 0.1s;
-  transition: background 0.1s;
-  color: #000000;
-  background: #ffffff;
+  color: #76a741;
 }
 .inner .like-form .orders-list .odd td,
 .inner .form .orders-list .odd td {
-  background: #f7f7f7;
+  background: #e3e3e3;
 }
 .inner .like-form .orders-list .even td,
 .inner .form .orders-list .even td {

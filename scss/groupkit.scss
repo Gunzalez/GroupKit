@@ -231,8 +231,29 @@ img { border: none; }
         padding-bottom: 35px;
     }
 
-    .full-width {
+    .full-width,
+    .free-text {
         padding-bottom: 10px;
+
+        ul, ol {
+            margin: 0;
+            padding: 0 0 10px 20px;
+
+            li {
+                padding-bottom: 4px;
+            }
+        }
+
+        blockquote {
+            padding: 16px 20px;
+            background: #e8e8e8;
+            margin: 0 0 15px 0;
+            @include border-radius(4px);
+
+            p {
+                padding-bottom: 0;
+            }
+        }
     }
 
     a {
@@ -498,7 +519,11 @@ textarea {
                     label {
                         padding: 0 8px 4px 0;
                         width: auto;
-                        cursor: pointer;
+                        cursor: default;
+
+                        .span {
+                            cursor: pointer;
+                        }
                     }
 
                     input {
@@ -643,7 +668,7 @@ textarea {
         }
 
         $tableHeader: #cfcfcf;
-        $tableOdd: #f7f7f7;
+        $tableOdd: #e3e3e3;
         $tableEven: #ededed;
 
         .orders-list {
@@ -677,15 +702,10 @@ textarea {
             }
 
             tr {
-                td {
-                    @include transition-background(0.1s);
-                }
 
                 &:hover {
                     td {
-                        @include transition-background(0.1s);
-                        color: #000000;
-                        background: #ffffff;
+                        color: $green;
                     }
                 }
             }
