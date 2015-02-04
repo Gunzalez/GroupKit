@@ -345,7 +345,6 @@ textarea {
 }
 
 .reminded-text {
-  margin-top: -12px;
   font-size: 0.9em;
 }
 
@@ -409,6 +408,10 @@ textarea {
   clear: left;
   padding-bottom: 15px;
   width: 100%;
+}
+.page .like-form .row h3.zero-padding,
+.page .form .row h3.zero-padding {
+  padding-bottom: 0;
 }
 .page .like-form .row .like-label,
 .page .like-form .row label,
@@ -650,6 +653,10 @@ textarea {
   margin-bottom: 15px;
   float: left;
 }
+.inner .like-form .links .button.bottom-button,
+.inner .form .links .button.bottom-button {
+  margin-bottom: 0;
+}
 .inner span.colour {
   display: inline-block;
   width: 32px;
@@ -703,11 +710,18 @@ textarea {
   font-size: 1.1em;
   color: #231f20;
 }
+.inner .summary.cost td,
+.inner .summary.cost th {
+  padding-top: 0;
+  padding-bottom: 10px;
+}
 .inner .summary.cost td {
   text-align: right;
 }
 .inner .summary.cost .total th, .inner .summary.cost .total td {
   border-top: 1px solid lightgrey;
+  padding-top: 10px;
+  padding-bottom: 0;
 }
 
 #garment-display {

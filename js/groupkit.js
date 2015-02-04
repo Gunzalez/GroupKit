@@ -42,7 +42,6 @@
                 }
             });
 
-
             var $allForms = $('.form');
             $allForms.each(function(){
                 var $thisForm = $(this);
@@ -87,6 +86,8 @@
                 $genderSwitches = $('a', $genderSwitcher),
                 $colourSwitcher = $('.colour-switch', self.$html),
                 $colourSwitches = $('input', $colourSwitcher),
+                $fontSwitcher = $('.font-switch', self.$html),
+                $fontSwitches = $('input', $fontSwitcher),
                 $positionSwitcher = $('.position-switch', self.$html),
                 $positionSwitches = $('input', $positionSwitcher),
                 $viewSwitcher = $('.view-switch', self.$html),
@@ -111,7 +112,7 @@
             }
 
 
-            // sets the image in display based on image set in form
+            // sets the image in the display, based on image set in form
             if(self.$garmentDisplay.hasClass('set-image')){
                 var initialGender = $('#gender', self.$form).val(), // comes from PHP
                     genderImage = $(self.$garmentDisplay).attr("data-gender-" + initialGender);
@@ -160,7 +161,6 @@
             }
 
 
-
             // switches the garment colours, works with any number of colours
             if ($colourSwitcher.length > 0) {
                 $colourSwitches.on('change', function(){
@@ -183,6 +183,18 @@
                     $("[for='"+ varColourRef+"']", self.$form).find('.colour').addClass('selected');
                 });
             }
+
+            // switches the font colours
+            if ($fontSwitcher.length > 0) {
+                $fontSwitches.on('change', function(){
+                    var varColourRef = $(this).val();
+
+                    $(this).siblings().find('span').removeClass("selected");
+                    $("[for='"+ varColourRef+"']", self.$form).find('.colour').addClass('selected');
+                });
+            }
+
+
         }
     };
 

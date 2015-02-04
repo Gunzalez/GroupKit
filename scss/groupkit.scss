@@ -352,7 +352,6 @@ textarea {
 }
 
 .reminded-text {
-    margin-top: -12px;
     font-size: 0.9em;
 }
 
@@ -431,6 +430,10 @@ textarea {
             clear: left;
             padding-bottom: 15px;
             width: 100%;
+
+            h3.zero-padding {
+                padding-bottom: 0;
+            }
 
             .like-label,
             label {
@@ -717,6 +720,10 @@ textarea {
             .button {
                 margin-bottom: 15px;
                 float: left;
+
+                &.bottom-button {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -778,6 +785,12 @@ textarea {
             font-size: 1.1em;
             color: $black;
 
+            td,
+            th {
+                padding-top: 0;
+                padding-bottom: 10px;
+            }
+
             td {
                 text-align: right;
             }
@@ -785,6 +798,8 @@ textarea {
             .total {
                 th, td {
                     border-top: 1px solid $eLgrey;
+                    padding-top: 10px;
+                    padding-bottom: 0;
                 }
             }
         }

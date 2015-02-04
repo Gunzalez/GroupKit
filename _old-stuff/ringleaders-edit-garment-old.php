@@ -93,7 +93,7 @@ if(isset($_GET['teamId'])) {
                 </div>
             </div>
 
-            <form class="form" id="" action="../huh.php" method="post" name="" novalidate="novalidate">
+            <form class="form" id="" action="huh.php" method="post" name="" novalidate="novalidate">
                 <input type="hidden" id="teamId" name="teamId" value="<?php echo $teamId; ?>" />
                 <div class="row">
                     <div class="like-label">Team</div>
@@ -119,7 +119,7 @@ if(isset($_GET['teamId'])) {
                 <div class="row button-row">
                     <button type="button" class="button"><i class="fa fa-fw"></i> Save</button>
                     <div class="links">
-                        <a href="../huh.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button"><i class="fa fa-fw"></i> Pay For Member</a><br />
+                        <a href="huh.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button"><i class="fa fa-fw"></i> Pay For Member</a><br />
                         <a href="ringleaders-edit-garment-old.php?teamId=<?php echo $teamId; ?>&memberId=<?php echo $memberId; ?>" class="button"><i class="fa fa-fw"></i> Remind</a> <!-- TODO Rob, you can hide this button if member is 100% -->
 
                     </div>

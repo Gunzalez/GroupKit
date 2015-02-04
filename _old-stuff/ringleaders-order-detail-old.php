@@ -59,7 +59,7 @@ if(isset($_GET['id'])) {
                 ?>
             </div>
 
-            <form class="form" id="" action="../ringleaders-do-detail.php" method="post" name="" novalidate="novalidate">
+            <form class="form" id="" action="ringleaders-do-detail.php" method="post" name="" novalidate="novalidate">
                 <input type="hidden" id="teamId" name="teamId" value="<?php echo $teamId; ?>" />
                 <div class="row">
                     <label for="team-name">Team name</label>

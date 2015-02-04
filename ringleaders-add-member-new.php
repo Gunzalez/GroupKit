@@ -1,5 +1,8 @@
 <?php
 $teamName = 'newName';
+if(isset($_POST['team-name']) && $_POST['team-name'] != ''){
+    $teamName = $_POST['team-name'];
+}
 $teamId = 'nil';
 ?>
 <!doctype html>
@@ -17,15 +20,23 @@ $teamId = 'nil';
 
             <div class="title">
                 <h2>Add member</h2>
-                <a href="ringleaders-personalise-back.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
+                <a href="ringleaders-add-order-new.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
             <div class="showcase">
-                <h3>#<span class="new-team">new team</span></h3>
-                <p>There are no members for this team yet.</p>
+                <h3>#00/<?php echo $teamName; ?></h3>
+                <?php if(isset($_GET['new-member']) && $_GET['new-member'] != ''){ ?>
+                    <p>Click on a member name for full details, where you can edit details or remind them about their garment.</p>
+                    <ul>
+                        <li><a href="#">Alasdair Orr (0%)</a></li>
+                    </ul>
+                <?php } else { ?>
+                    <p>There are no members for this team yet.</p>
+                <?php } ?>
             </div>
 
-            <form class="form" id="" action="ringleaders-edit-order.php?teamId=<?php echo $teamId; ?>&memberId=new" method="post" name="" novalidate="novalidate">
+            <form class="form" id="" action="ringleaders-add-member-new.php?new-member=1" method="post" name="" novalidate="novalidate">
+                <input type="hidden" id="team-name" name="team-name" value="<?php echo $teamName; ?>" />
                 <input type="hidden" id="teamId" name="teamId" value="<?php echo $teamId; ?>" />
                 <div class="row">
                     <label for="first-name">First name</label>
@@ -46,11 +57,19 @@ $teamId = 'nil';
                 <div class="row button-row">
                     <button type="button" class="button"><i class="fa fa-fw"></i> Save details</button>
                 </div>
+                <?php if(isset($_GET['new-member']) && $_GET['new-member'] != ''){ ?>
+                    <div class="row button-row">
+                        <div class="links">
+                            <a href="#" class="button"><i class="fa fa-fw"></i> Complete - I pay for all</a>
+                            <a href="#" class="button bottom-button"><i class="fa fa-fw"></i> Complete - Members pay</a>
+                        </div>
+                    </div>
+                <?php } ?>
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
                     <a href="ringleaders-help.php?topic=Admin%20Members" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
-                    <a href="ringleaders-start-over.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a>
+                    <a href="ringleaders-start-over-new.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a>
                 </div>
             </form>
             <div class="cboth"></div>

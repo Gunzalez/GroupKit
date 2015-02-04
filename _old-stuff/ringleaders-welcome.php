@@ -25,7 +25,7 @@
                     <li>Pay for items on their behalf, either individually or all the fools together</li>
                     <li>Wear your underwear backwards</li>
                 </ul>
-                <a href="../ringleaders-new-order.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
+                <a href="../ringleaders-add-order-new.php" class="button standalone-button"><i class="fa fa-fw"></i> Create new team</a>
             </div>
 
             <div class="like-form">

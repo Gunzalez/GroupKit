@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if(isset($_POST['colour'])){
+    $_SESSION["back-font-colour"] = $_POST['colour'];
+}
+
+if(isset($_POST["nameStyle"])){
+    $_SESSION["numberStyle"] = $_POST["nameStyle"];
+}
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -12,17 +24,17 @@
         <div class="content">
 
             <div class="title">
-                <h2>New order</h2>
-                <a href="ringleaders-manage-orders.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
+                <h2>New order/team</h2>
+                <a href="ringleaders-personalise-back.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
 
             <div class="showcase">
                 <h3>#<span class="new-team">new team</span></h3>
-                <!-- <a href="ringleaders-add-member.php" class="button standalone-button"><i class="fa fa-fw"></i> Add new member</a>I recommend you disable before a team is created -->
+                <p>There are no members for this team yet.</p>
             </div>
 
-            <form class="form" id="" action="ringleaders-manage-orders.php" method="post" name="" novalidate="novalidate">
+            <form class="form" id="" action="ringleaders-add-member-new.php" method="post" name="" novalidate="novalidate">
                 <input type="hidden" id="teamId" name="teamId" value="" />
                 <div class="row">
                     <label for="team-name">Team name</label>
@@ -38,7 +50,8 @@
                 <div class="cleft"></div>
                 <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Creating%20/%20Editing%20Yours%20Orders" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a>
+                    <a href="ringleaders-help.php?topic=Creating%20/%20Editing%20Yours%20Orders" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
+                    <a href="ringleaders-start-over-new.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a>
                 </div>
             </form>
             <div class="cboth"></div>

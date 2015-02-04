@@ -10,21 +10,33 @@ function echoIfEqual($val1, $val2, $str){
 if(isset($_POST['gender'])){
     $_SESSION["gender"] = $_POST['gender'];
 }
-if(isset($_POST['colour'])){
-    $_SESSION["colour"] = $_POST['colour'];
-}
+
 if(isset($_POST['size'])){
     $_SESSION["size"] = $_POST['size'];
 }
 
+if(isset($_POST['colour'])){
+    $_SESSION["colour"] = $_POST['colour'];
+}
+
+if(!isset($_SESSION["nameStyle"])){
+    $_SESSION["nameStyle"] = 'signikabold';
+}
+
+if(!isset($_SESSION["position"])){
+    $_SESSION["position"] = 'left';
+}
+
 $gender = $_SESSION['gender'];
-$colour = $_SESSION['colour'];
+$colour = $_SESSION['front-font-colour'];
 $size = $_SESSION['size'];
+
 $nameStyle = $_SESSION['nameStyle'];
 $position = $_SESSION['position'];
 
 $mensImage = "ringleaders-garment-mens-front.jpg";
 $womensImage = "ringleaders-garment-womens-front.jpg";
+
 ?>
 
 <!doctype html>
@@ -47,9 +59,7 @@ $womensImage = "ringleaders-garment-womens-front.jpg";
             </div>
 
             <div class="showcase">
-                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display front set-image">
-
-                </div>
+                <div id="garment-display" data-gender-mens="<?php echo $mensImage; ?>" data-gender-womens="<?php echo $womensImage; ?>" class="display front set-image">&nbsp;</div>
                 <div class="gender-switch switch">
                     <a href="#" class="button white-button<?php echoIfEqual('womens', $gender, ' selected'); ?>" data-gender="womens">Womens</a>
                     <a href="#" class="button white-button<?php echoIfEqual('mens', $gender, ' selected'); ?>" data-gender="mens">Mens</a>
@@ -64,33 +74,36 @@ $womensImage = "ringleaders-garment-womens-front.jpg";
                 <input type="hidden" id="gender" name="gender" value="<?php echo $gender; ?>" /> <!-- needed for gender display, but you can do it your way -->
                 <div class="row">
                     <div class="like-label">Choose allowed font colours</div>
-                    <div class="like-input colour-switch swatches">
-                        <label for="colour1"><span class="colour <?php echoIfEqual('#000000', $colour, ' selected'); ?>" style="background-color: #000000"></span></label>
-                        <input id="colour1" type="radio" name="colour" value="#000000"<?php echoIfEqual('#000000', $colour, ' checked'); ?>>
-                        <label for="colour8"><span class="colour <?php echoIfEqual('#ffffff', $colour, ' selected'); ?>" style="background-color: #ffffff"></span></label>
-                        <input id="colour8" type="radio" name="colour" value="#ffffff"<?php echoIfEqual('#ffffff', $colour, ' checked'); ?>>
-                        <label for="colour2"><span class="colour <?php echoIfEqual('#2AA9E0', $colour, ' selected'); ?>" style="background-color: #2AA9E0"></span></label>
-                        <input id="colour2" type="radio" name="colour" value="#2AA9E0"<?php echoIfEqual('#2AA9E0', $colour, ' checked'); ?>>
-                        <label for="colour3"><span class="colour <?php echoIfEqual('#ED1F7A', $colour, ' selected'); ?>" style="background-color: #ED1F7A"></span></label>
-                        <input id="colour3" type="radio" name="colour" value="#ED1F7A"<?php echoIfEqual('#ED1F7A', $colour, ' checked'); ?>>
-                        <label for="colour7"><span class="colour <?php echoIfEqual('#880000', $colour, ' selected'); ?>" style="background-color: #880000"></span></label>
-                        <input id="colour7" type="radio" name="colour" value="#880000"<?php echoIfEqual('#880000', $colour, ' checked'); ?>>
-                        <label for="colour4"><span class="colour <?php echoIfEqual('#FF00FF', $colour, ' selected'); ?>" style="background-color: #FF00FF"></span></label>
-                        <input id="colour4" type="radio" name="colour" value="#FF00FF"<?php echoIfEqual('#FF00FF', $colour, ' checked'); ?>>
-                        <label for="colour5"><span class="colour <?php echoIfEqual('#C8C847', $colour, ' selected'); ?>" style="background-color: #C8C847"></span></label>
-                        <input id="colour5" type="radio" name="colour" value="#C8C847"<?php echoIfEqual('#C8C847', $colour, ' checked'); ?>>
-                        <label for="colour6"><span class="colour <?php echoIfEqual('#76A741', $colour, ' selected'); ?>" style="background-color: #76A741"></span></label>
-                        <input id="colour6" type="radio" name="colour" value="#76A741"<?php echoIfEqual('#76A741', $colour, ' checked'); ?>>
+                    <div class="like-input font-switch swatches">
+                        <label for="colour1"><span class="colour <?php echoIfEqual('colour1', $colour, ' selected'); ?>" style="background-color: #000000"></span></label>
+                        <input id="colour1" type="radio" name="colour" value="colour1"<?php echoIfEqual('colour1', $colour, ' checked'); ?>>
+                        <label for="colour2"><span class="colour <?php echoIfEqual('colour2', $colour, ' selected'); ?>" style="background-color: #ffffff"></span></label>
+                        <input id="colour2" type="radio" name="colour" value="colour2"<?php echoIfEqual('colour2', $colour, ' checked'); ?>>
+                        <label for="colour3"><span class="colour <?php echoIfEqual('colour3', $colour, ' selected'); ?>" style="background-color: #2AA9E0"></span></label>
+                        <input id="colour3" type="radio" name="colour" value="colour3"<?php echoIfEqual('colour3', $colour, ' checked'); ?>>
+                        <label for="colour4"><span class="colour <?php echoIfEqual('colour4', $colour, ' selected'); ?>" style="background-color: #ED1F7A"></span></label>
+                        <input id="colour4" type="radio" name="colour" value="colour4"<?php echoIfEqual('colour4', $colour, ' checked'); ?>>
+                        <label for="colour5"><span class="colour <?php echoIfEqual('colour5', $colour, ' selected'); ?>" style="background-color: #880000"></span></label>
+                        <input id="colour5" type="radio" name="colour" value="colour5"<?php echoIfEqual('colour5', $colour, ' checked'); ?>>
+                        <label for="colour6"><span class="colour <?php echoIfEqual('colour6', $colour, ' selected'); ?>" style="background-color: #FF00FF"></span></label>
+                        <input id="colour6" type="radio" name="colour" value="colour6"<?php echoIfEqual('colour6', $colour, ' checked'); ?>>
+                        <label for="colour7"><span class="colour <?php echoIfEqual('colour7', $colour, ' selected'); ?>" style="background-color: #C8C847"></span></label>
+                        <input id="colour7" type="radio" name="colour" value="colour7"<?php echoIfEqual('colour7', $colour, ' checked'); ?>>
+                        <label for="colour8"><span class="colour <?php echoIfEqual('colour8', $colour, ' selected'); ?>" style="background-color: #76A741"></span></label>
+                        <input id="colour8" type="radio" name="colour" value="colour8"<?php echoIfEqual('colour8', $colour, ' checked'); ?>>
                     </div>
                 </div>
                 <div class="divider"></div>
                 <div class="row">
-                    <label for="front-text">Personalise name</label>
-                    <input type="text" id="front-text" value="" placeholder="Team" class="input">
+                    <h3 class="zero-padding">Personalise the team</h3>
+                </div>
+                <div class="row">
+                    <label for="front-text">Name</label>
+                    <input type="text" id="front-text" value="" placeholder="Team name" class="input">
                 </div>
                 <div class="row">
                     <div class="like-label">Choose allowed fonts</div>
-                    <div class="like-input style-switch block">
+                    <div class="like-input block">
                         <input id="style4" type="radio" name="nameStyle" value="signikabold"<?php echoIfEqual('signikabold', $nameStyle, ' checked'); ?>>
                         <label for="style4">Signika Bold</label><br class="cleft" />
                         <input id="style1" type="radio" name="nameStyle" value="Verdana"<?php echoIfEqual('Verdana', $nameStyle, ' checked'); ?>>
@@ -104,7 +117,7 @@ $womensImage = "ringleaders-garment-womens-front.jpg";
                 <div class="row">
                     <div class="like-label">Personalise options</div>
                     <div class="like-input block">
-                        <input id="same" type="radio" name="personaliseOptions" value="" >
+                        <input id="same" type="radio" name="personaliseOptions" checked="checked" value="" >
                         <label for="same">Same text for all</label><br class="cleft" />
                         <input id="members" type="radio" name="personaliseOptions" value="">
                         <label for="members">Each choose their own</label><br class="cleft" />
@@ -122,7 +135,6 @@ $womensImage = "ringleaders-garment-womens-front.jpg";
                     <p class="info important"><strong><a href="#">You must read Logo guidelines!</a></strong></p>
                 </div>
 
-
                 <div class="row button-row">
                     <button type="button" class="button"><i class="fa fa-fw"></i> Personalise the back</button>
                 </div>
@@ -130,7 +142,7 @@ $womensImage = "ringleaders-garment-womens-front.jpg";
                 <div class="divider"></div>
                 <div class="helpers">
                     <a href="ringleaders-help.php?topic=Personalise%20The%20Front&view=front" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
-                    <a href="ringleaders-start-over.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a>
+                    <a href="ringleaders-start-over-new.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a>
                 </div>
             </form>
             <div class="cboth"></div>
