@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit - Ringleaders help</title>
+    <title>Group Kit - Template double</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body class="page inner">
