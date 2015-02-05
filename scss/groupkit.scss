@@ -47,6 +47,10 @@ img { border: none; }
     }
 }
 
+.container-width {
+    width: 100%;
+}
+
 .status-bar {
     position: fixed;
     width: 100%;
@@ -253,6 +257,10 @@ img { border: none; }
             p {
                 padding-bottom: 0;
             }
+        }
+
+        img {
+            padding-bottom: 15px;
         }
     }
 
@@ -589,6 +597,10 @@ textarea {
     .showcase {
         float: left;
         width: 268px;
+
+        img {
+            padding-bottom: 15px;
+        }
 
         li {
             a {

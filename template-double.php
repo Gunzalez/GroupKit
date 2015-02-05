@@ -16,9 +16,11 @@
                 <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
+
             <div class="showcase">
                 <h3>Some title H3</h3>
-                <p>Pellentesque haectus et netus et malesuada fames ac turpibitant morectus et netus et malesuada fames ac turpibi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <p>Pellentesque <a href="#">et malesuada fames</a> haectus et netus et malesuada fames ac turpibitant morectus et netus et malesuada fames ac turpibi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <img src="http://placehold.it/350x150" class="container-width">
                 <ul>
                     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
                     <li>Aliquam tincidunt mauris eu risus.</li>
@@ -29,6 +31,7 @@
 
             <div class="like-form free-text">
                 <h3>Another Header Level 3</h3>
+                <p>That playe was caught smoking again, you'd think he would stay out of photos, or not hang around folk that go to the media. Kids today, pffft, honestly!</p>
                 <ol>
                     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
                     <li>Aliquam tincidunt mauris eu risus.</li>

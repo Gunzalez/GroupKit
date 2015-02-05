@@ -21,7 +21,8 @@
             <div class="full-width free-text">
 
                 <h3>Some title H3</h3>
-                <p>Pellentesque haectus et netus et malesuada fames ac turpibitant morectus et netus et malesuada fames ac turpibi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <p>Pellentesque haectus et netus <a href="#">et malesuada fames</a> ac turpibitant morectus et netus et malesuada fames ac turpibi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <img src="http://placehold.it/350x150" class="container-width">
                 <ul>
                     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
                     <li>Aliquam tincidunt mauris eu risus.</li>

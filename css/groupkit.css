@@ -74,6 +74,10 @@ img {
   color: #666666 !important;
 }
 
+.container-width {
+  width: 100%;
+}
+
 .status-bar {
   position: fixed;
   width: 100%;
@@ -254,6 +258,10 @@ img {
 .content .full-width blockquote p,
 .content .free-text blockquote p {
   padding-bottom: 0;
+}
+.content .full-width img,
+.content .free-text img {
+  padding-bottom: 15px;
 }
 .content a {
   color: #76a741;
@@ -552,6 +560,9 @@ textarea {
 .inner .showcase {
   float: left;
   width: 268px;
+}
+.inner .showcase img {
+  padding-bottom: 15px;
 }
 .inner .showcase li a {
   color: #76a741;
