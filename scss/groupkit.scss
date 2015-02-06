@@ -152,9 +152,106 @@ img { border: none; }
     .carousel {
         width: 760px;
         margin: 0 auto;
+        position: relative;
 
-        img {
-            width: 100%;
+        #price-tag {
+            position: absolute;
+            top: 250px;
+            left: 50%;
+            width: 136px;
+            height: 136px;
+            @include border-radius(50%);
+            margin-left: -68px;
+            background: #EA5DA1;
+            text-decoration: none;
+            -webkit-box-shadow: 0px 0px 90px -9px rgba(0,0,0,0.74);
+            -moz-box-shadow: 0px 0px 90px -9px rgba(0,0,0,0.74);
+            box-shadow: 0px 0px 90px -9px rgba(0,0,0,0.74);
+            text-align: center;
+            @include transitions();
+
+            .fa {
+                display: block;
+                text-align: center;
+                color: #ffffff;
+                font-size: 2.0em;
+                padding: 12px 0 8px 0;
+            }
+
+            span {
+                display: block;
+                color: #ffffff;
+                text-align: center;
+                line-height: 100%;
+
+                &.title {
+                    font-size: 1.2em;
+                    padding-bottom: 3px;
+                }
+                &.price {
+                    font-size: 1.7em;
+                    padding-bottom: 3px;
+                }
+                &.click {
+                    padding-top: 5px;
+                    font-size: 0.9em;
+                }
+                &.hand {
+                    display: inline-block;
+                }
+
+            }
+        }
+
+        .slide {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+            .large {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .super-slick {
+            border-top: 1px solid $green;
+            padding: 15px 0 10px 0;
+            text-align: center;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    display: inline;
+                    padding: 0 4px;
+
+                    a {
+                        display: inline-block;
+                        text-indent: -9000px;
+                        width: 14px;
+                        height: 14px;
+                        @include border-radius(50%);
+                        background: #E2DEDF;
+                        @include transitions();
+                        cursor: pointer;
+                    }
+
+                    &.slick-active {
+
+                        a {
+                            background: #B0ACAD;
+                            cursor: default;
+                            @include transitions();
+                        }
+                    }
+                }
+            }
         }
     }
 

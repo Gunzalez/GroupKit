@@ -17,7 +17,7 @@
         },
 
         resize : function(){
-            console.log(groupkit.properties.windowWidth);
+            //console.log(groupkit.properties.windowWidth);
         },
 
         init: function(){
@@ -160,7 +160,6 @@
                 self.$garmentDisplay.css('background','url(' + self.upLoadedImagesPath + garmentImage + ') 0 0 no-repeat');
             }
 
-
             // switches the garment colours, works with any number of colours
             if ($colourSwitcher.length > 0) {
                 $colourSwitches.on('change', function(){
@@ -193,11 +192,10 @@
                     $("[for='"+ varColourRef+"']", self.$form).find('.colour').addClass('selected');
                 });
             }
-
-
         }
     };
 
+    // Switching between edit mode and read only, on Ringleader edit page
     groupkit.editables = {
         init: function(){
             var $editableController = $('#editable'),
@@ -219,6 +217,82 @@
         }
     };
 
+    groupkit.carousel = {
+        $html: $('.carousel'),
+        isBusy: true,
+
+        priceTag:{
+            $html:$('#price-tag'),
+            baseUrl: 'ringleaders-choose-garment.php?garmentId=',
+
+            init:function(){
+                if(groupkit.carousel.isBusy){
+                    return false
+                } else {
+                    location.assign(this.$html.attr('href'));
+                }
+            },
+
+            hide: function(){
+                this.$html.css('opacity','0');
+            },
+
+            show: function(){
+                this.$html.css('opacity','1');
+            },
+
+            update: function(garmentPrice, garmentTitle, garmentGuid){
+                $(this.$html).attr('href', this.baseUrl + garmentGuid);
+                $('[data-role="title"]',this.$html).html(garmentTitle);
+                $('[data-role="price"]',this.$html).html('&pound'+garmentPrice);
+            }
+        },
+
+        init: function(){
+            var self = this,
+                $stage = $('.stage', self.$html);
+
+            if(self.$html.length > 0){
+
+                $stage.slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 7000,
+                    arrows: false,
+                    dots: true
+                });
+
+                $('.slick-active', self.html).trigger('click');
+
+                $stage.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                    self.priceTag.hide();
+                    self.isBusy = true;
+
+
+                    //console.log(currentSlide);
+                });
+
+                $stage.on('afterChange', function(event, slick, currentSlide, nextSlide){
+                    var $activeSlide = $('.slick-active',self.$html).eq(1),
+                        price = $activeSlide.attr("data-garment-price"),
+                        title = $activeSlide.attr("data-garment-title"),
+                        guid = $activeSlide.attr("data-garment-guid");
+
+                    self.priceTag.update(price, title, guid);
+                    self.priceTag.show();
+                    self.isBusy = false;
+
+
+
+                    //console.log(currentSlide);
+                });
+
+                self.priceTag.init();
+            }
+        }
+    };
+
 	groupkit.init = function(){
 
         // Other init
@@ -226,6 +300,7 @@
         groupkit.garmentSelection.init();
         groupkit.orders.init();
         groupkit.editables.init();
+        groupkit.carousel.init();
         //
         //
         //
