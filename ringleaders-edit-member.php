@@ -217,7 +217,7 @@ function returnIfEqual($val1, $val2, $str){
                     <div class="like-input read-only-mode">
                         <span class="value"><?php echo $garmentNumber; ?></span>
                     </div>
-                    <input type="text" id="garment-number" name="garment-number" maxlength="5" value="<?php echo $garmentNumber; ?>" class="input short-input edit-mode display-none" />
+                    <input type="text" id="garment-number" name="garment-number" value="<?php echo $garmentNumber; ?>" class="input short-input edit-mode display-none" />
                 </div>
 
                 <div class="row button-row edit-mode display-none">

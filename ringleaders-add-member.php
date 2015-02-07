@@ -166,15 +166,14 @@ if(isset($_GET['teamId'])) {
                     <label for="phone">Phone</label>
                     <input type="number" id="phone" name="phone" value="" class="input" />
                 </div>
-<!--                <div class="row">-->
-<!--                    <label for="garment-name">Garment name</label>-->
-<!--                    <input type="text" id="garment-name" name="garment-name" value="--><?php //echo $garmentName; ?><!--" class="input" />-->
-<!--                </div>-->
-<!--                <div class="row">-->
-<!--                    <label for="garment-number">Big number</label>-->
-<!--                    <input type="text" id="garment-number" name="garment-number" maxlength="4" style="width: 50px;" value="--><?php //echo $garmentNumber; ?><!--" class="input" />-->
-<!--                    <p class="info">Unique Personalisation Number</p>-->
-<!--                </div>-->
+                <div class="row">
+                    <label for="garment-name">name 1</label>
+                    <input type="text" id="garment-name" name="garment-name" value="" class="input" />
+                </div>
+                <div class="row">
+                    <label for="garment-number">Big number</label>
+                    <input type="text" id="garment-number" name="garment-number" value="" class="input short-input" />
+                </div>
                 <div class="row button-row">
                     <button type="button" class="button"><i class="fa fa-fw"></i> Save member</button>
                 </div>

@@ -62,6 +62,14 @@ $teamId = 'nil';
                     <label for="phone">Phone</label>
                     <input type="number" id="phone" name="phone" value="" class="input" />
                 </div>
+                <div class="row">
+                    <label for="garment-name">name 1</label>
+                    <input type="text" id="garment-name" name="garment-name" value="" class="input" />
+                </div>
+                <div class="row">
+                    <label for="garment-number">Big number</label>
+                    <input type="text" id="garment-number" name="garment-number" value="" class="input short-input" />
+                </div>
                 <div class="row button-row">
                     <button type="button" class="button"><i class="fa fa-fw"></i> Save member</button>
                 </div>
