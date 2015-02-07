@@ -35,6 +35,7 @@
                 $('html').addClass('desktop');
             }
 
+            // sets up all back buttons
             $('.back-button').on('click', function(evt) {
                 evt.preventDefault();
                 if($(this).attr('href') == '#'){
@@ -115,7 +116,7 @@
                 });
             }
 
-            // sets the image in the display, based on image set in form
+            // sets the image in the display, based on value set in form
             if(self.$garmentDisplay.hasClass('set-image')){
                 var initialGender = $('#gender', self.$form).val(), // comes from PHP
                     genderImage = $(self.$garmentDisplay).attr("data-gender-" + initialGender);
@@ -197,7 +198,7 @@
         }
     };
 
-    // Switching between edit mode and read only, on Ringleader edit page
+    // switching between edit mode and read-only, on Ringleader edit page
     groupkit.editables = {
         init: function(){
             var $editableController = $('#editable'),
@@ -205,14 +206,14 @@
                 $readOnly = $('.read-only-mode'),
                 $editable = $('.edit-mode');
 
-            // hides read only, shows editable
+            // hides read-only, shows editable
             $editableController.on('click',function(evt){
                 evt.preventDefault();
                 $readOnly.addClass('display-none');
                 $editable.removeClass('display-none');
             });
 
-            // hides editable, show read only
+            // hides editable, show read-only
             $nonEditableController.on('click',function(evt){
                 evt.preventDefault();
                 $readOnly.removeClass('display-none');
@@ -336,12 +337,12 @@
         $(window).trigger('resize');
 	};
 
-    // Main resize
+    // main resize
     groupkit.resize = function(){
         groupkit.environment.resize();
     };
 
-    // Main init
+    // main init
 	$(document).ready(function(){
 		groupkit.init();
 	});
