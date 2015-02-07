@@ -176,7 +176,7 @@ if(isset($_GET['teamId'])) {
 <!--                    <p class="info">Unique Personalisation Number</p>-->
 <!--                </div>-->
                 <div class="row button-row">
-                    <button type="button" class="button"><i class="fa fa-fw"></i> Save details</button>
+                    <button type="button" class="button"><i class="fa fa-fw"></i> Save member</button>
                 </div>
                 <div class="cleft"></div>
                 <div class="helpers">

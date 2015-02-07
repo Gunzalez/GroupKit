@@ -37,7 +37,7 @@ $teamId = 'nil';
                     <div class="row button-row">
                         <div class="links">
                             <a href="ringleaders-register.php?pay=all" class="button standalone-button"><i class="fa fa-fw"></i> Complete - I pay for all</a>
-                            <a href="ringleaders-register.php?pay=each" class="button standalone-button"><i class="fa fa-fw"></i> Complete - Members pay</a>
+                            <a href="ringleaders-register.php?pay=each" class="button standalone-button"><i class="fa fa-fw"></i> Complete - Members pay theirs</a>
                         </div>
                     </div>
                 <?php } ?>
@@ -63,7 +63,7 @@ $teamId = 'nil';
                     <input type="number" id="phone" name="phone" value="" class="input" />
                 </div>
                 <div class="row button-row">
-                    <button type="button" class="button"><i class="fa fa-fw"></i> Save details</button>
+                    <button type="button" class="button"><i class="fa fa-fw"></i> Save member</button>
                 </div>
                 <div class="cleft"></div>
                 <div class="helpers">

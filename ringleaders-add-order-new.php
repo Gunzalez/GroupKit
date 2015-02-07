@@ -45,7 +45,7 @@ if(isset($_POST["nameStyle"])){
                     <textarea id="team-description" name="team-description" class="input"></textarea>
                 </div>
                 <div class="row button-row">
-                    <button type="button" class="button"><i class="fa fa-fw"></i> Save details</button>
+                    <button type="button" class="button"><i class="fa fa-fw"></i> Save team</button>
                 </div>
                 <div class="cleft"></div>
                 <div class="helpers">

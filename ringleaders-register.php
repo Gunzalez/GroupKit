@@ -22,7 +22,7 @@
                 <div class="showcase">
                     <h3>New Ringleader Account</h3>
                     <p>Oh dear, you have chosen to pay for all members, are you sure you can afford it?</p>
-                    <p>A big bank account, with lots of money not just the size of the vault. Or just rich parents.</p>
+                    <p>You'll require a big bank account, with lots of money not just the size of the vault. Or just rich parents.</p>
                 </div>
 
             <?php } else { ?>

@@ -12,7 +12,7 @@
         <div class="content">
 
             <div class="title">
-                <h2>New order</h2>
+                <h2>New order/team</h2>
                 <a href="ringleaders-manage-orders.php" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
@@ -33,7 +33,7 @@
                     <textarea id="team-description" name="team-description" class="input"></textarea>
                 </div>
                 <div class="row button-row">
-                    <button type="button" class="button"><i class="fa fa-fw"></i> Save details</button>
+                    <button type="button" class="button"><i class="fa fa-fw"></i> Save team</button>
                 </div>
                 <div class="cleft"></div>
                 <div class="helpers">
