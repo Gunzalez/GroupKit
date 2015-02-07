@@ -292,8 +292,6 @@
                             $activeSlide = $possibleSlides.eq(0);
                         }
 
-                    console.log(window.Slick);
-
                     var price = $activeSlide.attr("data-garment-price"),
                         title = $activeSlide.attr("data-garment-title"),
                         guid = $activeSlide.attr("data-garment-guid");

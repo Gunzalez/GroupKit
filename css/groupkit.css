@@ -1266,12 +1266,12 @@ textarea {
     padding-bottom: 15px;
   }
   .footer .content ul.auxiliary-navigation li {
-    padding: 0 5px !important;
+    padding: 0 2px !important;
     float: none;
     display: inline;
   }
   .footer .content ul.auxiliary-navigation li a {
-    font-size: 0.8em;
+    font-size: 0.9em;
     display: inline;
   }
 }
