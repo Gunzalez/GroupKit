@@ -63,7 +63,7 @@ $teamId = 'nil';
                     <input type="number" id="phone" name="phone" value="" class="input" />
                 </div>
                 <div class="row">
-                    <label for="garment-name">name 1</label>
+                    <label for="garment-name">Name 1</label>
                     <input type="text" id="garment-name" name="garment-name" value="" class="input" />
                 </div>
                 <div class="row">

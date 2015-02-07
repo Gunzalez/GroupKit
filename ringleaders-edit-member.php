@@ -206,7 +206,7 @@ function returnIfEqual($val1, $val2, $str){
                     <input type="number" id="phone" name="phone" value="<?php echo $memberPhone; ?>" class="input edit-mode display-none" />
                 </div>
                 <div class="row">
-                    <label for="garment-name">name 1</label>
+                    <label for="garment-name">Name 1</label>
                     <div class="like-input read-only-mode">
                         <span class="value"><?php echo $garmentName; ?></span>
                     </div>
