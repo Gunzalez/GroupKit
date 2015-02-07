@@ -36,10 +36,8 @@
                     <button type="button" class="button"><i class="fa fa-fw"></i> Save details</button>
                 </div>
                 <div class="cleft"></div>
-                <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Creating%20/%20Editing%20Yours%20Orders" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
-                    <a href="ringleaders-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
+                    <a href="ringleaders-log-out.php"><i class="fa fa-fw"></i> Log out</a>
                 </div>
             </form>
             <div class="cboth"></div>

@@ -126,10 +126,8 @@ $womensImage = "ringleaders-garment-womens-front.jpg";
                     <button type="button" class="button"><i class="fa fa-fw"></i> Personalise the back</button>
                 </div>
                 <div class="cleft"></div>
-                <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Personalise%20The%20Front&view=front" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
-                    <a href="ringleaders-start-over-new.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a>
+                    <a href="ringleaders-start-over-new.php"><i class="fa fa-fw"></i> Start over</a>
                 </div>
             </form>
             <div class="cboth"></div>

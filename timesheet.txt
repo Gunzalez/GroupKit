@@ -24,18 +24,20 @@ Member route tweaked to reflect meeting decisions                       0.5 hrs 
 Returning Ringleaders journey, pretty much done                         3.5 hrs   - Monday morning, 26.01.2015
 New Ringleaders journey, choose garment + personalise front             1.5 hrs   - Thursday, 29.01.2015
 New Ringleaders journey, personalise back                               0.5 hrs   - Thursday, 29.01.2015
-Members journey refactor, imaged based for easy customisation (6.0 hrs) 2.0 hrs   - Monday, 02.02.2015 (but reduced to 2hrs as I was correcting my own error)
+Members journey refactor, imaged based for easy customisation (6.0 hrs) 2.0 hrs   - Monday, 02.02.2015 (but reduced to 2 hrs as I was correcting my own error)
 Completes all journeys                                                  3.0 hrs   - Tuesday, 03.02.2015
 Start and finish, empty templates                                       0.5 hrs   - Wednesday, 04.02.2015
 Carousel begins, and now 75%                                            3.5 hrs   - Thursday, 05.02.2015
 Carousel done (ish), me thinks                                          0.5 hr    - Friday, 06.02.2015
+Removes helper buttons, changes to text only                            1.5 hrs   - Saturday, 07.02.2015
 
 
-TODO
+
+
+TODO - Issues
 ================================
-Carousel
-
-
+Touchy trigger carousel on mobile
+Keyboard vs. fixed positioned objects
 
 
 Better with PHP

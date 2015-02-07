@@ -117,7 +117,7 @@ if(isset($_GET['teamId'])) {
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit - Ringleaders choose members</title>
+    <title>Group Kit - Ringleaders add members</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body class="page inner">
@@ -179,10 +179,8 @@ if(isset($_GET['teamId'])) {
                     <button type="button" class="button"><i class="fa fa-fw"></i> Save details</button>
                 </div>
                 <div class="cleft"></div>
-                <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Admin%20Members" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
-                    <a href="ringleaders-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
+                    <a href="ringleaders-log-out.php"><i class="fa fa-fw"></i> Log out</a>
                 </div>
             </form>
             <div class="cboth"></div>

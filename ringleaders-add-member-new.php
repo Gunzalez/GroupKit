@@ -8,7 +8,7 @@ $teamId = 'nil';
 <!doctype html>
 <html>
 <head>
-    <title>Group Kit - Ringleaders choose members</title>
+    <title>Group Kit - Ringleaders add members</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body class="page inner">
@@ -66,10 +66,8 @@ $teamId = 'nil';
                     <button type="button" class="button"><i class="fa fa-fw"></i> Save details</button>
                 </div>
                 <div class="cleft"></div>
-                <div class="divider"></div>
                 <div class="helpers">
-                    <a href="ringleaders-help.php?topic=Admin%20Members" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
-                    <a href="ringleaders-start-over-new.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a>
+                    <a href="ringleaders-start-over-new.php"><i class="fa fa-fw"></i> Start over</a>
                 </div>
             </form>
             <div class="cboth"></div>

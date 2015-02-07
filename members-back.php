@@ -70,11 +70,9 @@ $garmentBackImage = "garment-" . $gender . "-back.jpg";
                     <button type="button" class="button"><i class="fa fa-fw"></i> Confirm and pay</button>
                 </div>
                 <div class="cleft"></div>
-                <div class="divider"></div>
                 <div class="helpers">
-                    <a href="members-help.php?topic=Personalise%20The%20Back" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
-                    <a href="members-start-over.php" class="button white-button"><i class="fa fa-fw"></i> Start over</a><br />
-                    <a href="members-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
+                    <a href="members-start-over.php"><i class="fa fa-fw"></i> Start over</a>
+                    <a href="members-log-out.php"><i class="fa fa-fw"></i> Log out</a>
                 </div>
             </form>
             <div class="cboth"></div>

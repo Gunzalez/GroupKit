@@ -532,11 +532,21 @@ textarea {
 }
 
 .helpers {
-  padding-top: 20px;
+  margin-top: 30px;
+  border-top: 1px solid lightgrey;
+  padding-top: 15px;
   padding-left: 140px;
+  text-align: right;
 }
 .helpers a {
-  display: block;
+  display: inline-block;
+  padding-bottom: 7px;
+  text-decoration: none;
+  color: #666666;
+  margin-left: 12px;
+}
+.helpers a:hover {
+  color: #231f20;
 }
 
 .page .main .content {

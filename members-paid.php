@@ -123,10 +123,8 @@ $leftOrRightOverlay = "garment-" . $gender ."-front-" . $position .".png";
                     <button type="button" class="button disabled-button" disabled="disabled"><i class="fa fa-fw"></i> All Paid Up</button>
                 </div>
                 <div class="cleft"></div>
-                <div class="divider"></div>
                 <div class="helpers">
-                    <a href="members-help.php?topic=Confirm%20and%20Pay" class="button white-button"><i class="fa fa-fw"></i> Help with this page</a><br />
-                    <a href="members-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
+                    <a href="members-log-out.php"><i class="fa fa-fw"></i> Log out</a>
                 </div>
             </form>
             <div class="cboth"></div>
