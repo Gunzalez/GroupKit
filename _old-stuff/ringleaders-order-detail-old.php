@@ -90,7 +90,7 @@ if(isset($_GET['id'])) {
                     if(isset($_GET['id'])){
                         ?>
                         <br/>
-                        <a href="ringleaders-delete-order.php?id=<?php echo $teamId; ?>" class="button yellow-button"><i class="fa fa-fw"></i> Delete team</a>
+                        <a href="ringleaders-delete-order.php?id=<?php echo $teamId; ?>" class="button yellow-button"><i class="fa fa-fw"></i> Delete team</a>
                     <?php
                     }
                     ?>

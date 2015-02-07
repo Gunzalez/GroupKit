@@ -17,13 +17,15 @@
         },
 
         resize : function(){
-            //console.log(groupkit.properties.windowWidth);
+            // null
         },
 
         init: function(){
             var self = groupkit;
+
             // window size
             self.properties.windowWidth = $(window).width();
+
             // device type
             if(self.environment.mobileCheck()){
                 self.environment.isMobile = true;
@@ -42,6 +44,7 @@
                 }
             });
 
+            // submitting forms with buttons
             var $allForms = $('.form');
             $allForms.each(function(){
                 var $thisForm = $(this);
@@ -50,7 +53,6 @@
                 });
             });
         }
-
     };
 
     groupkit.orders = {
@@ -60,6 +62,7 @@
             var self = this,
                 $orderRows = $('tr', self.$html);
 
+            // order list to detail
             $orderRows.each(function(i, obj){
                 $(obj).on('click', function(){
                     var orderId = $(this).data('order-id');
@@ -69,6 +72,7 @@
                 });
             });
 
+            // simple cosmetics
             $('tr:odd', self.$html).addClass('odd');
         }
     };
@@ -111,7 +115,6 @@
                 });
             }
 
-
             // sets the image in the display, based on image set in form
             if(self.$garmentDisplay.hasClass('set-image')){
                 var initialGender = $('#gender', self.$form).val(), // comes from PHP
@@ -136,8 +139,7 @@
                 }
             }
 
-
-            // swapping back and front, for confirm and thank you pages
+            // swapping back and front views, on Confirm and Thank You pages
             if($viewSwitcher.length > 0){
                 $viewSwitches.on('click', function(evt){
                     evt.preventDefault();
@@ -203,12 +205,14 @@
                 $readOnly = $('.read-only-mode'),
                 $editable = $('.edit-mode');
 
+            // hides read only, shows editable
             $editableController.on('click',function(evt){
                 evt.preventDefault();
                 $readOnly.addClass('display-none');
                 $editable.removeClass('display-none');
             });
 
+            // hides editable, show read only
             $nonEditableController.on('click',function(evt){
                 evt.preventDefault();
                 $readOnly.removeClass('display-none');
@@ -221,6 +225,7 @@
         $html: $('.carousel'),
         isBusy: true,
 
+        // big pink circle in carousel
         priceTag:{
             $html:$('#price-tag'),
             baseUrl: 'ringleaders-choose-garment.php?garmentId=',
@@ -254,6 +259,7 @@
 
             if(self.$html.length > 0){
 
+                // carousel initiation
                 $stage.slick({
                     slidesToShow: 3,
                     slidesToScroll: 1,
@@ -272,15 +278,13 @@
                     ]
                 });
 
+                // set initial state
                 $('.slick-active', self.html).trigger('click');
 
                 $stage.on('beforeChange', function(event, slick, currentSlide, nextSlide){
                     self.priceTag.hide();
                     $('.active-garment', $stage).removeClass('active-garment');
                     self.isBusy = true;
-
-
-                    //console.log(currentSlide);
                 });
 
                 $stage.on('afterChange', function(event, slick, currentSlide, nextSlide){
@@ -300,10 +304,6 @@
                     self.priceTag.update(price, title, guid);
                     self.priceTag.show();
                     self.isBusy = false;
-
-
-
-                    //console.log(currentSlide);
                 });
 
                 self.priceTag.init();
@@ -313,18 +313,14 @@
 
 	groupkit.init = function(){
 
-        // Other init
+        // all init
         groupkit.environment.init();
         groupkit.garmentSelection.init();
         groupkit.orders.init();
         groupkit.editables.init();
         groupkit.carousel.init();
-        //
-        //
-        //
-        //
 
-        // Resize triggers
+        // resize triggers
 		$(window).on('resize',function(){
 			
 			var newWidth = $(window).width(),
@@ -343,10 +339,6 @@
     // Main resize
     groupkit.resize = function(){
         groupkit.environment.resize();
-        //
-        //
-        //
-        //
     };
 
     // Main init

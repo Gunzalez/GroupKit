@@ -232,11 +232,18 @@ function returnIfEqual($val1, $val2, $str){
                     <div class="links">
                         <!-- states -->
 
-<!--                        <button type="button" class="button disabled-button" disabled="disabled"><i class="fa fa-fw"></i> Payment made</button>-->
+                        <!--
+                        For when payment has been made
+                        <button type="button" class="button disabled-button" disabled="disabled"><i class="fa fa-fw"></i> Payment made</button>
+                        -->
 
-<!--                        <a href="#" class="button"><i class="fa fa-fw"></i> Pay for member</a>-->
-<!--                        <a href="#" class="button"><i class="fa fa-fw"></i> Remind member</a>-->
+                        <!--
+                        For when member has now been reminded
+                        <a href="#" class="button"><i class="fa fa-fw"></i> Pay for member</a>
+                        <a href="#" class="button"><i class="fa fa-fw"></i> Remind member</a>
+                        -->
 
+                        <!-- For when member has been reminded -->
                         <a href="#" class="button"><i class="fa fa-fw"></i> Pay for member</a>
                         <a href="#" class="button bottom-button"><i class="fa fa-fw"></i> Reminded</a>
                         <p class="info reminded-text">Last reminded #00/00/2015#</p>
@@ -251,7 +258,7 @@ function returnIfEqual($val1, $val2, $str){
                     if(isset($_GET['memberId'])){
                         ?>
                         <br/>
-                        <a href="ringleaders-delete-member.php?id=<?php echo $memberId; ?>" class="button yellow-button"><i class="fa fa-fw"></i> Delete member</a><br />
+                        <a href="ringleaders-delete-member.php?id=<?php echo $memberId; ?>" class="button yellow-button"><i class="fa fa-fw"></i> Delete member</a><br />
                         <a href="ringleaders-log-out.php" class="button yellow-button"><i class="fa fa-fw"></i> Log out</a>
                     <?php
                     }
