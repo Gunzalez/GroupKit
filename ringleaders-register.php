@@ -4,21 +4,38 @@
     <title>Group Kit - Ringleaders sign in</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
-<body class="page">
+<body class="page inner">
 
     <?php include_once('includes/header.php'); ?>
 
     <div class="main">
         <div class="content">
 
-            <div class="title form-heading">
-                <h2>Create an account</h2>
+            <div class="title">
+                <h2>Create account</h2>
+                <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>" class="button back-button white-button"><i class="fa fa-fw"></i> Back</a>
                 <div class="cboth"></div>
             </div>
-            <form class="form last-element" id="create-account" action="_old-stuff/ringleaders-welcome.php" method="post" name="create-account" novalidate="novalidate">
-                <div class="row">
-                    <p>Etiam nisi erat, egestas eget interdum ut, finibus id odio.  Nulla varius malesuada magna, us malesuut  X gonna give it to you! rhoncus odio facilisis non. </p>
+
+            <?php if(isset($_GET['pay']) && $_GET['pay'] == 'all'){ ?>
+
+                <div class="showcase">
+                    <h3>New Ringleader Account</h3>
+                    <p>Oh dear, you have chosen to pay for all members, are you sure you can afford it?</p>
+                    <p>A big bank account, with lots of money not just the size of the vault. Or just rich parents.</p>
                 </div>
+
+            <?php } else { ?>
+
+                <div class="showcase">
+                    <h3>New Ringleader Account</h3>
+                    <p>Good move, ain't no way you're paying for those fools, you're not Richard Branson!</p>
+                    <p>You will need knuckle dusters, chloroform some duct tape and a hitman, preferably from Malaysia, oh and nerves of steel.</p>
+                </div>
+
+            <?php } ?>
+
+            <form class="form" id="create-account" action="huh.php" method="post" name="create-account" novalidate="novalidate">
                 <div class="row">
                     <label for="firstname">First name</label>
                     <input type="text" name="firstname" id="firstname" value="" class="input"  />
@@ -52,6 +69,7 @@
                 </div>
                 <div class="cleft"></div>
             </form>
+            <div class="cboth"></div>
 
         </div>
     </div>

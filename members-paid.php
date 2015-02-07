@@ -53,7 +53,7 @@ $leftOrRightOverlay = "garment-" . $gender ."-front-" . $position .".png";
             </div>
 
             <div class="full-width">
-                <p>Thank you for your payment, made on the #00/00/2015#.  Your item should be at the submitted address by #00/00/2015#.</p>
+                <p>Thank you for your payment, made on the #00/00/2015#.  Your item should be at the submitted address by #00/00/2015#. This page shows the garment assigned to you.</p>
                 <p>Otherwise contact your ringleader at <a href="mailto:ringleader@emailaddress.com">ringleader@emailaddress.com</a> and give him what for, or better still if you know where they live turn up at midnight with two midgets in gimp costumes, has always worked for me.</p>
             </div>
 
@@ -95,15 +95,8 @@ $leftOrRightOverlay = "garment-" . $gender ."-front-" . $position .".png";
                             <td>Coke Zero</td>
                         </tr>
                         <tr>
-                            <th scope="row">(name style)</th>
-                            <td><?php echo $nameStyle; ?></td>
-                        </tr>
-                        <tr>
                             <th scope="row">Number</th>
                             <td>10</td>
-                        </tr><tr>
-                            <th scope="row">(number style)</th>
-                            <td><?php echo $numberStyle; ?></td>
                         </tr>
                     </table>
                 </div>
@@ -127,7 +120,7 @@ $leftOrRightOverlay = "garment-" . $gender ."-front-" . $position .".png";
                     </div>
                 </div>
                 <div class="row button-row">
-                    <button type="button" class="button disabled-button" disabled="disabled"><i class="fa fa-fw"></i> Payment made</button>
+                    <button type="button" class="button disabled-button" disabled="disabled"><i class="fa fa-fw"></i> All Paid Up</button>
                 </div>
                 <div class="cleft"></div>
                 <div class="divider"></div>

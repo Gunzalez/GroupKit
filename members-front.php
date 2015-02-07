@@ -68,20 +68,6 @@ $rightOverlay = "garment-" . $gender ."-front-right.png";
                     </div>
                 </div>
                 <div class="row">
-                    <div class="like-label">Name style</div>
-                    <div class="like-input style-switch block">
-                        <input id="style4" type="radio" name="nameStyle" value="signikabold"<?php echoIfEqual('signikabold', $nameStyle, ' checked'); ?>>
-                        <label for="style4">Signika Bold</label><br class="cleft" />
-                        <input id="style1" type="radio" name="nameStyle" value="Verdana"<?php echoIfEqual('Verdana', $nameStyle, ' checked'); ?>>
-                        <label for="style1">Verdana</label><br class="cleft" />
-                        <input id="style2" type="radio" name="nameStyle" value="Arial"<?php echoIfEqual('Arial', $nameStyle, ' checked'); ?>>
-                        <label for="style2">Some-long FontName</label><br class="cleft" />
-                        <input id="style3" type="radio" name="nameStyle" value="Century Gothic"<?php echoIfEqual('Century Gothic', $nameStyle, ' checked'); ?>>
-                        <label for="style3">Century Gothic</label>
-                    </div>
-                </div>
-
-                <div class="row">
                     <label for="front-text">Name</label>
                     <input type="text" id="front-text" value="Coke Zero" class="input">
                 </div>

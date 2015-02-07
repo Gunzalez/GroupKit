@@ -91,15 +91,8 @@ $leftOrRightOverlay = "garment-" . $gender ."-front-" . $position .".png";
                             <td>Coke Zero</td>
                         </tr>
                         <tr>
-                            <th scope="row">(name style)</th>
-                            <td><?php echo $nameStyle; ?></td>
-                        </tr>
-                        <tr>
                             <th scope="row">Number</th>
                             <td>10</td>
-                        </tr><tr>
-                            <th scope="row">(number style)</th>
-                            <td><?php echo $numberStyle; ?></td>
                         </tr>
                     </table>
                 </div>

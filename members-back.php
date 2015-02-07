@@ -52,19 +52,6 @@ $garmentBackImage = "garment-" . $gender . "-back.jpg";
 
             <form class="form" id="personalise-back-form" action="members-confirm.php" method="post" name="personalise-back-form" novalidate="novalidate">
                 <input type="hidden" id="gender" name="gender" value="<?php echo $gender; ?>" /> <!-- needed for gender display, but you can do it your way -->
-                <div class="row">
-                    <div class="like-label">Number style</div>
-                    <div class="like-input style-switch block">
-                        <input id="style4" type="radio" name="numberStyle" value="signikabold"<?php echoIfEqual('signikabold', $numberStyle, ' checked'); ?>>
-                        <label for="style4">Signika Bold</label><br class="cleft" />
-                        <input id="style1" type="radio" name="numberStyle" value="Verdana"<?php echoIfEqual('Verdana', $numberStyle, ' checked'); ?>>
-                        <label for="style1">Verdana</label><br class="cleft" />
-                        <input id="style2" type="radio" name="numberStyle" value="Arial"<?php echoIfEqual('Arial', $numberStyle, ' checked'); ?>>
-                        <label for="style2">Some-long FontName</label><br class="cleft" />
-                        <input id="style3" type="radio" name="numberStyle" value="Century Gothic"<?php echoIfEqual('Century Gothic', $numberStyle, ' checked'); ?>>
-                        <label for="style3">Century Gothic</label>
-                    </div>
-                </div>
 
                 <div class="row">
                     <label for="front-text">Number</label>

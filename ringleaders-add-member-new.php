@@ -24,7 +24,7 @@ $teamId = 'nil';
                 <div class="cboth"></div>
             </div>
             <div class="showcase">
-                <h3>#00/<?php echo $teamName; ?></h3>
+                <h3>#00 / <?php echo $teamName; ?></h3>
                 <?php if(isset($_GET['new-member']) && $_GET['new-member'] != ''){ ?>
                     <p>Click on a member name for full details, where you can edit details or remind them about their garment.</p>
                     <ul>
@@ -36,8 +36,8 @@ $teamId = 'nil';
                 <?php if(isset($_GET['new-member']) && $_GET['new-member'] != ''){ ?>
                     <div class="row button-row">
                         <div class="links">
-                            <a href="ringleaders-register.php" class="button standalone-button"><i class="fa fa-fw"></i> Complete - I pay for all</a>
-                            <a href="ringleaders-register.php" class="button standalone-button"><i class="fa fa-fw"></i> Complete - Members pay</a>
+                            <a href="ringleaders-register.php?pay=all" class="button standalone-button"><i class="fa fa-fw"></i> Complete - I pay for all</a>
+                            <a href="ringleaders-register.php?pay=each" class="button standalone-button"><i class="fa fa-fw"></i> Complete - Members pay</a>
                         </div>
                     </div>
                 <?php } ?>
