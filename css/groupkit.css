@@ -544,6 +544,7 @@ textarea {
   text-decoration: none;
   color: #666666;
   margin-left: 12px;
+  text-transform: uppercase;
 }
 .helpers a:hover {
   color: #231f20;
