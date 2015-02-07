@@ -619,7 +619,7 @@ textarea {
 .page .form .row .like-input {
   float: left;
   width: 200px;
-  padding-top: 7px;
+  padding-top: 5px;
 }
 .page .like-form .row .like-input.ellipsis,
 .page .form .row .like-input.ellipsis {
