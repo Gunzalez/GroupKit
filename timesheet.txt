@@ -28,6 +28,7 @@ Members journey refactor, imaged based for easy customisation (6.0 hrs) 2.0 hrs 
 Completes all journeys                                                  3.0 hrs   - Tuesday, 03.02.2015
 Start and finish, empty templates                                       0.5 hrs   - Wednesday, 04.02.2015
 Carousel begins, and now 75%                                            3.5 hrs   - Thursday, 05.02.2015
+Carousel done (ish), me thinks                                          0.5 hr    - Friday, 06.02.2015
 
 
 TODO

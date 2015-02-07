@@ -36,8 +36,8 @@ $teamId = 'nil';
                 <?php if(isset($_GET['new-member']) && $_GET['new-member'] != ''){ ?>
                     <div class="row button-row">
                         <div class="links">
-                            <a href="#" class="button standalone-button"><i class="fa fa-fw"></i> Complete - I pay for all</a>
-                            <a href="#" class="button standalone-button"><i class="fa fa-fw"></i> Complete - Members pay</a>
+                            <a href="ringleaders-register.php" class="button standalone-button"><i class="fa fa-fw"></i> Complete - I pay for all</a>
+                            <a href="ringleaders-register.php" class="button standalone-button"><i class="fa fa-fw"></i> Complete - Members pay</a>
                         </div>
                     </div>
                 <?php } ?>

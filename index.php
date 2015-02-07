@@ -37,9 +37,10 @@
                 </div>
                 <a href="#" id="price-tag" style="opacity: 0">
                     <span class="hand"><i class="fa fa-fw"></i></span>
-                    <span class="title" data-role="title">Hooded top stretch</span>
-                    <span class="price" data-role="price">&pound;12.00</span>
+                    <span class="title" data-role="title"></span>
+                    <span class="price" data-role="price"></span>
                     <span class="click">Click to start<br> ordering</span>
+                    <span class="click-short">Click here</span>
                 </a>
             </div>
             <p class="introduction">Ringleaders choose your garment above</p>

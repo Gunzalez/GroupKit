@@ -260,13 +260,23 @@
                     autoplay: true,
                     autoplaySpeed: 7000,
                     arrows: false,
-                    dots: true
+                    dots: true,
+                    responsive: [
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
                 });
 
                 $('.slick-active', self.html).trigger('click');
 
                 $stage.on('beforeChange', function(event, slick, currentSlide, nextSlide){
                     self.priceTag.hide();
+                    $('.active-garment', $stage).removeClass('active-garment');
                     self.isBusy = true;
 
 
@@ -274,11 +284,21 @@
                 });
 
                 $stage.on('afterChange', function(event, slick, currentSlide, nextSlide){
-                    var $activeSlide = $('.slick-active',self.$html).eq(1),
-                        price = $activeSlide.attr("data-garment-price"),
+                    var $possibleSlides = $('div.slick-active',self.$html),
+                        $activeSlide;
+                        if($possibleSlides.length == 3){
+                            $activeSlide = $possibleSlides.eq(1);
+                        } else if($possibleSlides.length == 1){
+                            $activeSlide = $possibleSlides.eq(0);
+                        }
+
+                    console.log(window.Slick);
+
+                    var price = $activeSlide.attr("data-garment-price"),
                         title = $activeSlide.attr("data-garment-title"),
                         guid = $activeSlide.attr("data-garment-guid");
 
+                    $activeSlide.addClass('active-garment');
                     self.priceTag.update(price, title, guid);
                     self.priceTag.show();
                     self.isBusy = false;

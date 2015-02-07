@@ -59,6 +59,7 @@ img { border: none; }
     -webkit-box-shadow: 0px 2px 10px 0px rgba(50, 50, 50, 0.30);
     -moz-box-shadow:    0px 2px 10px 0px rgba(50, 50, 50, 0.30);
     box-shadow:         0px 2px 10px 0px rgba(50, 50, 50, 0.30);
+    z-index: 999;
 
     .order {
         float: left;
@@ -156,12 +157,12 @@ img { border: none; }
 
         #price-tag {
             position: absolute;
-            top: 250px;
             left: 50%;
+            top: 55%;
             width: 136px;
             height: 136px;
-            @include border-radius(50%);
             margin-left: -68px;
+            @include border-radius(50%);
             background: #EA5DA1;
             text-decoration: none;
             -webkit-box-shadow: 0px 0px 90px -9px rgba(0,0,0,0.74);
@@ -176,6 +177,9 @@ img { border: none; }
                 color: #ffffff;
                 font-size: 2.0em;
                 padding: 12px 0 8px 0;
+                -ms-transform: rotate(330deg); /* IE 9 */
+                -webkit-transform: rotate(330deg); /* Chrome, Safari, Opera */
+                transform: rotate(330deg);
             }
 
             span {
@@ -190,15 +194,50 @@ img { border: none; }
                 }
                 &.price {
                     font-size: 1.7em;
-                    padding-bottom: 3px;
+                    padding-bottom: 7px;
                 }
                 &.click {
-                    padding-top: 5px;
                     font-size: 0.9em;
+                }
+                &.click-short {
+                    font-size: 0.9em;
+                    display: none;
                 }
                 &.hand {
                     display: inline-block;
                 }
+
+            }
+
+            @media only screen
+            and (max-width: 760px)
+            and (min-width: 480px) {
+                top: 45%;
+                width: 110px;
+                height: 110px;
+                margin-left: -55px;
+
+                .fa {
+                    display: none;
+                }
+
+                span {
+                    &.title {
+                        padding: 7px 15px 3px 15px;
+                    }
+                    &.price {
+                        font-size: 1.5em;
+                        padding-bottom: 5px;
+                    }
+                    &.click {
+                        display: none;
+                    }
+                    &.click-short {
+                        display: block;
+                    }
+                }
+
+
 
             }
         }
@@ -210,10 +249,19 @@ img { border: none; }
                 width: 100%;
             }
             .large {
-                display: none;
+                opacity: 0;
                 position: absolute;
                 top: 0;
                 left: 0;
+                @include transitions();
+            }
+
+            &.active-garment {
+
+                .large {
+                    opacity: 1;
+                    @include transitions();
+                }
             }
         }
 
