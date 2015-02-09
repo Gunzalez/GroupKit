@@ -166,6 +166,49 @@ img {
   margin: 0 auto;
   position: relative;
 }
+.main .carousel .chevron {
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #EA5DA1;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  color: #ffffff;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  display: none !important;
+}
+.main .carousel .chevron:hover {
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  border: 1px solid #EA5DA1;
+  color: #EA5DA1;
+  background: #ffffff;
+}
+.main .carousel .chevron i {
+  font-size: 1.4em;
+}
+.main .carousel .chevron.chevron-right {
+  right: 1px;
+}
+.main .carousel .chevron.chevron-right i {
+  padding-left: 2px;
+}
+.main .carousel .chevron.chevron-left {
+  left: 1px;
+}
+.main .carousel .chevron.chevron-left i {
+  padding-right: 2px;
+}
 .main .carousel #price-tag {
   position: absolute;
   left: 50%;
@@ -177,15 +220,23 @@ img {
   -moz-border-radius: 50%;
   border-radius: 50%;
   background: #EA5DA1;
+  border: 2px solid #D4CBCF;
   text-decoration: none;
-  -webkit-box-shadow: 0px 0px 90px -9px rgba(0, 0, 0, 0.74);
-  -moz-box-shadow: 0px 0px 90px -9px rgba(0, 0, 0, 0.74);
-  box-shadow: 0px 0px 90px -9px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 0px 0px 50px -9px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 0px 0px 50px -9px rgba(0, 0, 0, 0.74);
+  box-shadow: 0px 0px 50px -9px rgba(0, 0, 0, 0.74);
   text-align: center;
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
   transition: all 0.25s;
+}
+.main .carousel #price-tag:hover {
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  border: 2px solid #EA5DA1;
 }
 .main .carousel #price-tag .fa {
   display: block;
@@ -348,8 +399,14 @@ img {
 }
 .main .content .entry-points li a span.icon {
   font-size: 3.0em;
-  color: #2aa9e0;
   padding-bottom: 3px;
+}
+.main .content .entry-points li a span.icon i {
+  color: #2aa9e0;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
 }
 .main .content .entry-points li a span.title {
   font-size: 1.4em;
@@ -360,6 +417,17 @@ img {
 }
 .main .content .entry-points li a:hover {
   color: #231f20;
+}
+.main .content .entry-points li a:hover span.icon i {
+  color: #2598c9;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.desktop .carousel .chevron {
+  display: block !important;
 }
 
 .content {
