@@ -255,7 +255,7 @@ function returnIfEqual($val1, $val2, $str){
                     <?php
                     if(isset($_GET['memberId'])){
                         ?>
-                        <a href="ringleaders-delete-member.php?id=<?php echo $memberId; ?>"><i class="fa fa-fw"></i> Delete member</a>
+                        <a href="ringleaders-delete-member.php?id=<?php echo $memberId; ?>"><i class="fa fa-fw"></i> Delete</a>
                         <a href="ringleaders-log-out.php"><i class="fa fa-fw"></i> Log out</a>
                     <?php
                     }

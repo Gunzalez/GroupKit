@@ -183,7 +183,7 @@ if(isset($_GET['memberId'])) {
                 </div>
                 <div class="cleft"></div>
                 <div class="helpers">
-                    <a href="ringleaders-delete-order.php?id=<?php echo $teamId; ?>"><i class="fa fa-fw"></i> Delete team</a>
+                    <a href="ringleaders-delete-order.php?id=<?php echo $teamId; ?>"><i class="fa fa-fw"></i> Delete</a>
                     <a href="ringleaders-log-out.php"><i class="fa fa-fw"></i> Log out</a>
                 </div>
             </form>

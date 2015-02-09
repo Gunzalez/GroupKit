@@ -116,7 +116,7 @@ $womensImage = "ringleaders-garment-womens-back.jpg";
                     <div class="like-input">
                         <input type="checkbox" id="own-logo" type="radio" name="own-logo" value=""> <label for="own-logo" class="small">Use my own logo</label>
                     </div>
-                    <p class="info important"><strong><a href="#">You must read Logo guidelines!</a></strong></p>
+                    <p class="info important"><strong><a href="template-simple.php">You must read Logo guidelines!</a></strong></p>
                 </div>
 
 
