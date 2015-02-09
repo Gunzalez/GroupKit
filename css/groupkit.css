@@ -429,6 +429,11 @@ img {
 .desktop .carousel .chevron {
   display: block !important;
 }
+@media only screen and (max-width: 480px) {
+  .desktop .carousel .chevron {
+    display: none !important;
+  }
+}
 
 .content {
   width: 882px;
