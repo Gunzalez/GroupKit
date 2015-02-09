@@ -119,7 +119,6 @@ $womensImage = "ringleaders-garment-womens-back.jpg";
                     <p class="info important"><strong><a href="template-simple.php">You must read Logo guidelines!</a></strong></p>
                 </div>
 
-
                 <div class="row button-row">
                     <button type="button" class="button"><i class="fa fa-fw"></i> Choose the team</button>
                 </div>
@@ -129,7 +128,6 @@ $womensImage = "ringleaders-garment-womens-back.jpg";
                 </div>
             </form>
             <div class="cboth"></div>
-
 
         </div>
     </div>

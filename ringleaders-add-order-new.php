@@ -31,7 +31,7 @@ if(isset($_POST["nameStyle"])){
 
             <div class="showcase">
                 <h3>#<span class="new-team">new team</span></h3>
-                <p>Create a team and add members to your team.</p>
+                <p>Create a team, then add members to your team.</p>
             </div>
 
             <form class="form" id="" action="ringleaders-add-member-new.php" method="post" name="" novalidate="novalidate">

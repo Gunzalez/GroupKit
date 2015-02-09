@@ -132,7 +132,6 @@ $womensImage = "ringleaders-garment-womens-front.jpg";
             </form>
             <div class="cboth"></div>
 
-
         </div>
     </div>
 
